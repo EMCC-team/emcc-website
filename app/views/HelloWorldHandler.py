@@ -1,6 +1,7 @@
 import webapp2
-from app.models import Coach
+import pydoc
+from webapp2_extras.appengine.auth.models import User
 
 class HelloWorldHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write(help(Coach))
+        self.response.write(pydoc.plain(pydoc.render_doc(User, "Help on %s")))
