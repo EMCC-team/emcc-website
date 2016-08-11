@@ -24,30 +24,6 @@ class User(BaseUser):
         """
         
         self.password = security.generate_password_hash(raw_password)
-    
-    @classmethod
-    def get_by_auth_token(cls, user_id, token, subject='auth'):
-        """Return a tuple containing a user and their token's creation time.
-     
-        Args:
-            user_id: A string containing the user_id of the requesting user.
-            token: A string containing the token string to be verified.
-        
-        Returns:
-            tuple: (User, timestamp) or (None, None) if both were not found.
-            
-        Source: https://blog.abahgat.com/2013/01/07/user-authentication-with-webapp2-on-google-app-engine/
-        """
-        
-        token_key = cls.token_model.get_key(user_id, subject, token)
-        user_key = ndb.Key(cls, user_id)
-        # Use get_multi() to save a RPC call.
-        valid_token, user = ndb.get_multi([token_key, user_key])
-        if valid_token and user:
-            timestamp = int(time.mktime(valid_token.created.timetuple()))
-            return user, timestamp
-     
-        return None, None
 
 class Coach(User):
     """A model which stores coaches. Coaches are users which can create teams.
