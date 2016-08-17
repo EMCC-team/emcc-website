@@ -77,6 +77,6 @@ class BaseHandler(webapp2.RequestHandler):
             super(BaseHandler, self).dispatch()
         finally:
             # Save all sessions to the response object. (We add a
-            # cookie to the response object which store session
+            # cookie to the response object which stores session
             # information.)
             self.session_store.save_sessions(self.response)
