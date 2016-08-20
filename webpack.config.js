@@ -12,6 +12,7 @@ var config = {
     is bundled into a separate file as specified by the output config
     object below. */
     entry: {
+        main: ['./src'],
         vendor: ['react', 'react-dom']
     },
     /* Output defines where bundled objects are compiled to.
@@ -21,7 +22,7 @@ var config = {
                the hash of the contents of the resulting file, for 
                caching purposes */
     output: {
-        path: 'static',
+        path: 'dist',
         filename: 'js/[name].[chunkhash].js'
     },
     module: {
@@ -70,42 +71,3 @@ var config = {
         new CleanPlugin(['static'])
     ]
 };
-
-
-/* Dynamically load views inside the specified folder. For example, a typical
-directory structure might look like this, with root = './client/views/':
-
-client
-├── components
-│   ├── hello-world.js
-│   └── skeleton.css
-└── views
-    ├── home
-    │   ├── index.js
-    │   └── styles.css
-    └── login
-        ├── index.js
-        └── styles.css
-
-This code adds each folder inside the views directory to the entry object. For
-each folder it also creates an instance of HtmlPlugin, which generates an HTML
-file with imports the required dependencies (e.g. CSS, JS, etc.).
-*/
-var root = './client/views/';
-
-var directories = fs.readdirSync(path.join(__dirname, root)).filter(function (file) {
-    return fs.statSync(path.join(__dirname, root, file)).isDirectory();
-});
-directories.map(function (directory) {
-    config.entry[directory] = '.' + path.sep + path.join(root, directory);
-});
-
-config.plugins = Array.prototype.concat.apply(config.plugins,
-    directories.map(function (directory) {
-        return new HtmlPlugin({
-          chunks: ['vendor', directory],
-          filename: path.join('views/', directory + '.html')
-        });
-    })
-);
-module.exports = config;
