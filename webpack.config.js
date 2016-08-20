@@ -65,7 +65,7 @@ var config = {
     
     CleanPlugin cleans the compile directory before each build. */
     plugins: [
-        new CommonsChunkPlugin({name: 'vendor', filename: 'js/vendor.[chunkhash].js'}),
+        new CommonsChunkPlugin({name: 'vendor', filename: 'js/vendor.[chunkhash].js', minChunks: Infinity}),
         new ExtractTextPlugin("css/[name].[chunkhash].css", {allChunks: true}),
         new CleanPlugin(['static'])
     ]

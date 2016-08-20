@@ -1,13 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import HelloWorld from '../../components/hello-world.js';
-import './styles.css';
+import 'skeleton-css-webpack';
+
+import LoginComponent from './LoginComponent'
 
 var root;
 (root = document.createElement('div')).setAttribute('id', 'root');
 document.body.appendChild(root);
 
 render(
-    <HelloWorld />,
+    <LoginComponent />,
     root
 );

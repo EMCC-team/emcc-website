@@ -201,5 +201,5 @@ fabric.properties
 # .idea/misc.xml 
 # *.ipr
 
-# Cloud9 IDE
-runserver.sh
+### Cloud9 Startup Scripts ###
+run_*.sh
