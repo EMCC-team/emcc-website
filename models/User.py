@@ -12,7 +12,7 @@ class User(BaseUser):
     """
     name = ndb.StringProperty(required=True)
     email = ndb.StringProperty(required=True)
-    
+
     def set_password(self, raw_password):
         """Set the password for the current user.
  
