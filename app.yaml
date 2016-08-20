@@ -1,0 +1,35 @@
+application: emcc
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: static/index.html
+  upload: static/index.html
+  secure: always
+
+- url: /(.+)
+  static_files: static/\1
+  upload: static/(.+)
+  secure: always
+  
+- url: /.*
+  script: main.app
+  
+- url: /signup
+  script: main.app
+  secure: always
+ 
+- url: /login
+  script: main.app
+  secure: always
+ 
+- url: /forgot
+  script: main.app
+  secure: always
+
+libraries:
+- name: webapp2
+  version: latest
