@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var fs = require('fs');
 var path = require('path');
+var autoprefixer = require('autoprefixer');
 
 var HtmlPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -12,14 +13,14 @@ var config = {
     is bundled into a separate file as specified by the output config
     object below. */
     entry: {
-        main: ['./src'],
+        main: './src',
         vendor: ['react', 'react-dom']
     },
     /* Output defines where bundled objects are compiled to.
            path: the directory from the root.
            filename: the resulting filename. [name] refers to the key
                objects within the entry object. [chunkhash] refers to
-               the hash of the contents of the resulting file, for 
+               the hash of the contents of the resulting file, for
                caching purposes */
     output: {
         path: 'dist',
@@ -46,7 +47,11 @@ var config = {
         },
         {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+            loader: ExtractTextPlugin.extract('style', 'css!postcss')
+        },
+        {
+            test: /\.scss$/,
+            loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
         },
         {
             test: /\.jpe?g$|\.png$/,
@@ -54,20 +59,27 @@ var config = {
         }]
     },
     /* Plugins do additional transformations to the compilation.
-    
+
     CommonsChunkPlugin extracts from all .js and .css files common
     requirements, which are separately stored and cached. This
     prevents redownload of shared dependencies.
-    
+
     ExtractTextPlugin extracts .css files from being inlined in
     the compiled JavaScript code. Instead it bundles all required
     css inside a separate css file, which is loaded into the
     generated HTML through a stylesheet tag.
-    
+
     CleanPlugin cleans the compile directory before each build. */
     plugins: [
         new CommonsChunkPlugin({name: 'vendor', filename: 'js/vendor.[chunkhash].js', minChunks: Infinity}),
         new ExtractTextPlugin("css/[name].[chunkhash].css", {allChunks: true}),
-        new CleanPlugin(['static'])
-    ]
+        new CleanPlugin(['dist']),
+        new HtmlPlugin({chunks: ['vendor', 'main']})
+    ],
+
+    postcss: function() {
+      return [autoprefixer]
+    }
 };
+
+module.exports = config;
