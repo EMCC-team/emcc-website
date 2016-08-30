@@ -1,6 +1,4 @@
 var webpack = require('webpack');
-var fs = require('fs');
-var path = require('path');
 var autoprefixer = require('autoprefixer');
 
 var HtmlPlugin = require('html-webpack-plugin');
@@ -42,7 +40,7 @@ var config = {
             exclude: /node_modules/,
             loader: 'babel',
             query: {
-              presets: ['es2015', 'react']
+              presets: ['es2015', 'react', 'stage-2']
             }
         },
         {
@@ -56,7 +54,12 @@ var config = {
         {
             test: /\.jpe?g$|\.png$/,
             loader: 'file'
-        }]
+        },
+        {
+            test: /\.ttf$/,
+            loader: 'file?name=fonts/[name].[ext]'
+        }
+      ]
     },
     /* Plugins do additional transformations to the compilation.
 
@@ -79,6 +82,10 @@ var config = {
 
     postcss: function() {
       return [autoprefixer]
+    },
+
+    devServer: {
+      historyApiFallback: true
     }
 };
 

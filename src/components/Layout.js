@@ -3,16 +3,18 @@ import classNames from 'classnames';
 
 class Container extends React.Component {
   render() {
+    let { children, ...other } = this.props;
     return (
-      <div className='container'>{this.props.children}</div>
+      <div {...other} className='container'>{children}</div>
     );
   }
 }
 
 class Row extends React.Component {
   render() {
+    let { children, ...other } = this.props;
     return (
-      <div className='row'>{this.props.children}</div>
+      <div {...other} className='row'>{children}</div>
     );
   }
 }
@@ -23,13 +25,14 @@ class Columns extends React.Component {
   }
 
   render() {
+    let { children, offset, width, ...other } = this.props;
     let divClasses = classNames({
-      [`offset-by-${this.props.offset}`]: this.props.offset,
-      [`${this.props.width}`]: this.props.width,
-      columns: this.props.width
+      [`offset-by-${offset}`]: offset,
+      [`${width}`]: width,
+      columns: width
     });
     return (
-      <div className={divClasses}>{this.props.children}</div>
+      <div {...other} className={divClasses}>{children}</div>
     )
   }
 }

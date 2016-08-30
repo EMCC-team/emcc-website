@@ -2,8 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, Link, browserHistory } from 'react-router';
 import 'skeleton-css-webpack';
+import './fonts/montserrat/Montserrat-Regular.ttf'
 
-import Register from './views/Register';
+import Register from './components/Register';
+import Login from './components/Login'
 
 // Debugging
 // console.clear()
@@ -11,7 +13,13 @@ import Register from './views/Register';
 var root;
 document.body.insertBefore((root = document.createElement('div')), document.body.firstChild);
 
-render(
-  <Register />,
+render((
+  <Router history={browserHistory}>
+    <Route path="/">
+      <Route path="register" component={Register}/>
+      <Route path="login" component={Login}/>
+      <Route path="*"/>
+    </Route>
+  </Router>),
   root
 );
