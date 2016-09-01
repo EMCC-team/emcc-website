@@ -10,6 +10,16 @@ class Label extends React.Component {
   }
 }
 
+class ErrorText extends React.Component {
+  render() {
+    let { children, ...other} = this.props;
+    return (
+      <span {...other} style={{ fontWeight: 100, color: "#ff0033",
+          fontSize: 13, ...this.props.style }}>{children}</span>
+    );
+  }
+}
+
 class Input extends React.Component {
   render() {
     let { name, type, onChange, ...other } = this.props;
@@ -70,10 +80,6 @@ class Form extends React.Component {
   render() {
     let { onSubmit, children, name, formName, ...other } = this.props;
     let formStyle = {
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'baseline',
-      flexDirection: 'column',
       maxWidth: '300px',
       margin: '0px auto'
     };
@@ -86,4 +92,4 @@ class Form extends React.Component {
   }
 }
 
-export { Form, Input, Label, Button, Group };
+export { Form, Input, Label, Button, Group, ErrorText };
