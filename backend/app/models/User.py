@@ -5,7 +5,7 @@ import time
 
 class User(BaseUser):
     """A model which stores users.
-    
+
     Attributes:
         name: A string containing the users's name. (e.g. "Zuming Feng")
         email: A string containing the users's email. (e.g. "zfeng@exeter.edu")
@@ -15,23 +15,21 @@ class User(BaseUser):
 
     def set_password(self, raw_password):
         """Set the password for the current user.
- 
+
         Args:
             raw_password: A string containing the raw password which will be
                 hashed and stored.
-                
+
         Source: https://blog.abahgat.com/2013/01/07/user-authentication-with-webapp2-on-google-app-engine/
         """
-        
+
         self.password = security.generate_password_hash(raw_password)
 
 class Coach(User):
     """A model which stores coaches. Coaches are users which can create teams.
-    
+
     Attributes:
-        school: A string containing the coach's school. (e.g. "Phillips Exeter Academy")
         phone: A string containing the coach's phone number. (e.g. "3141592653")
     """
-    
-    school = ndb.StringProperty(required=True)
+
     phone = ndb.StringProperty(default=None)

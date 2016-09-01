@@ -13,42 +13,50 @@ class BaseHandler(webapp2.RequestHandler):
         return auth.get_auth(request=self.request)
 
     @webapp2.cached_property
-    def user(self):
-        """Extract user identification information from the Auth
-        object.
+    def user_info(self):
+        """Return user identification information.
 
         Returns:
             A thin, dict-like object containing only identifying
-            information of the logged-in user.
+            information of the user associated with the request.
 
             Use the user_model property to retrieve the full user
             instead.
         """
-        user = self.auth.get_user_by_session()
-        return user
+        user_info = self.auth.get_user_by_session()
+        return user_info
 
     @webapp2.cached_property
-    def user_model(self):
-        """Return the full user model.
+    def user(self):
+        """Return the full user.
 
         Returns:
-            An instance of the user model as set in the
-            webapp2_extras.auth.user_model config option.
+            An instance of the user associated with the request.
 
             If there is no user associated with the request,
             returns None.
         """
-        user_model, timestamp = 
+        user, timestamp = \
             self.auth.store.user_model.get_by_auth_token(
                     self.user['user_id'],
                     self.user['token']) if self.user else (None, None)
-        
-        return user_model
+
+        return user
+
+    @webapp2.cached_property
+    def user_model(self):
+        """Return the user model.
+
+        Returns:
+            The user model class as set in the
+            webapp2_extras.auth.user_model config option.
+        """
+        return self.auth.store.user_model
 
     @webapp2.cached_property
     def session(self):
         """Return the current session.
-        
+
         This method should only be called within a dispatch method
         (get, post...) so that session_store is not uninitialized.
 
@@ -61,7 +69,7 @@ class BaseHandler(webapp2.RequestHandler):
         """Extend the RequestHandler dispatch method with support
         for sessions.
 
-        The dispatch method is called for every request fufilled by a 
+        The dispatch method is called for every request fufilled by a
         handler. We modify the dispatch method to lookup the session
         each request and add the modified session to the response after
         each request.
