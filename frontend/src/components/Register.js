@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Row, Columns } from '../components/Layout';
-import { Form, Group, Label, Input, Button } from '../components/Form';
-import Card from '../components/Card';
+
+import { Container, Row, Columns } from './Layout';
+import { Form, Group, Label, Input, Button } from './Form';
+import Card from './Card';
 
 class Register extends React.Component {
   constructor(props) {

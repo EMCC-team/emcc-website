@@ -3,17 +3,19 @@ import React from 'react';
 import classNames from 'classnames';
 import isEmail from 'validator/lib/isEmail';
 
-import { Container, Row, Columns } from '../components/Layout';
-import { Form, Group, Label, ErrorText, Input, Button } from '../components/Form';
-import Card from '../components/Card';
+import { Container, Row, Columns } from './Layout';
+import { Form, Group, Label, ErrorText, Input, Button } from './Form';
+import Card from './Card';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
+    // Binding is necessary because otherwise the functions inhert an
+    // incorrect `this` value.
     this.loginUser = this.loginUser.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
-
+    
     // Storing styles like this is really ugly but it works.
     this.state = {
       email:    '',
@@ -24,7 +26,7 @@ class Login extends React.Component {
       passwordErrorText: ''
     };
   }
-
+  
   loginUser(e) {
     e.preventDefault();
 
@@ -39,7 +41,7 @@ class Login extends React.Component {
     // Reset
     let emailErrorText = '',  passwordErrorText = '';
     let { email, password } = this.state;
-    email = email.trim();
+    email = email.trim(); // because why not
 
     if (!email) {
       emailErrorText = requiredError;
