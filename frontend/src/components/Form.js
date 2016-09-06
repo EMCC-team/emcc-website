@@ -15,7 +15,7 @@ class ErrorText extends React.Component {
     let { children, ...other} = this.props;
     return (
       <span {...other} style={{ fontWeight: 100, color: "#ff0033",
-          fontSize: 13, ...this.props.style }}>{children}</span>
+          fontSize: "0.75em", ...this.props.style }}>{children}</span>
     );
   }
 }
@@ -25,7 +25,7 @@ class Input extends React.Component {
     let { name, type, onChange, ...other } = this.props;
     return (
       <input {...other} id={name} type={type}
-             style={{ fontSize: "14px", ...other.style }} onChange={onChange} />
+             style={{ fontSize: "0.75em", ...other.style }} onChange={onChange} />
     );
   }
 }

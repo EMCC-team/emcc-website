@@ -56,8 +56,8 @@ var config = {
             loader: 'file'
         },
         {
-            test: /\.ttf$/,
-            loader: 'file?name=fonts/[name].[ext]'
+            test: /\.woff2$|\.woff$|\.otf$|\.ttf$/,
+            loader: 'file?name=/fonts/[name].[ext]'
         }
       ]
     },

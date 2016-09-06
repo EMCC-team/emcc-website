@@ -1,0 +1,15 @@
+application: emcc
+module: default
+version: 1
+runtime: nodejs
+vm: true
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest
