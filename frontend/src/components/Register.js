@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Container, Row, Columns } from './Layout';
+import '../fonts/Montserrat.css';
+
 import { Form, Group, Label, Input, Button } from './Form';
 import Card from './Card';
 
@@ -44,33 +45,34 @@ class Register extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Columns width="six" offset="three">
-            <Card>
-              <Form name="register" onSubmit={this.registerUser}>
-                <Group name="name">
-                  <Label>Name</Label>
-                  <Input style={{ width: "100%" }} type="text" value={this.state.name} onChange={this.handleNameChange} />
-                </Group>
-                <Group name="email">
-                  <Label>Email</Label>
-                  <Input style={{ width: "100%" }} type="email" value={this.state.email} onChange={this.handleEmailChange} />
-                </Group>
-                <Group name="password">
-                  <Label>Password</Label>
-                  <Input style={{ width: "100%" }} type="password" value={this.state.password} onChange={this.handlePasswordChange} />
-                </Group>
-                <Group name="confirmPassword">
-                  <Label>Confirm password</Label>
-                  <Input style={{ width: "100%" }} type="password" value={this.state.confirm_password} onChange={this.handleConfirmPasswordChange} />
-                </Group>
-                <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button>
-              </Form>
-            </Card>
-          </Columns>
-        </Row>
-      </Container>
+      <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ minWidth: "350px", width: "fit-content" }}>
+          <Card style={{ marginTop: "50px" }}>
+            <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
+              Create your EMCC&nbsp;account
+            </h5>
+            <Form name="register" onSubmit={this.registerUser} style={{ fontSize: "inherit" }}>
+              <Group name="name">
+                <Label>Name</Label>
+                <Input style={{ width: "100%" }} type="text" value={this.state.name} onChange={this.handleNameChange} />
+              </Group>
+              <Group name="email">
+                <Label>Email</Label>
+                <Input style={{ width: "100%" }} type="email" value={this.state.email} onChange={this.handleEmailChange} />
+              </Group>
+              <Group name="password">
+                <Label>Password</Label>
+                <Input style={{ width: "100%" }} type="password" value={this.state.password} onChange={this.handlePasswordChange} />
+              </Group>
+              <Group name="confirmPassword">
+                <Label>Confirm password</Label>
+                <Input style={{ width: "100%" }} type="password" value={this.state.confirm_password} onChange={this.handleConfirmPasswordChange} />
+              </Group>
+              <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button>
+            </Form>
+          </Card>
+        </div>
+      </div>
     );
   }
 }

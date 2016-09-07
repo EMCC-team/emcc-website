@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import { Router, Route, Link, browserHistory } from 'react-router';
 
 import './css/skeleton';
+
+import './fonts/Open-Sans.css';
 import './css/styles.css';
 
 import Register from './components/Register';
@@ -14,9 +16,10 @@ import Home from './components/Home';
 
 var root;
 document.body.insertBefore((root = document.createElement('div')), document.body.firstChild);
+root.style.minHeight = "100vh";
 
 render((
-  <div>
+  <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
     <div style={{ flex: "1" }}>
       <Router history={browserHistory}>
         <Route path="/" component={Home}/>

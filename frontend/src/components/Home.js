@@ -1,6 +1,5 @@
 import React from 'react';
 
-import '../fonts/Open-Sans.css';
 import '../fonts/Montserrat.css';
 
 import { Container, Row, Columns } from './Layout';
@@ -20,12 +19,13 @@ class Home extends React.Component {
       backgroundPosition: '50%',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: '60vh',
+      height: '70vh',
       minHeight: 'fit-content',
       color: "#EEEEEE",
       textAlign: 'center',
       display: 'flex',
       alignItems: 'center',
+      fontFamily: '\'Montserrat\', sans-serif'
     }
     let headingStyles = {
       fontWeight: '100',
@@ -37,11 +37,10 @@ class Home extends React.Component {
     }
 
     let docStyles = {
-      padding: '50px 0px 0px',
-      fontFamily: "'Open Sans', sans-serif"
+      padding: '50px 0px 0px'
     }
     return (
-      <div style={{ height: "100%", fontFamily: '\'Montserrat\', sans-serif' }}>
+      <div style={{ height: "100%" }}>
         <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"/>
         <div id="hero" style={heroStyles}>
           <Container style={{ backdropFilter: "blusdr(5px)", filter: "brightness(200%)" }}>
@@ -65,8 +64,9 @@ class Home extends React.Component {
                 </p>
                 <p>
                   While designing EMCC, we've taken inspiration from the contests
-                  that we ourselves attend. This means that attending EMCC will
-                  prepare you for future contests.
+                  that we ourselves attend and formatted our contest likewise.
+                  This means that attending EMCC will not only be an enjoyable
+                  experience but it will also prepare you for future contests.
                 </p>
 
                 <h3>
@@ -88,7 +88,8 @@ class Home extends React.Component {
                   Registration fees are $50 for teams and $15 for individuals.
                   We'll arrange a shuttle to and from nearby aiports, but
                   competitors will have to cover the expense themselves.
-                  We also can't compensate competitors for any travel.
+                  We can't compensate competitors for any travel expenses like
+                  gas or bus/train/airplane tickets.
                 </p>
                 <p>
                   For teams traveling from outside a 300-mile radius, we'll
@@ -98,7 +99,7 @@ class Home extends React.Component {
                 </p>
 
                 <h3>
-                  Start solving problems!
+                  What next? Start practicing!
                 </h3>
                 <p style={{ fontFamily: "'Computer Modern Serif', serif" }}>
                   <span style={{ fontWeight: "bold" }}>2016 Team Test, Problem 9</span>
@@ -108,10 +109,12 @@ class Home extends React.Component {
                   and Sander work together, the work would be finished in 10 hours. How many hours would Sander
                   take to finish signing if he worked alone?
                   <br/>
-                  <Input placeholder="Answer" style={{ marginTop: "5px", fontSize: "inherit" }}></Input>
+                  <Input placeholder="Answer" style={{ marginTop: "5px", fontSize: "inherit", paddingLeft: "5px" }}></Input>
                 </p>
 
                 <div style={{ textAlign: "center" }}>
+                  <a href="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
+                    fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</a>
                   <a href="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
                     fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</a>
                 </div>

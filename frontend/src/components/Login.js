@@ -15,7 +15,7 @@ class Login extends React.Component {
     this.loginUser = this.loginUser.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    
+
     // Storing styles like this is really ugly but it works.
     this.state = {
       email:    '',
@@ -26,7 +26,7 @@ class Login extends React.Component {
       passwordErrorText: ''
     };
   }
-  
+
   loginUser(e) {
     e.preventDefault();
 
@@ -87,33 +87,37 @@ class Login extends React.Component {
   }
   render() {
     return (
-      <Container>
-        <Row>
-          <Columns width="six" offset="three">
-            <Card>
-              <Form name="register" onSubmit={this.loginUser} noValidate>
-                <Group name="email">
-                  <Label>
-                    Email<br/>
-                    <ErrorText>{this.state.emailErrorText}</ErrorText>
-                  </Label>
-                  <Input style={{ width: "100%", ...this.state.emailErrorStyle }} type="email"
-                         value={this.state.email} onChange={this.handleEmailChange}/>
-                </Group>
-                <Group name="password">
-                  <Label>
-                    Password <br/>
-                    <ErrorText>{this.state.passwordErrorText}</ErrorText>
-                  </Label>
-                  <Input style={{ width: "100%", ...this.state.passwordErrorStyle }} type="password"
-                         value={this.state.password} onChange={this.handlePasswordChange} />
-                </Group>
-                <Button type="submit" className="button-primary" style={{ width: "100%" }}>Login</Button>
-              </Form>
-            </Card>
-          </Columns>
-        </Row>
-      </Container>
+      <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ minWidth: "350px", width: "fit-content" }}>
+          <Card style={{ marginTop: "50px" }}>
+            <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0" }}>
+              EMCC
+            </h4>
+            <h5 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "10px" }}>
+              Log in
+            </h5>
+            <Form name="login" onSubmit={this.loginUser} noValidate>
+              <Group name="email">
+                <Label>
+                  Email<br/>
+                  <ErrorText>{this.state.emailErrorText}</ErrorText>
+                </Label>
+                <Input style={{ width: "100%", ...this.state.emailErrorStyle }} type="email"
+                       value={this.state.email} onChange={this.handleEmailChange}/>
+              </Group>
+              <Group name="password">
+                <Label>
+                  Password <br/>
+                  <ErrorText>{this.state.passwordErrorText}</ErrorText>
+                </Label>
+                <Input style={{ width: "100%", ...this.state.passwordErrorStyle }} type="password"
+                       value={this.state.password} onChange={this.handlePasswordChange} />
+              </Group>
+              <Button type="submit" className="button-primary" style={{ width: "100%" }}>Login</Button>
+            </Form>
+          </Card>
+        </div>
+      </div>
     );
   }
 }
