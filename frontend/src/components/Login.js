@@ -1,6 +1,6 @@
-import axios from 'axios';
 import React from 'react';
 import classNames from 'classnames';
+import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
 
 import { Container, Row, Columns } from './Layout';
@@ -51,7 +51,6 @@ class Login extends React.Component {
     }
 
     let validEmail = function validEmail(email) {
-      console.log(isEmail(email));
       return isEmail(email);
     }
     let validPassword = function validPassword(password) {
@@ -90,11 +89,8 @@ class Login extends React.Component {
       <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ minWidth: "350px", width: "fit-content" }}>
           <Card style={{ marginTop: "50px" }}>
-            <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0" }}>
-              EMCC
-            </h4>
-            <h5 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "10px" }}>
-              Log in
+            <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
+              Log in to EMCC
             </h5>
             <Form name="login" onSubmit={this.loginUser} noValidate>
               <Group name="email">
@@ -114,6 +110,9 @@ class Login extends React.Component {
                        value={this.state.password} onChange={this.handlePasswordChange} />
               </Group>
               <Button type="submit" className="button-primary" style={{ width: "100%" }}>Login</Button>
+              <span>
+                Don't have an account? <a href="register">Register.</a>
+              </span>
             </Form>
           </Card>
         </div>

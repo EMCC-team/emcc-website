@@ -5,8 +5,22 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /.*
+- url: /api/.*
   script: main.app
+
+- url: /js
+  static_dir: frontend/dist/js
+
+- url: /css
+  static_dir: frontend/dist/css
+
+- url: /fonts
+  static_dir: frontend/dist/fonts
+
+
+- url: /.*
+  static_files: frontend/dist/index.html
+  upload: frontend/dist/index.html
 
 libraries:
 - name: webapp2
