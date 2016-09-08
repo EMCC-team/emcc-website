@@ -4,7 +4,7 @@ from app.handlers.Authentication import RegisterUserHandler, LoginUserHandler
 
 config = {
     'webapp2_extras.auth': {
-        'user_model': 'models.User',
+        'user_model': 'app.models.User.User',
         'user_attributes': ['name']
     },
     'webapp2_extras.sessions': {
@@ -13,6 +13,6 @@ config = {
 }
 
 app = webapp2.WSGIApplication([
-    ('/auth/register', RegisterUserHandler),
-    ('/auth/login', LoginUserHandler)
+    ('/api/auth/register', RegisterUserHandler),
+    ('/api/auth/login', LoginUserHandler)
 ], debug=True, config=config)

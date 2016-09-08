@@ -7,35 +7,27 @@ class RegisterUserHandler(BaseHandler):
         name = self.request.get('name')
         email = self.request.get('email')
         password = self.request.get('password')
-        confirmed_password = self.request.get('confirmed_password')
 
-        if not name or not email or not password or not confirmed_password:
+        if not name or not email or not password:
             self.response.status = '422'
             self.response.write(json.dumps({
                 'status': '422',
                 'error': 'Unprocessable Entity',
-                'message': 'Fields name, email, password, and confirmed_password '
-                           'are required.'
-            }))
-            return
-
-        if password != confirmed_password:
-            self.response.status = '422'
-            self.response.write(json.dumps({
-                'status': '422',
-                'error': 'Unprocessable Entity',
-                'message': 'Fields password and confirmed_password do not match.'
+                'message': 'Fields name, email, password are required.'
             }))
             return
 
         auth_id = 'own:' + email
-        user = self.user_model.create_user(auth_id, name=name, password_raw=password)
+        user = self.user_model.create_user(auth_id, email=email, name=name, password_raw=password)
         if user[0]:
             self.response.status = '201'
             self.response.write(json.dumps({
                 'status': '200',
                 'message': 'Created',
-                'user': user
+                'user': {
+                    'email': email,
+                    'name': name
+                }
             }))
             print auth_id
             return
@@ -56,6 +48,18 @@ class LoginUserHandler(BaseHandler):
         password = self.request.get('password')
         try:
             u = self.auth.get_user_by_password('own:' + email, password, remember=True)
-        except (InvalidAuthIdError, InvalidPasswordError) as e:
-
-
+        except InvalidAuthIdError as e:
+            self.response.status = '401'
+            self.response.write(json.dumps({
+                'status': '401',
+                'error': 'Unauthorized',
+                'message': 'A user with that email does not exist.',
+            }))
+            return
+        except InvalidPasswordError as e:
+            self.response.status = '401'
+            self.response.write(json.dumps({
+                'status': '401',
+                'error': 'Unauthorized',
+                'message': 'Incorrect password.',
+            }))
