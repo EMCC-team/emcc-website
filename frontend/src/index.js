@@ -4,6 +4,7 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 
 import './css/skeleton';
 
+import './fonts/Montserrat.css';
 import './fonts/Open-Sans.css';
 import './css/styles.css';
 
@@ -15,20 +16,14 @@ import Home from './views/Home';
 // console.clear()
 
 render((
-  <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-    <div style={{ flex: "1" }}>
-      <Router history={browserHistory}>
-        <Route path="/" component={Home}/>
-        <Route path="/">
-          <Route path="register" component={Register}/>
-          <Route path="login" component={Login}/>
-          <Route path="*"/>
-        </Route>
-      </Router>
-    </div>
-    <footer style={{ backgroundColor: "rgba(140, 0, 0, 1)", height: "120px", marginTop: "50px" }}>
-
-    </footer>
-  </div>),
+  <Router history={browserHistory}>
+    <Route path="/" component={Home}/>
+    <Route path="/">
+      <Route path="register" component={Register}/>
+      <Route path="login" component={Login}/>
+      <Route path="*"/>
+    </Route>
+  </Router>
+  ),
   document.getElementById('root')
 );

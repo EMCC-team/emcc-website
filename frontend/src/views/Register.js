@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
+import { Link } from 'react-router';
 
 import '../fonts/Montserrat.css';
 
+import { Header, Footer } from '../components/Layout';
 import { Form, Group, Label, Input, Button, ErrorText } from '../components/Form';
 import Card from '../components/Card';
 
@@ -93,8 +95,9 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ minWidth: "300px", width: "fit-content" }}>
+      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+        <Header/>
+        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flex: "1" }}>
           <Card style={{ marginTop: "50px" }}>
             <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
               Create your EMCC&nbsp;account
@@ -126,11 +129,12 @@ class Register extends React.Component {
               </Group>
               <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button>
               <span>
-                Have an account? <a href="login">Login.</a>
+                Have an account? <Link to="login">Login.</Link>
               </span>
             </Form>
           </Card>
         </div>
+        <Footer/>
       </div>
     );
   }
