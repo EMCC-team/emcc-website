@@ -5,9 +5,19 @@ from webapp2_extras.auth import InvalidAuthIdError, InvalidPasswordError
 
 class RegisterUserHandler(BaseHandler):
     def post(self):
-        name = self.request.get('name')
-        email = self.request.get('email').lower()
-        password = self.request.get('password')
+        try:
+            j = json.loads(self.request.body)
+        except ValueError as e:
+            self.response.write(json.dumps({
+                'status': '400',
+                'error': 'Bad Request',
+                'message': 'Invalid json in body.'
+            }))
+            return
+
+        name = j.get('name')
+        email = j.get('email').lower()
+        password = j.get('password')
 
         if not name or not email or not password:
             self.response.status = '422'
@@ -24,6 +34,15 @@ class RegisterUserHandler(BaseHandler):
                 'status': '422',
                 'error': 'Unprocessable Entity',
                 'message': 'Invalid email.'
+            }))
+            return
+
+        if len(password) < 8:
+            self.response.status = '422'
+            self.response.write(json.dumps({
+                'status': '422',
+                'error': 'Unprocessable Entity',
+                'message': 'Password must be at least 8 characters.'
             }))
             return
 
@@ -46,10 +65,7 @@ class RegisterUserHandler(BaseHandler):
         self.response.write(json.dumps({
             'status': '422',
             'error': 'Unprocessable Entity',
-            'message': 'A user with that email address already exists.',
-            'data': {
-                'email': email
-            }
+            'message': 'A user with that email address already exists.'
         }))
 
 class LoginUserHandler(BaseHandler):

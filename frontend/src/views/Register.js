@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 import '../fonts/Montserrat.css';
 
@@ -27,6 +27,11 @@ class Register extends React.Component {
 
   registerUser(e) {
     e.preventDefault();
+    var k = "a";
+    Promise.resolve({}).then(function (value) {
+      k = 'b';
+    });
+    console.log(k);
 
     /* Preflight validation */
 
@@ -41,22 +46,23 @@ class Register extends React.Component {
     let { name, email, password } = this.state;
     email = email.trim(); // because why not
 
-    if (!name) {
-      nameErrorText = requiredError;
-    }
-    if (!email) {
-      emailErrorText = requiredError;
-    }
-    if (!password) {
-      passwordErrorText = requiredError;
-    }
+    this.setState({
+      nameErrorText: nameErrorText,
+      emailErrorText: emailErrorText,
+      passwordErrorText: passwordErrorText,
 
-    let validEmail = function validEmail(email) {
-      return isEmail(email);
-    }
-    let validPassword = function validPassword(password) {
-      return password.length >= 8;
-    }
+      nameErrorStyle: {},
+      emailErrorStyle: {},
+      passwordErrorStyle: {},
+    });
+
+    if (!name) { nameErrorText = requiredError; }
+    if (!email) { emailErrorText = requiredError; }
+    if (!password) { passwordErrorText = requiredError; }
+
+    let validEmail = function validEmail(email) { return isEmail(email); }
+    let validPassword = function validPassword(password) { return password.length >= 8; }
+
     if (email && !validEmail(email)) {
       emailErrorText = 'Enter a valid email address.'
     }
@@ -64,21 +70,52 @@ class Register extends React.Component {
       passwordErrorText = 'Password must be at least 8 characters.'
     }
 
-    this.setState({
-      nameErrorText: nameErrorText,
-      emailErrorText: emailErrorText,
-      passwordErrorText: passwordErrorText,
-
-      nameErrorStyle: nameErrorText ? inputError : {},
-      emailErrorStyle: emailErrorText ? inputError : {},
-      passwordErrorStyle: passwordErrorText ? inputError : {},
-    })
     if (nameErrorText || emailErrorText || passwordErrorText) {
-      return;
-    }
+      this.setState({
+        nameErrorText: nameErrorText,
+        emailErrorText: emailErrorText,
+        passwordErrorText: passwordErrorText,
 
+        nameErrorStyle: nameErrorText ? inputError : {},
+        emailErrorStyle: emailErrorText ? inputError : {},
+        passwordErrorStyle: passwordErrorText ? inputError : {},
+      });
+      return
+    }
     /* Fly */
-    axios.post();
+    axios.post('/api/auth/register', {
+      name: name,
+      email: email,
+      password: password
+    }).then(response => {
+      browserHistory.push('login');
+    }).catch(e => {
+      let error = e.response.data.message;
+      if (error === 'Fields name, email, password are required.') {
+        k = 'asdasd'
+        if (!name) { nameErrorText = requiredError; }
+        if (!email) { emailErrorText = requiredError; }
+        if (!password) { passwordErrorText = requiredError; }
+      }
+      if (error === 'Invalid email.') {
+        emailErrorText = 'Enter a valid email address.';
+      }
+      if (error === 'Password must be at least 8 characters.') {
+        passwordErrorText = 'Password must be at least 8 characters.';
+      }
+      if (error === 'A user with that email address already exists.') {
+        emailErrorText = 'A user with that email address already exists.';
+      }
+      this.setState({
+        nameErrorText: nameErrorText,
+        emailErrorText: emailErrorText,
+        passwordErrorText: passwordErrorText,
+
+        nameErrorStyle: nameErrorText ? inputError : {},
+        emailErrorStyle: emailErrorText ? inputError : {},
+        passwordErrorStyle: passwordErrorText ? inputError : {},
+      });
+    });
   }
 
   handleNameChange(e) {
@@ -129,7 +166,7 @@ class Register extends React.Component {
               </Group>
               <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button>
               <span>
-                Have an account? <Link to="login">Login.</Link>
+                Already have an account? <Link to="login">Login.</Link>
               </span>
             </Form>
           </Card>

@@ -45,6 +45,13 @@ class Login extends React.Component {
     let { email, password } = this.state;
     email = email.trim(); // because why not
 
+    this.setState({
+      emailErrorText: emailErrorText,
+      passwordErrorText: passwordErrorText,
+      emailErrorStyle: {},
+      passwordErrorStyle: {}
+    })
+
     if (!email) {
       emailErrorText = requiredError;
     }
@@ -55,28 +62,27 @@ class Login extends React.Component {
     let validEmail = function validEmail(email) {
       return isEmail(email);
     }
-    let validPassword = function validPassword(password) {
-      return password.length >= 8;
-    }
     if (email && !validEmail(email)) {
       emailErrorText = 'Enter a valid email address.'
     }
-    if (password && !validPassword(password)) {
-      passwordErrorText = 'Password must be at least 8 characters.'
-    }
 
-    this.setState({
-      emailErrorText: emailErrorText,
-      passwordErrorText: passwordErrorText,
-      emailErrorStyle: emailErrorText ? inputError : {},
-      passwordErrorStyle: passwordErrorText ? inputError : {}
-    })
     if (emailErrorText || passwordErrorText) {
-      return;
+      this.setState({
+        emailErrorText: emailErrorText,
+        passwordErrorText: passwordErrorText,
+        emailErrorStyle: emailErrorText ? inputError : {},
+        passwordErrorStyle: passwordErrorText ? inputError : {}
+      });
+      return
     }
 
     /* Fly */
-    axios.post();
+    axios.post('/api/auth/register', {
+      email: email,
+      password: password
+    }).then(response => {
+      
+    });
   }
 
   handleEmailChange(e) {
