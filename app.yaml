@@ -10,13 +10,15 @@ handlers:
 
 - url: /js
   static_dir: frontend/dist/js
+  expiration: '100d'
 
 - url: /css
   static_dir: frontend/dist/css
+  expiration: '100d'
 
 - url: /fonts
   static_dir: frontend/dist/fonts
-
+  expiration: '100d'
 
 - url: /.*
   static_files: frontend/dist/index.html

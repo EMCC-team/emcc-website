@@ -7,16 +7,12 @@ import './css/skeleton';
 import './fonts/Open-Sans.css';
 import './css/styles.css';
 
-import Register from './components/Register';
-import Login from './components/Login';
-import Home from './components/Home';
+import Register from './views/Register';
+import Login from './views/Login';
+import Home from './views/Home';
 
 // Debugging
 // console.clear()
-
-var root;
-document.body.insertBefore((root = document.createElement('div')), document.body.firstChild);
-root.style.minHeight = "100vh";
 
 render((
   <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
@@ -34,5 +30,5 @@ render((
 
     </footer>
   </div>),
-  root
+  document.getElementById('root')
 );

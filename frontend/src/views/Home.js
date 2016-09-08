@@ -1,14 +1,51 @@
 import React from 'react';
+import katex from 'katex';
 
 import '../fonts/Montserrat.css';
+import '../fonts/Computer-Modern.css';
 
-import { Container, Row, Columns } from './Layout';
-import { Button, Input } from './Form';
+import { Container, Row, Columns } from '../components/Layout';
+import { Button, Input } from '../components/Form';
 
 
 class Home extends React.Component {
   constructor(props){
     super(props);
+    document.title = 'Home | EMCC';
+
+    this.showAnswer = this.showAnswer.bind(this);
+    this.nextQuestion = this.nextQuestion.bind(this);
+
+    this.state = {
+      question: 0,
+      answerTextDisplay: 'none',
+      answerButtonDisplay: 'inline',
+      nextButtonDisplay: 'none'
+    };
+    this.state.questions = ['Teemu, Marcus, and Sander are signing documents. If they all work together, they would finish in 6 \
+    hours. If only Teemu and Sander work together, the work would be finished in 8 hours. If only Marcus \
+    and Sander work together, the work would be finished in 10 hours. How many hours would Sander \
+    take to finish signing if he worked alone?'];
+    this.state.answers = ['\\frac{120}{7}'];
+    this.state.answers = this.state.answers.map((answer) => katex.renderToString(answer));
+    console.log(this.state.answers);
+  }
+
+  showAnswer() {
+    this.setState({
+      answerTextDisplay: 'inline',
+      answerButtonDisplay: 'none',
+      nextButtonDisplay: 'inline'
+    })
+  }
+
+  nextQuestion() {
+    this.setState({
+      question: (this.state.question + 1) % this.state.questions.length,
+      answerTextDisplay: 'none',
+      answerButtonDisplay: 'inline',
+      nextButtonDisplay: 'none'
+    });
   }
 
   render() {
@@ -41,7 +78,7 @@ class Home extends React.Component {
     }
     return (
       <div style={{ height: "100%" }}>
-        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"/>
         <div id="hero" style={heroStyles}>
           <Container style={{ backdropFilter: "blusdr(5px)", filter: "brightness(200%)" }}>
             <h1 style={headingStyles}>EMCC</h1>
@@ -104,14 +141,19 @@ class Home extends React.Component {
                 <p style={{ fontFamily: "'Computer Modern Serif', serif" }}>
                   <span style={{ fontWeight: "bold" }}>2016 Team Test, Problem 9</span>
                   <br/>
-                  Teemu, Marcus, and Sander are signing documents. If they all work together, they would finish in 6
-                  hours. If only Teemu and Sander work together, the work would be finished in 8 hours. If only Marcus
-                  and Sander work together, the work would be finished in 10 hours. How many hours would Sander
-                  take to finish signing if he worked alone?
+                    {this.state.questions[this.state.question]}
                   <br/>
-                  <Input placeholder="Answer" style={{ marginTop: "5px", fontSize: "inherit", paddingLeft: "5px" }}></Input>
+                    <button onClick={this.showAnswer} style={{ display: this.state.answerButtonDisplay, fontSize: ".8em", marginTop: "10px",
+                      fontFamily: "Montserrat", fontWeight: "200" }}>Show answer</button>
+                    <span style={{ display: this.state.answerTextDisplay }}>Answer: </span>
+                    <span style={{ display: this.state.answerTextDisplay }} dangerouslySetInnerHTML={{__html: this.state.answers[this.state.question]}}></span>
+                    <button onClick={this.nextQuestion} style={{ display: this.state.nextButtonDisplay, fontSize: ".8em", marginTop: "10px",
+                      fontFamily: "Montserrat", fontWeight: "200", marginLeft: "15px" }}>Next question</button>
                 </p>
 
+                <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
+                  Register now!
+                </h3>
                 <div style={{ textAlign: "center" }}>
                   <a href="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
                     fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</a>

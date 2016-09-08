@@ -3,13 +3,14 @@ import classNames from 'classnames';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
 
-import { Container, Row, Columns } from './Layout';
-import { Form, Group, Label, ErrorText, Input, Button } from './Form';
-import Card from './Card';
+import { Container, Row, Columns } from '../components/Layout';
+import { Form, Group, Label, ErrorText, Input, Button } from '../components/Form';
+import Card from '../components/Card';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
+    document.title = "Login | EMCC";
     // Binding is necessary because otherwise the functions inhert an
     // incorrect `this` value.
     this.loginUser = this.loginUser.bind(this);

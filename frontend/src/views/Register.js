@@ -4,12 +4,13 @@ import isEmail from 'validator/lib/isEmail';
 
 import '../fonts/Montserrat.css';
 
-import { Form, Group, Label, Input, Button, ErrorText } from './Form';
-import Card from './Card';
+import { Form, Group, Label, Input, Button, ErrorText } from '../components/Form';
+import Card from '../components/Card';
 
 class Register extends React.Component {
   constructor(props) {
     super(props);
+    document.title = "Register | EMCC";
     this.registerUser = this.registerUser.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);

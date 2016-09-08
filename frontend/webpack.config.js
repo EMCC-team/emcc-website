@@ -3,7 +3,6 @@ var autoprefixer = require('autoprefixer');
 
 var HtmlPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CleanPlugin = require('clean-webpack-plugin')
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 var config = {
@@ -57,7 +56,7 @@ var config = {
         },
         {
             test: /\.woff2$|\.woff$|\.otf$|\.ttf$/,
-            loader: 'file?name=/fonts/[name].[ext]'
+            loader: 'file?name=/fonts/[name].[hash].[ext]'
         }
       ]
     },
@@ -76,8 +75,7 @@ var config = {
     plugins: [
         new CommonsChunkPlugin({name: 'vendor', filename: 'js/vendor.[chunkhash].js', minChunks: Infinity}),
         new ExtractTextPlugin("css/[name].[chunkhash].css", {allChunks: true}),
-        new CleanPlugin(['dist']),
-        new HtmlPlugin({chunks: ['vendor', 'main']})
+        new HtmlPlugin({chunks: ['vendor', 'main'], template: 'src/index.ejs'})
     ],
 
     postcss: function() {
