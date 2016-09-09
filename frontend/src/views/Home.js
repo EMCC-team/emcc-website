@@ -81,7 +81,7 @@ class Home extends React.Component {
         <div style={{ flex: "1", height: "100%" }}>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"/>
           <div id="hero" style={heroStyles}>
-            <Container style={{ backdropFilter: "blusdr(5px)", filter: "brightness(200%)" }}>
+            <Container>
               <h1 style={headingStyles}>EMCC</h1>
               <h3 style={subheadingStyles}>The Exeter Math Club&nbsp;Competition</h3>
             </Container>

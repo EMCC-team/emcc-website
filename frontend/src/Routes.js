@@ -29,21 +29,14 @@ class Test extends React.Component {
 }
 
 class Routes extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
-    axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data})
-    })
-  }
-
   render() {
     return (
       <Router history={browserHistory}>
         <Route path="/" component={Home}/>
         <Route path="/">
-          <Route path="register"><Register/></Route>
-          <Route path="login"><Login/></Route>
+          <Route path="register" component={Register}/>
+          <Route path="login" component={Login}/>
+          <Route path="test" component={Test}/>
           <Route path="*"/>
         </Route>
       </Router>
