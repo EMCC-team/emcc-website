@@ -70,8 +70,18 @@ class RegisterUserHandler(BaseHandler):
 
 class LoginUserHandler(BaseHandler):
     def post(self):
-        email = self.request.get('email').lower()
-        password = self.request.get('password')
+        try:
+            j = json.loads(self.request.body)
+        except ValueError as e:
+            self.response.write(json.dumps({
+                'status': '400',
+                'error': 'Bad Request',
+                'message': 'Invalid json in body.'
+            }))
+            return
+
+        email = j.get('email').lower()
+        password = j.get('password')
         try:
             u = self.auth.get_user_by_password('own:' + email, password, remember=True)
         except InvalidAuthIdError as e:
@@ -89,3 +99,11 @@ class LoginUserHandler(BaseHandler):
                 'error': 'Unauthorized',
                 'message': 'Incorrect password.',
             }))
+
+class LogoutUserHandler(BaseHandler):
+    def post(self):
+        self.auth.unset_session()
+
+class CurrentUserHandler(BaseHandler):
+    def get(self):
+        self.response.write(self.user_info)

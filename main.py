@@ -1,6 +1,6 @@
 import webapp2
 
-from app.handlers.Authentication import RegisterUserHandler, LoginUserHandler
+from app.handlers.Authentication import RegisterUserHandler, LoginUserHandler, LogoutUserHandler, CurrentUserHandler
 
 config = {
     'webapp2_extras.auth': {
@@ -14,5 +14,7 @@ config = {
 
 app = webapp2.WSGIApplication([
     ('/api/auth/register', RegisterUserHandler),
-    ('/api/auth/login', LoginUserHandler)
+    ('/api/auth/login', LoginUserHandler),
+    ('/api/auth/logout', LogoutUserHandler),
+    ('/api/auth/token', CurrentUserHandler)
 ], debug=True, config=config)

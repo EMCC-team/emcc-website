@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 import { Header, Footer } from '../components/Layout';
 import { Form, Group, Label, ErrorText, Input, Button } from '../components/Form';
@@ -75,13 +75,15 @@ class Login extends React.Component {
       });
       return
     }
-
+    console.log(email);
     /* Fly */
-    axios.post('/api/auth/register', {
+    axios.post('/api/auth/login', {
       email: email,
       password: password
     }).then(response => {
-      
+      this.props.router.push('test');
+    }).catch(e => {
+      console.log(e.response.data.message);
     });
   }
 
@@ -131,4 +133,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

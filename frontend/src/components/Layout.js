@@ -35,13 +35,23 @@ class Columns extends React.Component {
 }
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (<header style={{ backgroundColor: "rgba(140, 0, 0, 1)", height: "75px",
               fontFamily: "Montserrat", display: "flex", alignItems: "center",
-              boxShadow: '0 1px 6px rgba(0,0,0,.5)' }}>
-      <h2 style={{ fontWeight: "100", marginBottom: "0px", marginLeft: "5px" }}>
+              boxShadow: '0 1px 6px rgba(0,0,0,.5)', color: "#EEEEEE" }}>
+      <h2 style={{ fontWeight: "100", marginBottom: "0px", marginLeft: "14px" }}>
         <Link to="/" style={{ color: "#EEEEEE", textDecoration: "none" }}>EMCC</Link>
       </h2>
+      <span style={{ fontWeight: "200", marginLeft: "auto",
+        marginRight: "14px", fontSize: "1em" }}>
+        {this.state.name ? `You are logged in as ${this.state.name}.` :
+        <Link to="login" style={{ color: "#EEEEEE", textDecoration: "none" }}>Login</Link> }
+      </span>
     </header>);
   }
 }

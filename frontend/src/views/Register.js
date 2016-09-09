@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
-import { Link, browserHistory } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 import '../fonts/Montserrat.css';
 
@@ -27,12 +27,7 @@ class Register extends React.Component {
 
   registerUser(e) {
     e.preventDefault();
-    var k = "a";
-    Promise.resolve({}).then(function (value) {
-      k = 'b';
-    });
-    console.log(k);
-
+    console.log(this.props)
     /* Preflight validation */
 
     // Definitions
@@ -88,7 +83,7 @@ class Register extends React.Component {
       email: email,
       password: password
     }).then(response => {
-      browserHistory.push('login');
+      this.props.router.push('login');
     }).catch(e => {
       let error = e.response.data.message;
       if (error === 'Fields name, email, password are required.') {
@@ -177,4 +172,4 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);

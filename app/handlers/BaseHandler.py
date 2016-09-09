@@ -38,8 +38,8 @@ class BaseHandler(webapp2.RequestHandler):
         """
         user, timestamp = \
             self.auth.store.user_model.get_by_auth_token(
-                    self.user['user_id'],
-                    self.user['token']) if self.user else (None, None)
+                    self.user_info['user_id'],
+                    self.user_info['token']) if self.user_info else (None, None)
 
         return user
 
