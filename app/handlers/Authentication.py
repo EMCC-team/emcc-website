@@ -107,7 +107,7 @@ class LogoutUserHandler(BaseHandler):
 class CurrentUserHandler(BaseHandler):
     def get(self):
         if (self.user_info):
-            self.response.write(self.user_info)
+            self.response.write(json.dumps(self.user_info))
         else:
             self.response.status = '401'
             self.response.write(json.dumps({

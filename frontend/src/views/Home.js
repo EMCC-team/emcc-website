@@ -85,7 +85,7 @@ class Home extends React.Component {
             <h1 style={headingStyles}>EMCC</h1>
             <h3 style={subheadingStyles}>The Exeter Math Club&nbsp;Competition</h3>
             <h5 style={subheadingStyles}>January 21, 2017, Phillips Exeter Academy</h5>
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center", marginBottom: "10vh" }}>
               <Link to="login" className="button" style={{ color: "#EEEEEE", margin: "auto", display: "inline", fontSize: "1.2em",
                 fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
               <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
@@ -158,7 +158,7 @@ class Home extends React.Component {
                     <button onClick={this.nextQuestion} style={{ display: this.state.nextButtonDisplay, fontSize: ".8em", marginTop: "10px",
                       fontFamily: "Montserrat", fontWeight: "200", marginLeft: "15px" }}>Next question</button>
                 </p>
-                
+
                 <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
                   Register now!
                 </h3>

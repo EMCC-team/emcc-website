@@ -52,15 +52,18 @@ class ViewContainer extends React.Component {
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.logout = this.logout.bind(this);
+
     this.state = {};
     axios.get('/api/auth/token').then(response => {
       this.setState({user: response.data})
-      console.log(response.data);
-    });
+    }).catch(function(){});
   }
-  
+
   logout(e) {
-    axios.post('/api/auth/logout');
+    axios.post('/api/auth/logout').then(response => {
+      this.setState({user: undefined});
+    });
   }
 
   render() {
@@ -73,9 +76,9 @@ class Header extends React.Component {
         </h2>
         <span style={{ fontWeight: "200", marginLeft: "auto",
           marginRight: "20px", fontSize: "1em" }}>
-          {this.state.user ? 
+          {this.state.user ?
           <span>
-              Logged in as {this.state.user}.
+              Logged in as {this.state.user.name}.
               &nbsp;|&nbsp;
             <Link to="/" style={{ color: "#EEEEEE", textDecoration: "none" }} onClick={this.logout}>logout</Link>
           </span>
@@ -96,11 +99,11 @@ let JaneStreetLogo = require('../assets/janestreetlogo.png')
 class Footer extends React.Component {
   render() {
     return (
-      <footer style={{ backgroundColor: "rgba(140, 0, 0, 1)", marginTop: "50px", 
+      <footer style={{ backgroundColor: "rgba(140, 0, 0, 1)", marginTop: "50px",
                 color: "#EEEEEE", fontFamily: "Montserrat", padding: "20px" }}>
           <h6 style={{ fontWeight: "200", float: "left", margin: "0" }}>Copyright &copy; Exeter Math Club 2016.</h6>
           <h6 style={{ fontWeight: "200", float: "right", margin: "0" }}>
-            <span style={{ marginRight: "15px" }}>Sponsored by Jane Street (c).</span>
+            <span style={{ marginRight: "15px" }}>Sponsored by Jane Street.</span>
             <a href="http://janestreet.com">
               <img id="jane_logo" style={{ filter: "invert(100%)", verticalAlign: "middle" }} src={JaneStreetLogo}/>
             </a>
