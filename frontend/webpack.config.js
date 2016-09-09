@@ -52,7 +52,7 @@ var config = {
         },
         {
             test: /\.jpe?g$|\.png$/,
-            loader: 'file'
+            loader: 'url-loader?limit=8192'
         },
         {
             test: /\.woff2$|\.woff$|\.otf$|\.ttf$/,

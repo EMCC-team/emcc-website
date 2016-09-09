@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router';
 
 import '../fonts/Montserrat.css';
 
-import { Header, Footer } from '../components/Layout';
+import { ViewContainer } from '../components/Layout';
 import { Form, Group, Label, Input, Button, ErrorText } from '../components/Form';
 import Card from '../components/Card';
 
@@ -127,14 +127,13 @@ class Register extends React.Component {
 
   render() {
     return (
-      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-        <Header/>
+      <ViewContainer>
         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flex: "1" }}>
           <Card style={{ marginTop: "50px" }}>
             <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
               Create your EMCC&nbsp;account
             </h5>
-            <Form name="register" onSubmit={this.registerUser} style={{ fontSize: "inherit" }}>
+            <Form name="register" onSubmit={this.registerUser} style={{ fontSize: "inherit" }} noValidate>
               <Group name="name">
                 <Label>
                   Name<br/>
@@ -166,8 +165,7 @@ class Register extends React.Component {
             </Form>
           </Card>
         </div>
-        <Footer/>
-      </div>
+      </ViewContainer>
     );
   }
 }

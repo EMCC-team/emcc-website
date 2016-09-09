@@ -11,6 +11,7 @@ import './css/styles.css';
 import Register from './views/Register';
 import Login from './views/Login';
 import Home from './views/Home';
+import Contest from './views/Contest';
 
 import axios from 'axios';
 class Test extends React.Component {
@@ -37,6 +38,7 @@ class Routes extends React.Component {
           <Route path="register" component={Register}/>
           <Route path="login" component={Login}/>
           <Route path="test" component={Test}/>
+          <Route path="contest" component={Contest}/>
           <Route path="*"/>
         </Route>
       </Router>

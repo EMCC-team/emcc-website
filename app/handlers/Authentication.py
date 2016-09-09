@@ -106,4 +106,12 @@ class LogoutUserHandler(BaseHandler):
 
 class CurrentUserHandler(BaseHandler):
     def get(self):
-        self.response.write(self.user_info)
+        if (self.user_info):
+            self.response.write(self.user_info)
+        else:
+            self.response.status = '401'
+            self.response.write(json.dumps({
+                'status': '401',
+                'error': 'Unauthorized',
+                'message': 'You are not logged in.',
+            }))

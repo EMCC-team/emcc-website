@@ -10,6 +10,7 @@ class BaseHandler(webapp2.RequestHandler):
             An Auth object (webapp2_extras.auth.Auth) containing
             the authorization of the current user.
         """
+        print auth.get_auth(request=self.request).get_user_by_session()
         return auth.get_auth(request=self.request)
 
     @webapp2.cached_property
