@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import classNames from 'classnames';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, withRouter } from 'react-router';
 
 class Container extends React.Component {
   render() {
@@ -49,7 +49,27 @@ class ViewContainer extends React.Component {
   }
 }
 
-class Navigation extends React.Component {
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.logout = this.logout.bind(this);
+
+    this.state = {};
+    axios.get('/api/auth/token').then(response => {
+      this.setState({user: response.data})
+    }).catch(response => {
+      this.setState({user: undefined});
+    });
+  }
+
+  logout(e) {
+    e.preventDefault();
+    axios.post('/api/auth/logout').then(response => {
+      this.setState({user: undefined});
+      this.props.router.push('/');
+    });
+  }
+
   render() {
     let navStyle = {
       listStyle: "none",
@@ -61,41 +81,10 @@ class Navigation extends React.Component {
       color: "inherit",
       padding: "15px 10px",
       margin: "initial 0px"
-    };
+    }
     let activeLinkStyle = {
       backgroundColor: "rgb(110, 0, 0)"
-    };
-    <nav style={navStyle}>
-      <li style={{ marginBottom: "0px" }}>
-        <it>
-          <Link style={linkStyle} activeStyle={activeLinkStyle} to="contest">Contest Information</Link>
-        </it>
-        <it>
-          <Link style={linkStyle} activeStyle={activeLinkStyle} to="dashboard">Dashboard</Link>
-        </it>
-      </li>
-    </nav>
-  }
-}
-
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.logout = this.logout.bind(this);
-
-    this.state = {};
-    axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data})
-    }).catch(function(){});
-  }
-
-  logout(e) {
-    axios.post('/api/auth/logout').then(response => {
-      this.setState({user: undefined});
-    });
-  }
-
-  render() {
+    }
     return (
       <header style={{ backgroundColor: "rgba(140, 0, 0, 1)", height: "75px", zIndex: "100",
                 fontFamily: "Montserrat", display: "flex", alignItems: "center", width: "100%",
@@ -103,6 +92,17 @@ class Header extends React.Component {
         <h2 style={{ fontWeight: "100", margin: "0px 14px" }}>
           <Link to="/" style={{ color: "#EEEEEE", textDecoration: "none" }}>EMCC</Link>
         </h2>
+
+        <nav style={navStyle}>
+          <li style={{ marginBottom: "0px" }}>
+            <it>
+              <Link style={linkStyle} activeStyle={activeLinkStyle} to="contest">Contest Information</Link>
+            </it>
+            {this.state.user ? <it>
+              <Link style={linkStyle} activeStyle={activeLinkStyle} to="dashboard">Dashboard</Link>
+            </it> : undefined}
+          </li>
+        </nav>
 
         <span style={{ fontWeight: "200", marginLeft: "auto",
           marginRight: "20px", fontSize: "1em" }}>
@@ -124,6 +124,7 @@ class Header extends React.Component {
     );
   }
 }
+Header = withRouter(Header);
 
 let JaneStreetLogo = require('../assets/janestreetlogo.png')
 class Footer extends React.Component {

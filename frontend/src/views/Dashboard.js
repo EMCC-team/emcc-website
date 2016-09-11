@@ -1,6 +1,6 @@
 import React from 'react';
-import katex from 'katex';
-import { Link } from 'react-router';
+import axios from 'axios';
+import { Link, withRouter } from 'react-router';
 
 import '../fonts/Computer-Modern.css';
 
@@ -8,7 +8,17 @@ import { Container, Row, Columns, Header, Footer, ViewContainer } from '../compo
 import { Button, Input } from '../components/Form';
 
 
-class Home extends React.Component {
+class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+    axios.get('/api/auth/token').then(response => {
+      this.setState({user: response.data})
+    }).catch(response => {
+      this.setState({user: undefined});
+      this.props.router.push('/');
+    });
+  }
+
   render() {
     return (
       <ViewContainer>
@@ -17,4 +27,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default withRouter(Dashboard);

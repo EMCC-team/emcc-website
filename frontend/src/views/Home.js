@@ -28,7 +28,6 @@ class Home extends React.Component {
     take to finish signing if he worked alone?'];
     this.state.answers = ['\\frac{120}{7}'];
     this.state.answers = this.state.answers.map((answer) => katex.renderToString(answer));
-    console.log(this.state.answers);
   }
 
   showAnswer() {

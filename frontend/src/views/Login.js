@@ -25,8 +25,10 @@ class Login extends React.Component {
     };
 
     axios.get('/api/auth/token').then(response => {
-      this.props.router.push('/dashboard');
-    }).catch(function(){});
+      this.setState({user: response.data})
+    }).catch(response => {
+      this.setState({user: undefined});
+    });
   }
 
   loginUser(e) {
@@ -71,7 +73,6 @@ class Login extends React.Component {
       });
       return
     }
-    console.log(email);
     /* Fly */
     axios.post('/api/auth/login', {
       email: email,

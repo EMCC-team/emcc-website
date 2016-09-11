@@ -25,8 +25,10 @@ class Register extends React.Component {
     };
 
     axios.get('/api/auth/token').then(response => {
-      this.props.router.push('/dashboard');
-    }).catch(function(){});
+      this.setState({user: response.data})
+    }).catch(response => {
+      this.setState({user: undefined});
+    });
   }
 
   registerUser(e) {
