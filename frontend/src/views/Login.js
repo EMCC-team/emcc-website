@@ -21,12 +21,12 @@ class Login extends React.Component {
     // Storing styles like this is really ugly but it works.
     this.state = {
       email:    '',
-      password: '',
-      emailErrorStyle: {},
-      passwordErrorStyle: {},
-      emailErrorText: '',
-      passwordErrorText: ''
+      password: ''
     };
+
+    axios.get('/api/auth/token').then(response => {
+      this.props.router.push('/dashboard');
+    }).catch(function(){});
   }
 
   loginUser(e) {
@@ -52,12 +52,8 @@ class Login extends React.Component {
       passwordErrorStyle: {}
     })
 
-    if (!email) {
-      emailErrorText = requiredError;
-    }
-    if (!password) {
-      passwordErrorText = requiredError;
-    }
+    if (!email) { emailErrorText = requiredError; }
+    if (!password) { passwordErrorText = requiredError; }
 
     let validEmail = function validEmail(email) {
       return isEmail(email);
@@ -81,9 +77,26 @@ class Login extends React.Component {
       email: email,
       password: password
     }).then(response => {
-      this.props.router.push('/');
+      this.props.router.push('/dashboard');
     }).catch(e => {
-      console.log(e.response.data.message);
+      let error = e.response.data.message;
+      if (error === 'Fields email, password are required.') {
+        if (!email) { emailErrorText = requiredError; }
+        if (!password) { passwordErrorText = requiredError; }
+      }
+      if (error === 'A user with that email does not exist.') {
+        emailErrorText = 'A user with that email does not exist.';
+      }
+      if (error === 'Incorrect password.') {
+        passwordErrorText = 'Incorrect password.';
+      }
+      this.setState({
+        emailErrorText: emailErrorText,
+        passwordErrorText: passwordErrorText,
+
+        emailErrorStyle: emailErrorText ? inputError : {},
+        passwordErrorStyle: passwordErrorText ? inputError : {},
+      });
     });
   }
 

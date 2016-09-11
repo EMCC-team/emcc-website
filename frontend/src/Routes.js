@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
 import './css/skeleton';
 
@@ -12,6 +12,7 @@ import Register from './views/Register';
 import Login from './views/Login';
 import Home from './views/Home';
 import Contest from './views/Contest';
+import Dashboard from './views/Dashboard';
 
 import axios from 'axios';
 class Test extends React.Component {
@@ -33,12 +34,12 @@ class Routes extends React.Component {
   render() {
     return (
       <Router history={browserHistory}>
-        <Route path="/" component={Home}/>
         <Route path="/">
+          <IndexRoute component={Home}/>
           <Route path="register" component={Register}/>
           <Route path="login" component={Login}/>
-          <Route path="test" component={Test}/>
           <Route path="contest" component={Contest}/>
+          <Route path="dashboard" component={Dashboard}/>
           <Route path="*"/>
         </Route>
       </Router>

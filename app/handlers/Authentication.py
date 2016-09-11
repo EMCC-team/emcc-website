@@ -82,6 +82,15 @@ class LoginUserHandler(BaseHandler):
 
         email = j.get('email').lower()
         password = j.get('password')
+
+        if not email or not password:
+            self.response.status = '422'
+            self.response.write(json.dumps({
+                'status': '422',
+                'error': 'Unprocessable Entity',
+                'message': 'Fields email, password are required.'
+            }))
+            return
         try:
             u = self.auth.get_user_by_password('own:' + email, password, remember=True)
         except InvalidAuthIdError as e:

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import classNames from 'classnames';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 class Container extends React.Component {
   render() {
@@ -49,6 +49,35 @@ class ViewContainer extends React.Component {
   }
 }
 
+class Navigation extends React.Component {
+  render() {
+    let navStyle = {
+      listStyle: "none",
+      fontWeight: "300",
+    };
+    let linkStyle = {
+      textDecoration: "none",
+      display: "inline-block",
+      color: "inherit",
+      padding: "15px 10px",
+      margin: "initial 0px"
+    };
+    let activeLinkStyle = {
+      backgroundColor: "rgb(110, 0, 0)"
+    };
+    <nav style={navStyle}>
+      <li style={{ marginBottom: "0px" }}>
+        <it>
+          <Link style={linkStyle} activeStyle={activeLinkStyle} to="contest">Contest Information</Link>
+        </it>
+        <it>
+          <Link style={linkStyle} activeStyle={activeLinkStyle} to="dashboard">Dashboard</Link>
+        </it>
+      </li>
+    </nav>
+  }
+}
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -70,10 +99,11 @@ class Header extends React.Component {
     return (
       <header style={{ backgroundColor: "rgba(140, 0, 0, 1)", height: "75px", zIndex: "100",
                 fontFamily: "Montserrat", display: "flex", alignItems: "center", width: "100%",
-                boxShadow: '0 1px 6px rgba(0,0,0,.5)', color: "#EEEEEE", position: "fixed" }}>
-        <h2 style={{ fontWeight: "100", marginBottom: "0px", marginLeft: "14px" }}>
+                boxShadow: '0 1px 6px rgba(0,0,0,.8)', color: "#EEEEEE", position: "fixed" }}>
+        <h2 style={{ fontWeight: "100", margin: "0px 14px" }}>
           <Link to="/" style={{ color: "#EEEEEE", textDecoration: "none" }}>EMCC</Link>
         </h2>
+
         <span style={{ fontWeight: "200", marginLeft: "auto",
           marginRight: "20px", fontSize: "1em" }}>
           {this.state.user ?
@@ -100,8 +130,9 @@ class Footer extends React.Component {
   render() {
     return (
       <footer style={{ backgroundColor: "rgba(140, 0, 0, 1)", marginTop: "50px",
-                color: "#EEEEEE", fontFamily: "Montserrat", padding: "20px" }}>
-          <h6 style={{ fontWeight: "200", float: "left", margin: "0" }}>Copyright &copy; Exeter Math Club 2016.</h6>
+                color: "#EEEEEE", fontFamily: "Montserrat", padding: "20px",
+                boxShadow: "rgba(0, 0, 0, 0.8) 0px 1px 6px", position: "relative" }}>
+          <h6 style={{ fontWeight: "200", float: "left", margin: "0" }}> &copy; Copyright 2016 Exeter Math Club. All&nbsp;rights&nbsp;reserved.</h6>
           <h6 style={{ fontWeight: "200", float: "right", margin: "0" }}>
             <span style={{ marginRight: "15px" }}>Sponsored by Jane Street.</span>
             <a href="http://janestreet.com">

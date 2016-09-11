@@ -23,6 +23,10 @@ class Register extends React.Component {
       email:            '',
       password:         ''
     };
+
+    axios.get('/api/auth/token').then(response => {
+      this.props.router.push('/dashboard');
+    }).catch(function(){});
   }
 
   registerUser(e) {
@@ -87,7 +91,6 @@ class Register extends React.Component {
     }).catch(e => {
       let error = e.response.data.message;
       if (error === 'Fields name, email, password are required.') {
-        k = 'asdasd'
         if (!name) { nameErrorText = requiredError; }
         if (!email) { emailErrorText = requiredError; }
         if (!password) { passwordErrorText = requiredError; }
