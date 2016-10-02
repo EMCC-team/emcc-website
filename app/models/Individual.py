@@ -18,6 +18,7 @@ class Individual(ndb.Model):
     name = ndb.StringProperty(required=True)
     _paid = ndb.BooleanProperty(default=False)
     team = ndb.KeyProperty(kind=Team, default=None)
+    year = ndb.IntegerPropery(required=True)
     
     @property
     def paid(self):

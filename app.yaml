@@ -8,6 +8,10 @@ handlers:
 - url: /api/.*
   script: main.app
 
+- url: /assets
+  static_dir: frontend/dist/assets
+  expiration: '100d'
+  
 - url: /js
   static_dir: frontend/dist/js
   expiration: '100d'

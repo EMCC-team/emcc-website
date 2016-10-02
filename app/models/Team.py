@@ -15,3 +15,4 @@ class Team(ndb.Model):
     name = ndb.StringProperty(required=True)
     school = ndb.StringProperty(required=True)
     paid = ndb.BooleanProperty(default=False)
+    year = ndb.IntegerPropery(required=True)

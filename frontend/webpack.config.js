@@ -51,8 +51,8 @@ var config = {
             loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
         },
         {
-            test: /\.jpe?g$|\.png$/,
-            loader: 'url-loader?limit=8192'
+            test: /\.jpg$|\.jpeg$|\.png$/,
+            loader: 'url-loader?limit=8192&name=/assets/[name].[hash].[ext]'
         },
         {
             test: /\.woff2$|\.woff$|\.otf$|\.ttf$/,

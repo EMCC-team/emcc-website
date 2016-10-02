@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 class Label extends React.Component {
   render() {
@@ -80,10 +79,8 @@ class Form extends React.Component {
   render() {
     let { onSubmit, children, name, formName, ...other } = this.props;
     let formStyle = {
-      maxWidth: '300px',
       margin: '0px auto'
     };
-
     return (
       <form {...other} style={{ ...formStyle, ...other.style }} onSubmit={onSubmit}>
         {this.addPropsToChildren(children)}

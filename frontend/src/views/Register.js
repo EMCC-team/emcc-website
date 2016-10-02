@@ -8,6 +8,7 @@ import '../fonts/Montserrat.css';
 import { ViewContainer } from '../components/Layout';
 import { Form, Group, Label, Input, Button, ErrorText } from '../components/Form';
 import Card from '../components/Card';
+import '../css/Form.scss';
 
 class Register extends React.Component {
   constructor(props) {
@@ -25,7 +26,8 @@ class Register extends React.Component {
     };
 
     axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data})
+      this.setState({user: response.data});
+      this.props.router.push('dashboard');
     }).catch(response => {
       this.setState({user: undefined});
     });
@@ -134,7 +136,7 @@ class Register extends React.Component {
     return (
       <ViewContainer>
         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flex: "1" }}>
-          <Card style={{ marginTop: "50px" }}>
+          <Card className="form" style={{ marginTop: "50px" }}>
             <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
               Create your EMCC&nbsp;account
             </h5>

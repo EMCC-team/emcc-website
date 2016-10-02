@@ -13,6 +13,8 @@ import Login from './views/Login';
 import Home from './views/Home';
 import Contest from './views/Contest';
 import Dashboard from './views/Dashboard';
+import Travel from './views/Travel';
+import Contact from './views/Contact';
 
 import axios from 'axios';
 class Test extends React.Component {
@@ -40,6 +42,8 @@ class Routes extends React.Component {
           <Route path="login" component={Login}/>
           <Route path="contest" component={Contest}/>
           <Route path="dashboard" component={Dashboard}/>
+          <Route path="travel" component={Travel}/>
+          <Route path="contact" component={Contact}/>
           <Route path="*"/>
         </Route>
       </Router>

@@ -1,12 +1,14 @@
 import React from 'react';
-import classNames from 'classnames';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
 import { Link, withRouter } from 'react-router';
 
+import '../fonts/Montserrat.css';
+
 import { ViewContainer } from '../components/Layout';
 import { Form, Group, Label, ErrorText, Input, Button } from '../components/Form';
 import Card from '../components/Card';
+import '../css/Form.scss';
 
 class Login extends React.Component {
   constructor(props) {
@@ -25,7 +27,8 @@ class Login extends React.Component {
     };
 
     axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data})
+      this.setState({user: response.data});
+      this.props.router.push('dashboard');
     }).catch(response => {
       this.setState({user: undefined});
     });
@@ -112,7 +115,7 @@ class Login extends React.Component {
     return (
       <ViewContainer>
         <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Card style={{ marginTop: "50px" }}>
+          <Card className="form" style={{ marginTop: "50px" }}>
             <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
               Log in to EMCC
             </h5>
