@@ -8,7 +8,7 @@ class Card extends React.Component {
       padding: '40px 40px 40px',
     };
     return (
-      <div {...other} style={{ ...divStyle, ...other.style }} className={className}>
+      <div {...other} style={{ margin: "10px", ...divStyle, ...other.style }} className={className}>
         {children}
       </div>
     );

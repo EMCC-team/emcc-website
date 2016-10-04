@@ -24,7 +24,7 @@ class Input extends React.Component {
     let { name, type, onChange, ...other } = this.props;
     return (
       <input {...other} id={name} type={type}
-             style={{ ...other.style }} onChange={onChange} />
+             style={{ ...other.style }} onChange={onChange}/>
     );
   }
 }

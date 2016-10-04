@@ -7,6 +7,7 @@ import './css/skeleton';
 import './fonts/Montserrat.css';
 import './fonts/Open-Sans.css';
 import './css/styles.css';
+import './fonts/Material-Icons.css';
 
 import Register from './views/Register';
 import Login from './views/Login';

@@ -20,7 +20,6 @@ class Login extends React.Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
 
-    // Storing styles like this is really ugly but it works.
     this.state = {
       email:    '',
       password: ''

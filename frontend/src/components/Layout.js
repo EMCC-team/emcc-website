@@ -3,8 +3,6 @@ import axios from 'axios';
 import classNames from 'classnames';
 import { Link, NavLink, withRouter } from 'react-router';
 
-import '../fonts/Material-Icons.css';
-
 class Container extends React.Component {
   render() {
     let { children, ...other } = this.props;
@@ -58,7 +56,7 @@ class Header extends React.Component {
     this.toggleDropdown = this.toggleDropdown.bind(this);
     this.getNavLinks = this.getNavLinks.bind(this);
 
-    this.update = this.forceUpdate.bind(this);
+    this.update = () => this.forceUpdate();
     window.addEventListener('resize', this.update);
     this.state = { dropdownVisible: false };
     axios.get('/api/auth/token').then(response => {
@@ -102,8 +100,8 @@ class Header extends React.Component {
     else {
       return (
         <div key={10} style={{ width: "fit-content" }}>
-          <a key={11} style={linkStyle} href="#" onClick={this.toggleDropdown}>Menu
-            <i style={{ verticalAlign: "middle" }} className="material-icons">expand_more</i></a>
+          <a key={11} style={linkStyle} href="#" onClick={this.toggleDropdown}>
+          {window.innerWidth < 380 ? "" : "Menu"}<i style={{ verticalAlign: "middle" }} className="material-icons">arrow_drop_down</i></a>
           <ul key={12} style={{ position: "absolute", backgroundColor: "rgb(140, 0, 0)",
                        listStyle: "none", width: "110px",
                        display: this.state.dropdownVisible ? "block" : "none"}}>

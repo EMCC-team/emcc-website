@@ -65,7 +65,7 @@ class Home extends React.Component {
     }
     let headingStyles = {
       fontWeight: '100',
-      fontSize: '20rem',
+      fontSize: '20vw',
       marginBottom: '4px'
     }
     let subheadingStyles = {
@@ -162,9 +162,10 @@ class Home extends React.Component {
                   Register now!
                 </h3>
                 <div style={{ textAlign: "center" }}>
-                  <Link to="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
+                  <Link to="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1em",
                     fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
-                  <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
+
+                  <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
                     fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</Link>
                 </div>
               </Columns>
