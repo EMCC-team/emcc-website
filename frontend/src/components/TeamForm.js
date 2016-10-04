@@ -28,6 +28,10 @@ class TeamView extends React.Component {
     this.state.unsavedTeamname = this.state.teamname;
   }
 
+  componentWillMount() {
+    this.props.updatePrice(this.price(this.state.members));
+  }
+
   updateMember(memberIndex) {
     return (e) => {
       e.preventDefault();
@@ -45,10 +49,10 @@ class TeamView extends React.Component {
   price(members) {
     let length = members.filter((e) => e).length;
     if (length === 4) {
-      return "$" + 50;
+      return 50;
     }
     else {
-      return "$" + length * 15;
+      return length * 15;
     }
   }
 
@@ -60,10 +64,6 @@ class TeamView extends React.Component {
 
   cancel(e) {
     e.preventDefault();
-    if (!this.state.teamname) {
-      this.props.del();
-      return;
-    }
     this.setState({ unsavedTeamname: "", unsavedMembers: ["", "", "", ""], expanded: false });
   }
 
@@ -99,13 +99,15 @@ class TeamView extends React.Component {
       });
       return
     }
-    this.setState({ teamname: unsavedTeamname, members: unsavedMembers, expanded: false });
+    this.props.updatePrice(this.price(unsavedMembers));
+    this.setState({ teamname: unsavedTeamname, members: unsavedMembers, expanded: false,
+                    unsavedTeamname: "", unsavedMembers: ["", "", "", ""] });
   }
 
   render() {
     let { number } = this.props;
     return (
-      <Card style={{ padding: (this.state.expanded ? "8px" : "20px") + " 10px",
+      <Card style={{ padding: (this.state.expanded ? "8px" : "20px") + " 20px",
                     borderBottom: "1px solid #DDDDDD", overflow: "hidden" }}>
         <div style={{ display: "flex", justifyContent: "space-between",
                       alignItems: "baseline" }}>
@@ -114,7 +116,7 @@ class TeamView extends React.Component {
                        display: this.state.expanded ? "none" : "block", marginRight: ".5rem",
                        fontWeight: "500", fontFamily: "Montserrat" }}>{this.state.teamname}</h6>
           <span style={{ display: this.state.expanded ? "none" : "block" }}>
-            {this.price(this.state.members)}
+            {"$" + this.price(this.state.members)}
           </span>
         </div>
         <div style={{ display: "flex" }}>
@@ -187,14 +189,18 @@ class TeamView extends React.Component {
               <div style={{ display: "flex", justifyContent: "flex-end",
                             alignItems: "baseline" }}>
                 <span style={{ display: this.state.expanded ? "block" : "none" }}>
-                  {this.price(this.state.unsavedMembers)}
+                  {"$" + this.price(this.state.unsavedMembers)}
                 </span>
-                <Button onClick={this.cancel} className="button"
-                    style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
-                    marginLeft: "10px", display: "flex", alignItems: "center" }}>
-                  Cancel
-                  <i className="material-icons">clear</i>
-                </Button>
+                {(() => {
+                  if (this.state.teamname) {
+                    return (<Button onClick={this.cancel} className="button"
+                        style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
+                        marginLeft: "10px", display: "flex", alignItems: "center" }}>
+                      Cancel
+                      <i className="material-icons">clear</i>
+                    </Button>);
+                  }
+                })()}
                 <Button type="submit" onClick={this.save} className="button-primary"
                     style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
                     marginLeft: "10px", display: "flex", alignItems: "center" }}>
