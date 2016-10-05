@@ -90,14 +90,14 @@ class TeamView extends React.Component {
 
     if (!unsavedTeamname) { teamnameErrorText = requiredError; }
 
+    this.setState({
+      teamnameErrorText: teamnameErrorText,
+      teamnameErrorStyle: teamnameErrorText ? inputError : {},
+      firstMemberErrorText: firstMemberErrorText,
+      firstMemberErrorStyle: firstMemberErrorText ? inputError : {}
+    });
     if (teamnameErrorText || firstMemberErrorText) {
-      this.setState({
-        teamnameErrorText: teamnameErrorText,
-        teamnameErrorStyle: teamnameErrorText ? inputError : {},
-        firstMemberErrorText: firstMemberErrorText,
-        firstMemberErrorStyle: firstMemberErrorText ? inputError : {}
-      });
-      return
+      return;
     }
     this.props.updatePrice(this.price(unsavedMembers));
     this.setState({ teamname: unsavedTeamname, members: unsavedMembers, expanded: false,
@@ -119,7 +119,7 @@ class TeamView extends React.Component {
             {"$" + this.price(this.state.members)}
           </span>
         </div>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <span style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden",
                          display: this.state.expanded ? "none" : "block",
                          color: this.state.members ? "inherit" : "#888"}}>
@@ -133,6 +133,14 @@ class TeamView extends React.Component {
                 return "No members. Add one?";
               }
             })()}
+          </span>
+          <span>
+            <a href="#" onClick={this.expand}
+                style={{ display: this.state.expanded ? "none" : "block" }}>
+              <i className="material-icons" style={{ verticalAlign: "middle" }}
+                dangerouslySetInnerHTML={{ __html: this.state.expanded ? "done" : "expand_more" }}>
+              </i>
+            </a>
           </span>
           <Form name={"team" + number} style={{ marginTop: "10px", width: "100%",
               display: this.state.expanded ? "block" : "none" }}>
@@ -212,14 +220,6 @@ class TeamView extends React.Component {
               </div>
             </div>
           </Form>
-          <span>
-            <a href="#" onClick={this.expand}
-                style={{ display: this.state.expanded ? "none" : "block" }}>
-              <i className="material-icons" style={{ verticalAlign: "middle" }}
-                dangerouslySetInnerHTML={{ __html: this.state.expanded ? "done" : "expand_more" }}>
-              </i>
-            </a>
-          </span>
         </div>
       </Card>
     );

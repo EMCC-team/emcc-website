@@ -65,7 +65,7 @@ class Home extends React.Component {
     }
     let headingStyles = {
       fontWeight: '100',
-      fontSize: '20vw',
+      fontSize: 'calc(10vw + 4.0rem)',
       marginBottom: '4px'
     }
     let subheadingStyles = {
