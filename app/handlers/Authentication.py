@@ -46,7 +46,6 @@ class RegisterUserHandler(BaseHandler):
             }))
             return
 
-
         auth_id = 'own:' + email
         user = self.user_model.create_user(auth_id, email=email, name=name, password_raw=password)
         if user[0]:

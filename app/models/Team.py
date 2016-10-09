@@ -16,3 +16,4 @@ class Team(ndb.Model):
     school = ndb.StringProperty(required=True)
     paid = ndb.BooleanProperty(default=False)
     year = ndb.IntegerPropery(required=True)
+    combinable = ndb.BooleanProperty(required=True)
