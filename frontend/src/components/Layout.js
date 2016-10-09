@@ -132,7 +132,7 @@ class Header extends React.Component {
     };
     return (
       <header style={{ backgroundColor: "rgba(140, 0, 0, 1)", zIndex: "100",
-                fontFamily: "Montserrat", display: "flex", alignItems: "center", width: "100%",
+        fontFamily: "Montserrat", display: "flex", alignItems: "center", width: "100%",
                 boxShadow: '0 1px 6px rgba(0,0,0,.8)', color: "#EEEEEE", position: "fixed" }}>
 
         <h2 style={{ fontWeight: "100", margin: "0px 14px" }}>
@@ -171,10 +171,10 @@ class Footer extends React.Component {
   render() {
     return (
       <footer style={{ backgroundColor: "rgba(140, 0, 0, 1)", marginTop: "50px",
-                color: "#EEEEEE", fontFamily: "Montserrat", padding: "20px",
-                boxShadow: "rgba(0, 0, 0, 0.8) 0px 1px 6px", position: "relative" }}>
-          <h6 style={{ fontWeight: "200", float: "left", margin: "0" }}> &copy; Copyright 2016 Exeter Math Club. All&nbsp;rights&nbsp;reserved.</h6>
-          <h6 style={{ fontWeight: "200", float: "right", margin: "0" }}>
+        color: "#EEEEEE", fontFamily: "Montserrat", padding: "20px",
+      boxShadow: "rgba(0, 0, 0, 0.8) 0px 1px 6px", position: "relative" }}>
+        <h6 style={{ fontWeight: "200", float: "left", margin: "0" }}> &copy; Copyright 2016 Exeter Math Club. All&nbsp;rights&nbsp;reserved.</h6>
+        <h6 style={{ fontWeight: "200", float: "right", margin: "0" }}>
             <span style={{ marginRight: "15px" }}>Sponsored by Jane Street.</span>
             <a href="http://janestreet.com">
               <img id="jane_logo" style={{ filter: "invert(100%)", verticalAlign: "middle" }} src={JaneStreetLogo}/>

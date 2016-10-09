@@ -8,6 +8,7 @@ class RegisterUserHandler(BaseHandler):
         try:
             j = json.loads(self.request.body)
         except ValueError as e:
+            self.response.status = '400'
             self.response.write(json.dumps({
                 'status': '400',
                 'error': 'Bad Request',
@@ -51,7 +52,7 @@ class RegisterUserHandler(BaseHandler):
         if user[0]:
             self.response.status = '201'
             self.response.write(json.dumps({
-                'status': '200',
+                'status': '201',
                 'message': 'Created',
                 'user': {
                     'email': email,
@@ -72,6 +73,7 @@ class LoginUserHandler(BaseHandler):
         try:
             j = json.loads(self.request.body)
         except ValueError as e:
+            self.response.status = '400'
             self.response.write(json.dumps({
                 'status': '400',
                 'error': 'Bad Request',
