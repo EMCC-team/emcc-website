@@ -10,13 +10,14 @@ class TeamView extends React.Component {
     super(props);
     this.updateMember = this.updateMember.bind(this);
     this.updateName = this.updateName.bind(this);
+    this.updateCombinable = this.updateCombinable.bind(this);
     this.expand = this.expand.bind(this);
     this.cancel = this.cancel.bind(this);
     this.price = this.price.bind(this);
     this.save = this.save.bind(this);
 
-    let { members, expanded, number, teamname } = this.props
-    this.state = { expanded: false, members, expanded, number, teamname };
+    let { members, expanded, number, teamname, combinable } = this.props
+    this.state = { expanded: false, members, expanded, number, teamname, combinable };
 
     if (!this.state.members) {
       this.state.members = ["", "", "", ""];
@@ -26,6 +27,10 @@ class TeamView extends React.Component {
       this.state.teamname = "";
     }
     this.state.unsavedTeamname = this.state.teamname;
+    if (!this.state.combinable) {
+      this.state.combinable = true;
+    }
+    this.state.unsavedCombinable = this.state.combinable;
   }
 
   componentWillMount() {
@@ -46,9 +51,14 @@ class TeamView extends React.Component {
     this.setState({ unsavedTeamname: e.target.value });
   }
 
+  updateCombinable(e) {
+    e.preventDefault();
+    this.setState({ unsavedCombinable: e.target.value });
+  }
+
   price(members) {
     let length = members.filter((e) => e).length;
-    if (length === 4) {
+    if (!this.state.unsavedCombinable) {
       return 50;
     }
     else {
@@ -58,13 +68,13 @@ class TeamView extends React.Component {
 
   expand(e) {
     e.preventDefault();
-    this.setState({ unsavedTeamname: this.state.teamname,
-                    unsavedMembers: this.state.members.slice(), expanded: true });
+    this.setState({ unsavedTeamname: this.state.teamname, unsavedMembers: this.state.members.slice(),
+                    unsavedCombinable: this.state.combinable, expanded: true });
   }
 
   cancel(e) {
     e.preventDefault();
-    this.setState({ unsavedTeamname: "", unsavedMembers: ["", "", "", ""], expanded: false });
+    this.setState({ unsavedTeamname: "", unsavedMembers: ["", "", "", ""], unsavedCombinable: false, expanded: false });
   }
 
   save(e) {
@@ -77,7 +87,7 @@ class TeamView extends React.Component {
 
     let teamnameErrorText = "", firstMemberErrorText = "";
 
-    let { unsavedTeamname, unsavedMembers } = this.state;
+    let { unsavedTeamname, unsavedMembers, unsavedCombinable } = this.state;
     unsavedTeamname = unsavedTeamname.trim();
     unsavedMembers = unsavedMembers.filter((e) => e); // remove empty and undefined fields
     unsavedMembers = unsavedMembers.map((e) => e.trim());
@@ -86,6 +96,9 @@ class TeamView extends React.Component {
     }
     if (unsavedMembers.length < 4) {
       unsavedMembers = Array.prototype.concat.call(unsavedMembers, Array(4-unsavedMembers.length).fill(""));
+    }
+    if(unsavedMembers.length == 4) {
+      unsavedcombinable = false;
     }
 
     if (!unsavedTeamname) { teamnameErrorText = requiredError; }
@@ -100,7 +113,12 @@ class TeamView extends React.Component {
       return;
     }
     this.props.updatePrice(this.price(unsavedMembers));
-    this.setState({ teamname: unsavedTeamname, members: unsavedMembers, expanded: false,
+    axios.post('/api/teams', {
+      teamname = unsavedTeamname,
+      members = unsavedMembers,
+      combinable = unsavedCombinable
+    });
+    this.setState({ teamname: unsavedTeamname, members: unsavedMembers, combinable: unsavedCombinable, expanded: false,
                     unsavedTeamname: "", unsavedMembers: ["", "", "", ""] });
   }
 
@@ -181,7 +199,8 @@ class TeamView extends React.Component {
                 if (length < 4) {
                   return (
                       <Label style={{ fontWeight: "normal", marginBottom: ".4rem" }}>
-                        <Input style={{ marginBottom: "0px" }} type="checkbox"/>&nbsp;
+                        <Input style={{ marginBottom: "0px" }} type="checkbox"
+                        onChange={this.updateCombinable}/>&nbsp;
                         Combine this team with teams from other&nbsp;schools.
                       </Label>
                   );

@@ -18,5 +18,5 @@ app = webapp2.WSGIApplication([
     ('/api/auth/login', LoginUserHandler),
     ('/api/auth/logout', LogoutUserHandler),
     ('/api/auth/token', CurrentUserHandler),
-    ('/api/teams/', TeamListHandler)
+    ('/api/teams', TeamListHandler)
 ], debug=True, config=config)

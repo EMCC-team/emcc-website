@@ -24,7 +24,6 @@ class TeamListHandler(BaseHandler):
 			return
 		self.response.write(json.dumps(teams))
 
-
 	def post(self):
 		try:
 			j = json.loads(self.request.body)

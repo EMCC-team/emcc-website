@@ -22,7 +22,16 @@ class Dashboard extends React.Component {
       this.props.router.push('/');
     });
 
-    this.state = { nextKey: "1", teams: [{key: "0", teamname: "Houlin Tuna", members: ["Tyler Hou", "James Lin", "Vinjay Vale", "Patrick Dickinson"]}] }
+    // retrieval
+    axios.get('/api/teams').then(response => {
+      //this.setState(teams: response.data);
+    }).catch(response => {
+      alert("hello");
+      this.setState({ nextKey: "0", teams: []});
+    });
+    alert("hello2");
+
+    this.state = { nextKey: "1", teams: [{key: "0", teamname: "Houlin Tuna", members: ["Tyler Hou", "James Lin", "Vinjai Vale", "Patrick Dickinson"], combinable: false}] }
   }
 
   getTeamViews() {
@@ -46,7 +55,7 @@ class Dashboard extends React.Component {
     }
     return this.state.teams.map((team, index) => {
       return <TeamView key={team.key} number={index} teamname={team.teamname}
-                  members={team.members} expanded={team.expanded}
+                  members={team.members} combinable={team.combinable} expanded={team.expanded}
                   del={del(index)} updatePrice={updatePrice(index)}/>
     });
   }

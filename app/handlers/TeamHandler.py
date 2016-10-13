@@ -13,5 +13,5 @@ class TeamHandler(BaseHandler):
             self.response.write(json.dumps({
                 'status': '404',
                 'error': 'No such team',
-                'message': 'The team with that ID does not exist.',
+                'message': 'The team with that ID does not exist.'
             }))
