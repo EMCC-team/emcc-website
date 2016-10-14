@@ -11,13 +11,13 @@ class TeamView extends React.Component {
     this.updateCombinable = this.updateCombinable.bind(this);
     this.updateMember = this.updateMember.bind(this);
     this.updateName = this.updateName.bind(this);
+    this.updateCombinable = this.updateCombinable.bind(this);
     this.expand = this.expand.bind(this);
     this.cancel = this.cancel.bind(this);
-    this.price = this.price.bind(this);
     this.save = this.save.bind(this);
 
-    let { members, expanded, number, teamname, combinable } = this.props
-    this.state = { expanded: false, members, expanded, number, teamname, combinable };
+    let { members, expanded, teamname, combinable } = this.props
+    this.state = { expanded: false, members, expanded, teamname, combinable };
 
     if (!this.state.members) {
       this.state.members = ["", "", "", ""];
@@ -34,7 +34,7 @@ class TeamView extends React.Component {
   }
 
   componentWillMount() {
-    this.state.price = this.price(this.props.members);
+    this.state.price = this.props.price(this.props.members, this.props.combinable);
     this.props.save(this);
   }
 
@@ -52,14 +52,9 @@ class TeamView extends React.Component {
     this.setState({ _teamname: e.target.value });
   }
 
-  price(members) {
-    let length = members.filter((e) => e).length;
-    if (length === 4) {
-      return 50;
-    }
-    else {
-      return length * 15;
-    }
+  updateCombinable(e) {
+    e.preventDefault();
+    this.setState({ _combinable: e.target.value });
   }
 
   updateCombinable(e) {
@@ -115,11 +110,12 @@ class TeamView extends React.Component {
     this.setState({ teamname: _teamname, members: _members,
                     expanded: false, combinable: _combinable,
                     _teamname: "", _members: ["", "", "", ""],
-                    price: this.price(_members) }, () => this.props.save(this));
+                    price: this.props.price(_members, _combinable) },
+                    () => this.props.save(this, { request: true }));
   }
 
   render() {
-    let { number } = this.props;
+    let { id } = this.props;
     return (
       <Card style={{ padding: (this.state.expanded ? "8px" : "20px") + " 20px",
       borderBottom: "1px solid #DDDDDD", overflow: "hidden" }}>
@@ -130,7 +126,7 @@ class TeamView extends React.Component {
             display: this.state.expanded ? "none" : "block", marginRight: ".5rem",
           fontWeight: "500", fontFamily: "Montserrat" }}>{this.state.teamname}</h6>
           <span style={{ display: this.state.expanded ? "none" : "block" }}>
-            {"$" + this.price(this.state.members)}
+            {"$" + this.props.price(this.state.members, this.state.combinable)}
           </span>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -156,7 +152,7 @@ class TeamView extends React.Component {
               </i>
             </a>
           </span>
-          <Form name={"team" + number} style={{ marginTop: "10px", width: "100%",
+          <Form name={"team" + id} style={{ marginTop: "10px", width: "100%",
           display: this.state.expanded ? "block" : "none" }}>
             <Group name="teamname">
               <Label>
@@ -213,7 +209,7 @@ class TeamView extends React.Component {
               <div style={{ display: "flex", justifyContent: "flex-end",
               alignItems: "baseline" }}>
                 <span style={{ display: this.state.expanded ? "block" : "none" }}>
-                  {"$" + this.price(this.state._members)}
+                  {"$" + this.props.price(this.state._members, this.state._combinable)}
                 </span>
                 {(() => {
                   if (this.state.teamname) {

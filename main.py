@@ -2,6 +2,7 @@ import webapp2
 
 from app.handlers.Authentication import RegisterUserHandler, LoginUserHandler, LogoutUserHandler, CurrentUserHandler
 from app.handlers.TeamListHandler import TeamListHandler
+from app.handlers.TeamHandler import TeamHandler
 
 config = {
     'webapp2_extras.auth': {
@@ -14,9 +15,10 @@ config = {
 }
 
 app = webapp2.WSGIApplication([
-    ('/api/auth/register', RegisterUserHandler),
-    ('/api/auth/login', LoginUserHandler),
-    ('/api/auth/logout', LogoutUserHandler),
-    ('/api/auth/token', CurrentUserHandler),
-    ('/api/teams/', TeamListHandler)
+    (r'/api/auth/register', RegisterUserHandler),
+    (r'/api/auth/login', LoginUserHandler),
+    (r'/api/auth/logout', LogoutUserHandler),
+    (r'/api/auth/token', CurrentUserHandler),
+    webapp2.Route(r'/api/teams/<team_id>', handler=TeamHandler, name='team'),
+    (r'/api/teams/', TeamListHandler),
 ], debug=True, config=config)
