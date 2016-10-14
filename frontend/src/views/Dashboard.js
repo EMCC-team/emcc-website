@@ -23,6 +23,7 @@ class Dashboard extends React.Component {
     });
 
     // retrieval
+    this.state = { nextKey: "0", teams: [] };
     axios.get('/api/teams').then(response => {
       this.state = response.data;
     }).catch(response => {

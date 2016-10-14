@@ -74,7 +74,7 @@ class TeamView extends React.Component {
 
   cancel(e) {
     e.preventDefault();
-    this.setState({ unsavedTeamname: "", unsavedMembers: ["", "", "", ""], unsavedCombinable: false, expanded: false });
+    this.setState({ unsavedTeamname: "", unsavedMembers: ["", "", "", ""], unsavedCombinable: true, expanded: false });
   }
 
   save(e) {
