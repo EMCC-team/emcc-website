@@ -98,7 +98,7 @@ class TeamView extends React.Component {
       unsavedMembers = Array.prototype.concat.call(unsavedMembers, Array(4-unsavedMembers.length).fill(""));
     }
     if(unsavedMembers.length == 4) {
-      unsavedcombinable = false;
+      unsavedCombinable = false;
     }
 
     if (!unsavedTeamname) { teamnameErrorText = requiredError; }
@@ -114,12 +114,19 @@ class TeamView extends React.Component {
     }
     this.props.updatePrice(this.price(unsavedMembers));
     axios.post('/api/teams', {
-      teamname = unsavedTeamname,
-      members = unsavedMembers,
-      combinable = unsavedCombinable
+      teamname: unsavedTeamname,
+      members: unsavedMembers,
+      combinable: unsavedCombinable
+    }).then(response => {
+      this.setState({
+        teamname: unsavedTeamname,
+        members: unsavedMembers,
+        combinable: unsavedCombinable,
+        expanded: false,
+        unsavedTeamname: "",
+        unsavedMembers: ["", "", "", ""]
+      });
     });
-    this.setState({ teamname: unsavedTeamname, members: unsavedMembers, combinable: unsavedCombinable, expanded: false,
-                    unsavedTeamname: "", unsavedMembers: ["", "", "", ""] });
   }
 
   render() {

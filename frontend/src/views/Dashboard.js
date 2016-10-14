@@ -24,14 +24,12 @@ class Dashboard extends React.Component {
 
     // retrieval
     axios.get('/api/teams').then(response => {
-      //this.setState(teams: response.data);
+      this.state = response.data;
     }).catch(response => {
-      alert("hello");
       this.setState({ nextKey: "0", teams: []});
     });
-    alert("hello2");
 
-    this.state = { nextKey: "1", teams: [{key: "0", teamname: "Houlin Tuna", members: ["Tyler Hou", "James Lin", "Vinjai Vale", "Patrick Dickinson"], combinable: false}] }
+    //this.state = { nextKey: "1", teams: [{key: "0", teamname: "Houlin Tuna", members: ["Tyler Hou", "James Lin", "Vinjai Vale", "Patrick Dickinson"], combinable: false}] }
   }
 
   getTeamViews() {

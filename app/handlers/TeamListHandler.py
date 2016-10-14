@@ -13,7 +13,7 @@ class TeamListHandler(BaseHandler):
 				'error': 'Unauthorized',
 			}))
 			return
-		teams = Team.query(Team.coach == self.user.key).get()
+		teams = Team.query(Team.coach == self.user.key)
 		if not teams:
 			self.response.status = '404'
 			self.response.write(json.dumps({
@@ -22,7 +22,16 @@ class TeamListHandler(BaseHandler):
 				'message': 'No teams registered to this user exist.'
 			}))
 			return
-		self.response.write(json.dumps(teams))
+		teamDict = {'nextKey': 0, 'teams': []};
+		for team in teams:
+			members = Individual.query(Individual.team == team.key)
+			memberNames = []
+			for member in members:
+				memberNames.append(member.name)
+			entry = {'key': teamDict['nextKey'], 'teamname': team.name, 'members': memberNames, 'combinable': team.combinable}
+			teamDict['teams'].append(entry);
+			teamDict['nextKey'] = teamDict['nextKey']+1
+		self.response.write(json.dumps(teamDict))
 
 	def post(self):
 		try:
