@@ -8,6 +8,7 @@ import '../fonts/Montserrat.css';
 class TeamView extends React.Component {
   constructor(props) {
     super(props);
+    this.updateCombinable = this.updateCombinable.bind(this);
     this.updateMember = this.updateMember.bind(this);
     this.updateName = this.updateName.bind(this);
     this.expand = this.expand.bind(this);
@@ -15,35 +16,40 @@ class TeamView extends React.Component {
     this.price = this.price.bind(this);
     this.save = this.save.bind(this);
 
-    let { members, expanded, number, teamname } = this.props
-    this.state = { expanded: false, members, expanded, number, teamname };
+    let { members, expanded, number, teamname, combinable } = this.props
+    this.state = { expanded: false, members, expanded, number, teamname, combinable };
 
     if (!this.state.members) {
       this.state.members = ["", "", "", ""];
     }
-    this.state.unsavedMembers = this.state.members.slice();
+    this.state._members = this.state.members.slice();
     if (!this.state.teamname) {
       this.state.teamname = "";
     }
-    this.state.unsavedTeamname = this.state.teamname;
+    this.state._teamname = this.state.teamname;
+    if (!this.state.combinable) {
+      this.state.combinable = true;
+    }
+    this.state._combinable = this.state.combinable;
   }
 
   componentWillMount() {
-    this.props.updatePrice(this.price(this.state.members));
+    this.state.price = this.price(this.props.members);
+    this.props.save(this);
   }
 
   updateMember(memberIndex) {
     return (e) => {
       e.preventDefault();
-      let unsavedMembers = this.state.unsavedMembers;
-      unsavedMembers[memberIndex] = e.target.value;
-      this.setState({ unsavedMembers });
+      let _members = this.state._members;
+      _members[memberIndex] = e.target.value;
+      this.setState({ _members });
     }
   }
 
   updateName(e) {
     e.preventDefault();
-    this.setState({ unsavedTeamname: e.target.value });
+    this.setState({ _teamname: e.target.value });
   }
 
   price(members) {
@@ -56,15 +62,21 @@ class TeamView extends React.Component {
     }
   }
 
+  updateCombinable(e) {
+    this.setState({ _combinable: e.target.checked });
+  }
+
   expand(e) {
     e.preventDefault();
-    this.setState({ unsavedTeamname: this.state.teamname,
-                    unsavedMembers: this.state.members.slice(), expanded: true });
+    this.setState({ _teamname: this.state.teamname,
+                    _combinable: this.state.combinable,
+                    _members: this.state.members.slice(), expanded: true });
   }
 
   cancel(e) {
     e.preventDefault();
-    this.setState({ unsavedTeamname: "", unsavedMembers: ["", "", "", ""], expanded: false });
+    this.setState({ _teamname: "", _members: ["", "", "", ""],
+                    _combinable: true, expanded: false });
   }
 
   save(e) {
@@ -77,18 +89,19 @@ class TeamView extends React.Component {
 
     let teamnameErrorText = "", firstMemberErrorText = "";
 
-    let { unsavedTeamname, unsavedMembers } = this.state;
-    unsavedTeamname = unsavedTeamname.trim();
-    unsavedMembers = unsavedMembers.filter((e) => e); // remove empty and undefined fields
-    unsavedMembers = unsavedMembers.map((e) => e.trim());
-    if (unsavedMembers.length === 0) {
+    let { _teamname, _members, _combinable } = this.state;
+    _teamname = _teamname.trim();
+    _members = _members.filter((e) => e); // remove falsy fields
+    _members = _members.map((e) => e.trim());
+    if (_members.length === 0) {
       firstMemberErrorText = "Enter at least one team member.";
     }
-    if (unsavedMembers.length < 4) {
-      unsavedMembers = Array.prototype.concat.call(unsavedMembers, Array(4-unsavedMembers.length).fill(""));
+    // Pad array to length 4.
+    if (_members.length < 4) {
+      _members = Array.prototype.concat.call(_members, Array(4-_members.length).fill(""));
     }
 
-    if (!unsavedTeamname) { teamnameErrorText = requiredError; }
+    if (!_teamname) { teamnameErrorText = requiredError; }
 
     this.setState({
       teamnameErrorText: teamnameErrorText,
@@ -99,30 +112,31 @@ class TeamView extends React.Component {
     if (teamnameErrorText || firstMemberErrorText) {
       return;
     }
-    this.props.updatePrice(this.price(unsavedMembers));
-    this.setState({ teamname: unsavedTeamname, members: unsavedMembers, expanded: false,
-                    unsavedTeamname: "", unsavedMembers: ["", "", "", ""] });
+    this.setState({ teamname: _teamname, members: _members,
+                    expanded: false, combinable: _combinable,
+                    _teamname: "", _members: ["", "", "", ""],
+                    price: this.price(_members) }, () => this.props.save(this));
   }
 
   render() {
     let { number } = this.props;
     return (
       <Card style={{ padding: (this.state.expanded ? "8px" : "20px") + " 20px",
-                    borderBottom: "1px solid #DDDDDD", overflow: "hidden" }}>
+      borderBottom: "1px solid #DDDDDD", overflow: "hidden" }}>
         <div style={{ display: "flex", justifyContent: "space-between",
-                      alignItems: "baseline" }}>
+        alignItems: "baseline" }}>
           <h6 style={{ textOverflow: "ellipsis", whiteSpace: "nowrap",
-                       fontSize: "1.2em", marginBottom: "0px", overflow: "hidden",
-                       display: this.state.expanded ? "none" : "block", marginRight: ".5rem",
-                       fontWeight: "500", fontFamily: "Montserrat" }}>{this.state.teamname}</h6>
+            fontSize: "1.2em", marginBottom: "0px", overflow: "hidden",
+            display: this.state.expanded ? "none" : "block", marginRight: ".5rem",
+          fontWeight: "500", fontFamily: "Montserrat" }}>{this.state.teamname}</h6>
           <span style={{ display: this.state.expanded ? "none" : "block" }}>
             {"$" + this.price(this.state.members)}
           </span>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <span style={{ textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden",
-                         display: this.state.expanded ? "none" : "block",
-                         color: this.state.members ? "inherit" : "#888"}}>
+            display: this.state.expanded ? "none" : "block",
+          color: this.state.members ? "inherit" : "#888"}}>
             {(() => {
               if (this.state.members) {
                 let members = this.state.members;
@@ -136,21 +150,21 @@ class TeamView extends React.Component {
           </span>
           <span>
             <a href="#" onClick={this.expand}
-                style={{ display: this.state.expanded ? "none" : "block" }}>
+              style={{ display: this.state.expanded ? "none" : "block" }}>
               <i className="material-icons" style={{ verticalAlign: "middle" }}
                 dangerouslySetInnerHTML={{ __html: this.state.expanded ? "done" : "expand_more" }}>
               </i>
             </a>
           </span>
           <Form name={"team" + number} style={{ marginTop: "10px", width: "100%",
-              display: this.state.expanded ? "block" : "none" }}>
+          display: this.state.expanded ? "block" : "none" }}>
             <Group name="teamname">
               <Label>
                 Team name<br/>
                 <ErrorText>{this.state.teamnameErrorText}</ErrorText>
               </Label>
-              <Input value={this.state.unsavedTeamname} style={{ width: "100%",
-                ...this.state.teamnameErrorStyle }}
+              <Input value={this.state._teamname} style={{ width: "100%",
+              ...this.state.teamnameErrorStyle }}
                 type="text" onChange={this.updateName}/>
             </Group>
             <Label>
@@ -158,60 +172,62 @@ class TeamView extends React.Component {
               <ErrorText>{this.state.firstMemberErrorText}</ErrorText>
             </Label>
             <Group name="member0">
-              <Input value={this.state.unsavedMembers[0]} style={{ width: "100%",
-                ...this.state.firstMemberErrorStyle }}
+              <Input value={this.state._members[0]} style={{ width: "100%",
+              ...this.state.firstMemberErrorStyle }}
                 type="text" onChange={this.updateMember(0)}/>
             </Group>
             <Group name="member1">
-              <Input value={this.state.unsavedMembers[1]} style={{ width: "100%" }}
+              <Input value={this.state._members[1]} style={{ width: "100%" }}
                 type="text" onChange={this.updateMember(1)}/>
             </Group>
             <Group name="member2">
-              <Input value={this.state.unsavedMembers[2]} style={{ width: "100%" }}
+              <Input value={this.state._members[2]} style={{ width: "100%" }}
                 type="text" onChange={this.updateMember(2)}/>
             </Group>
             <Group name="member3">
-              <Input value={this.state.unsavedMembers[3]} style={{ width: "100%" }}
+              <Input value={this.state._members[3]} style={{ width: "100%" }}
                 type="text" onChange={this.updateMember(3)}/>
             </Group>
             <Group name="combine">
               {(() => {
-                let unsavedMembers = this.state.unsavedMembers;
-                let length = unsavedMembers.filter((e) => e).length;
+                let _members = this.state._members;
+                let length = _members.filter((e) => e).length;
                 if (length < 4) {
                   return (
-                      <Label style={{ fontWeight: "normal", marginBottom: ".4rem" }}>
-                        <Input style={{ marginBottom: "0px" }} type="checkbox"/>&nbsp;
-                        Combine this team with teams from other&nbsp;schools.
-                      </Label>
+                    <Label style={{ fontWeight: "normal", marginBottom: ".4rem" }}>
+                      <Input checked={this.state._combinable}
+                        onChange={this.updateCombinable}
+                        style={{ marginBottom: "0px" }} type="checkbox"/>&nbsp;
+                      Combine this team with teams from other&nbsp;schools.
+                    </Label>
                   );
                 }
               })()}
             </Group>
             <div style={{ display: "flex", justifyContent: "space-between",
-                          alignItems: "baseline", paddingLeft: "10px" }}>
+            alignItems: "baseline", paddingLeft: "10px" }}>
               <a href="#" style={{ fontSize: ".8em" }} onClick={(e) => {
                 e.preventDefault();
                 this.props.del();
               }}>Delete this team</a>
               <div style={{ display: "flex", justifyContent: "flex-end",
-                            alignItems: "baseline" }}>
+              alignItems: "baseline" }}>
                 <span style={{ display: this.state.expanded ? "block" : "none" }}>
-                  {"$" + this.price(this.state.unsavedMembers)}
+                  {"$" + this.price(this.state._members)}
                 </span>
                 {(() => {
                   if (this.state.teamname) {
                     return (<Button onClick={this.cancel} className="button"
-                        style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
-                        marginLeft: "10px", display: "flex", alignItems: "center" }}>
+                      style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
+                      marginLeft: "10px", display: "flex", alignItems: "center" }}>
                       Cancel
                       <i className="material-icons">clear</i>
                     </Button>);
                   }
                 })()}
                 <Button type="submit" onClick={this.save} className="button-primary"
-                    style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
-                    marginLeft: "10px", display: "flex", alignItems: "center" }}>
+                  style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
+                  marginLeft: "10px", display: "flex", alignItems: "center" }}>
                   Save
                   <i className="material-icons"
                     dangerouslySetInnerHTML={{ __html: this.state.expanded ? "done" : "expand_more" }}>

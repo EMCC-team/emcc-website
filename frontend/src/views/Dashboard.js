@@ -21,8 +21,6 @@ class Dashboard extends React.Component {
       this.setState({user: undefined});
       this.props.router.push('/');
     });
-
-    this.state = { nextKey: "1", teams: [{key: "0", teamname: "Houlin Tuna", members: ["Tyler Hou", "James Lin", "Vinjay Vale", "Patrick Dickinson"]}] }
   }
 
   getTeamViews() {
@@ -31,30 +29,37 @@ class Dashboard extends React.Component {
         let teams = this.state.teams.slice();
         teams.splice(index, 1);
         if (teams.length === 0) {
-          teams = [{expanded: true, key: this.state.nextKey }];
-          this.setState({ nextKey: this.state.nextKey+1 });
+          teams = [{expanded: true, key: this.state.next_id }];
+          this.setState({ next_id: this.state.next_id+1 });
         }
         this.setState({ teams });
       }
     };
-    let updatePrice = (index) => {
-      return (price) => {
+    let save = (index) => {
+      return (team) => {
         let teams = this.state.teams.slice();
-        teams[index].price = price;
+        let serialized_team = {
+          id: team.props.id,
+          teamname: team.state.teamname,
+          members: team.state.members,
+          combinable: team.state.combinable,
+          price: team.state.price
+        }
+        teams[index] = serialized_team;
         this.setState({ teams });
       }
     }
     return this.state.teams.map((team, index) => {
-      return <TeamView key={team.key} number={index} teamname={team.teamname}
-                  members={team.members} expanded={team.expanded}
-                  del={del(index)} updatePrice={updatePrice(index)}/>
+      return <TeamView key={team.id} id={team.id} number={index} teamname={team.teamname}
+        members={team.members} expanded={team.expanded} combinable={team.combinable}
+        del={del(index)} save={save(index)}/>
     });
   }
 
   addTeam() {
     let teams = this.state.teams;
-    teams.push({expanded: true, key: this.state.nextKey });
-    this.setState({ teams, nextKey: this.state.nextKey+1 });
+    teams.push({ expanded: true, id: this.state.next_id });
+    this.setState({ teams, next_id: this.state.next_id+1 });
   }
 
   getTotalPrice() {

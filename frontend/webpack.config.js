@@ -75,7 +75,7 @@ var config = {
     plugins: [
         new CommonsChunkPlugin({name: 'vendor', filename: 'js/vendor.[chunkhash].js', minChunks: Infinity}),
         new ExtractTextPlugin("css/[name].[chunkhash].css", {allChunks: true}),
-        new HtmlPlugin({chunks: ['vendor', 'main'], template: 'src/index.ejs'})
+        new HtmlPlugin({chunks: ['vendor', 'main'], template: 'src/index.ejs'}),
     ],
 
     postcss: function() {
