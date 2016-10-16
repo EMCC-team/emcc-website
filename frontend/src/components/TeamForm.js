@@ -9,24 +9,30 @@ class TeamView extends React.Component {
   constructor(props) {
     super(props);
     this.updateCombinable = this.updateCombinable.bind(this);
-    this.updateMember = this.updateMember.bind(this);
     this.updateName = this.updateName.bind(this);
-    this.updateCombinable = this.updateCombinable.bind(this);
+    this.updateSchool = this.updateSchool.bind(this);
+    this.updateMember = this.updateMember.bind(this);
     this.expand = this.expand.bind(this);
     this.cancel = this.cancel.bind(this);
     this.save = this.save.bind(this);
 
-    let { members, expanded, teamname, combinable } = this.props
-    this.state = { expanded: false, members, expanded, teamname, combinable };
+    this.state = { expanded: this.props.expanded, ...this.props.team };
 
     if (!this.state.members) {
       this.state.members = ["", "", "", ""];
     }
     this.state._members = this.state.members.slice();
-    if (!this.state.teamname) {
-      this.state.teamname = "";
+
+    if (!this.state.name) {
+      this.state.name = "";
     }
-    this.state._teamname = this.state.teamname;
+    this.state._name = this.state.name;
+
+    if (!this.state.school) {
+      this.state.school = "";
+    }
+    this.state._school = this.state.school;
+
     if (!this.state.combinable) {
       this.state.combinable = true;
     }
@@ -49,7 +55,12 @@ class TeamView extends React.Component {
 
   updateName(e) {
     e.preventDefault();
-    this.setState({ _teamname: e.target.value });
+    this.setState({ _name: e.target.value });
+  }
+
+  updateSchool(e) {
+    e.preventDefault();
+    this.setState({ _school: e.target.value });
   }
 
   updateCombinable(e) {
@@ -63,15 +74,21 @@ class TeamView extends React.Component {
 
   expand(e) {
     e.preventDefault();
-    this.setState({ _teamname: this.state.teamname,
+    this.setState({ _name: this.state.name, _school: this.state.school,
                     _combinable: this.state.combinable,
-                    _members: this.state.members.slice(), expanded: true });
+                    _members: this.state.members.slice(), expanded: true },
+                    () => {
+                      this.props.save(this)
+                    });
   }
 
   cancel(e) {
-    e.preventDefault();
-    this.setState({ _teamname: "", _members: ["", "", "", ""],
-                    _combinable: true, expanded: false });
+    if (e) { e.preventDefault(); }
+    this.setState({ _name: "", _school: "", _members: ["", "", "", ""],
+                    _combinable: true, expanded: false },
+                    () => {
+                      this.props.save(this)
+                    });
   }
 
   save(e) {
@@ -82,10 +99,11 @@ class TeamView extends React.Component {
       borderColor: '#ff0033'
     };
 
-    let teamnameErrorText = "", firstMemberErrorText = "";
+    let nameErrorText = "", schoolErrorText = "", firstMemberErrorText = "";
 
-    let { _teamname, _members, _combinable } = this.state;
-    _teamname = _teamname.trim();
+    let { _name, _school, _members } = this.state;
+    _name = _name.trim();
+    _school = _school.trim();
     _members = _members.filter((e) => e); // remove falsy fields
     _members = _members.map((e) => e.trim());
     if (_members.length === 0) {
@@ -96,26 +114,32 @@ class TeamView extends React.Component {
       _members = Array.prototype.concat.call(_members, Array(4-_members.length).fill(""));
     }
 
-    if (!_teamname) { teamnameErrorText = requiredError; }
+    if (!_name) { nameErrorText = requiredError; }
+    if (!_school) { schoolErrorText = requiredError; }
 
     this.setState({
-      teamnameErrorText: teamnameErrorText,
-      teamnameErrorStyle: teamnameErrorText ? inputError : {},
+      nameErrorText: nameErrorText,
+      nameErrorStyle: nameErrorText ? inputError : {},
+      schoolErrorText: schoolErrorText,
+      schoolErrorStyle: schoolErrorText ? inputError : {},
       firstMemberErrorText: firstMemberErrorText,
       firstMemberErrorStyle: firstMemberErrorText ? inputError : {}
     });
-    if (teamnameErrorText || firstMemberErrorText) {
-      return;
+    if (nameErrorText || schoolErrorText || firstMemberErrorText) {
+      return false;
     }
-    this.setState({ teamname: _teamname, members: _members,
-                    expanded: false, combinable: _combinable,
-                    _teamname: "", _members: ["", "", "", ""],
-                    price: this.props.price(_members, _combinable) },
-                    () => this.props.save(this, { request: true }));
+    this.setState({ name: _name, school: _school, members: _members,
+                    combinable: this.state.combinable, expanded: false,
+                    price: this.props.price(_members, this.state._combinable) },
+                    () => {
+                      this.props.save(this, true)
+                      this.cancel();
+                    });
+    return true;
   }
 
   render() {
-    let { id } = this.props;
+    let { id } = this.props.team;
     return (
       <Card style={{ padding: (this.state.expanded ? "8px" : "20px") + " 20px",
       borderBottom: "1px solid #DDDDDD", overflow: "hidden" }}>
@@ -124,7 +148,7 @@ class TeamView extends React.Component {
           <h6 style={{ textOverflow: "ellipsis", whiteSpace: "nowrap",
             fontSize: "1.2em", marginBottom: "0px", overflow: "hidden",
             display: this.state.expanded ? "none" : "block", marginRight: ".5rem",
-          fontWeight: "500", fontFamily: "Montserrat" }}>{this.state.teamname}</h6>
+          fontWeight: "500", fontFamily: "Montserrat" }}>{this.state.name}</h6>
           <span style={{ display: this.state.expanded ? "none" : "block" }}>
             {"$" + this.props.price(this.state.members, this.state.combinable)}
           </span>
@@ -153,18 +177,28 @@ class TeamView extends React.Component {
             </a>
           </span>
           <Form name={"team" + id} style={{ marginTop: "10px", width: "100%",
-          display: this.state.expanded ? "block" : "none" }}>
-            <Group name="teamname">
+          display: this.state.expanded ? "block" : "none" }}
+            onKeyPress={(e) => {if (e && e.charCode === 13) {this.save(e)}}}>
+            <Group name="name">
               <Label>
                 Team name<br/>
-                <ErrorText>{this.state.teamnameErrorText}</ErrorText>
+                <ErrorText>{this.state.nameErrorText}</ErrorText>
               </Label>
-              <Input value={this.state._teamname} style={{ width: "100%",
-              ...this.state.teamnameErrorStyle }}
+              <Input value={this.state._name} style={{ width: "100%",
+              ...this.state.nameErrorStyle }}
                 type="text" onChange={this.updateName}/>
             </Group>
+            <Group name="school">
+              <Label>
+                School<br/>
+                <ErrorText>{this.state.schoolErrorText}</ErrorText>
+              </Label>
+              <Input value={this.state._school} style={{ width: "100%",
+              ...this.state.schoolErrorStyle }}
+                type="text" onChange={this.updateSchool}/>
+            </Group>
             <Label>
-              Members<br/>
+              Team members<br/>
               <ErrorText>{this.state.firstMemberErrorText}</ErrorText>
             </Label>
             <Group name="member0">
@@ -212,7 +246,7 @@ class TeamView extends React.Component {
                   {"$" + this.props.price(this.state._members, this.state._combinable)}
                 </span>
                 {(() => {
-                  if (this.state.teamname) {
+                  if (this.state.name) {
                     return (<Button onClick={this.cancel} className="button"
                       style={{ float: "right", paddingLeft: "12px", paddingRight: "10px",
                       marginLeft: "10px", display: "flex", alignItems: "center" }}>

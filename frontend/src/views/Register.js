@@ -35,7 +35,6 @@ class Register extends React.Component {
 
   registerUser(e) {
     e.preventDefault();
-    console.log(this.props)
     /* Preflight validation */
 
     // Definitions
@@ -91,7 +90,11 @@ class Register extends React.Component {
       email: email,
       password: password
     }).then(response => {
-      this.props.router.push('login');
+      return new Promise(resolve => setTimeout(resolve, 1000));
+    }).then(response => {
+      return axios.post('/api/auth/login', { email: email, password: password });
+    }).then(response => {
+      this.props.router.push('/dashboard');
     }).catch(e => {
       let error = e.response.data.message;
       if (error === 'Fields name, email, password are required.') {

@@ -24,12 +24,3 @@ class User(BaseUser):
         """
 
         self.password = security.generate_password_hash(raw_password)
-
-class Coach(User):
-    """A model which stores coaches. Coaches are users which can create teams.
-
-    Attributes:
-        phone: A string containing the coach's phone number. (e.g. "3141592653")
-    """
-
-    phone = ndb.StringProperty(default=None)

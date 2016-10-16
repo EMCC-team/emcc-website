@@ -13,7 +13,7 @@ class TeamListHandler(BaseHandler):
 				'error': 'Unauthorized',
 			}))
 			return
-		teams = Team.query(Team.coach == self.user.key)
+		teams = Team.query(Team.user == self.user.key)
 		if not teams:
 			self.response.status = '404'
 			self.response.write(json.dumps({
@@ -22,17 +22,7 @@ class TeamListHandler(BaseHandler):
 				'message': 'No teams registered to this user exist.'
 			}))
 			return
-		serialized_teams = []
-		for team in teams:
-			members = Individual.query(Individual.team == team.key)
-			serialized_members = [member.name for member in members]
-			entry = {
-				'id': team.key.urlsafe(),
-				'teamname': team.name,
-				'members': serialized_members,
-				'combinable': team.combinable
-			}
-			serialized_teams.append(entry);
+		serialized_teams = [team.serialize() for team in teams]
 		self.response.write(json.dumps(serialized_teams))
 
 	def post(self):
@@ -47,21 +37,9 @@ class TeamListHandler(BaseHandler):
 			}))
 			return
 
-		teamname = j.get('teamname');
-		members = j.get('members');
-		combinable = j.get('combinable');
-		team = Team(name=teamname,
-				combinable=combinable,
-				year=2017,
-				coach=self.user.key);
-		team.put();
-
-		for membername in members:
-			member = Individual(name=membername,
-						coach=self.user.key,
-						team=team.key,
-						year=2017);
-			member.put();
+		team = Team(year=2017, user=self.user.key)
+		team.deserialize(j)
+		team.put()
 
 		self.response.status = '201'
 		self.response.headers.add('Location', team.key.urlsafe())

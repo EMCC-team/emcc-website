@@ -1,7 +1,13 @@
 .form {
-  width: 100%;
   @media (min-width: 300px) {
     width: fit-content;
     min-width: 300px;
   };
+}
+
+.confirmation-box {
+  max-width: 420px;
+  @media (min-width: 880px) {
+    max-width: 860px;
+  }
 }
