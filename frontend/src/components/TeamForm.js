@@ -224,12 +224,32 @@ class TeamView extends React.Component {
                 let length = _members.filter((e) => e).length;
                 if (length < 4) {
                   return (
+                    <div>
                     <Label style={{ fontWeight: "normal", marginBottom: ".4rem" }}>
                       <Input checked={this.state._combinable}
                         onChange={this.updateCombinable}
                         style={{ marginBottom: "0px" }} type="checkbox"/>&nbsp;
-                      Combine this team with teams from other&nbsp;schools.
+                      Combine this team with other unfilled teams.&nbsp;
+                      <Card style={{ position: "absolute", right: "0",
+                        backgroundColor: "#FFFFFF", maxWidth: "350px",
+                        padding: "10px", width: "60vw",
+                        display: this.state.showHint ? "block" : "none" }}>
+                        If this option is checked, we'll try to combine your
+                        team with other teams to make a full four person team.
+                        Due to space limitations, if this box is unchecked
+                        we must charge you the full cost of a team ($50) even
+                        if there are not four people on it.
+                        <a style={{ float: "right" }} href="#" onClick={e => {
+                          e.preventDefault()
+                          this.setState({ showHint: !this.state.showHint });
+                        }}>close</a>
+                      </Card>
+                      <a href="#" onClick={e => {
+                        e.preventDefault()
+                        this.setState({ showHint: !this.state.showHint });
+                      }}>?</a>
                     </Label>
+                    </div>
                   );
                 }
               })()}

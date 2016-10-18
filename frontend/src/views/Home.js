@@ -1,10 +1,11 @@
 import React from 'react';
 import katex from 'katex';
+import axios from 'axios';
 import { Link } from 'react-router';
 
 import '../fonts/Computer-Modern.css';
 
-import { Container, Row, Columns, Header, Footer, ViewContainer } from '../components/Layout';
+import { Container, Row, Columns, Header, Footer } from '../components/Layout';
 import { Button, Input } from '../components/Form';
 
 
@@ -28,6 +29,7 @@ class Home extends React.Component {
     take to finish signing if he worked alone?'];
     this.state.answers = ['\\frac{120}{7}'];
     this.state.answers = this.state.answers.map((answer) => katex.renderToString(answer));
+    console.log(this.props.user);
   }
 
   showAnswer() {
@@ -77,18 +79,33 @@ class Home extends React.Component {
       padding: '50px 0px 0px'
     }
     return (
-      <ViewContainer>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"/>
+      <div>
         <div id="hero" style={heroStyles}>
           <Container>
             <h1 style={headingStyles}>EMCC</h1>
             <h3 style={subheadingStyles}>The Exeter Math Club&nbsp;Competition</h3>
             <h5 style={subheadingStyles}>January 21, 2017, Phillips Exeter Academy</h5>
             <div style={{ textAlign: "center", marginBottom: "10vh" }}>
-              <Link to="login" className="button" style={{ color: "#EEEEEE", margin: "auto", display: "inline", fontSize: "1.2em",
-                fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
-              <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
-                fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</Link>
+              {(() => {if (!this.props.user) {
+                return (
+                  <div>
+                    <Link to="login" className="button" style={{ color:
+                      "#EEEEEE", margin: "auto", display: "inline",
+                      fontSize: "1.2em", fontFamily: "Montserrat",
+                      fontWeight: "200", paddingTop: "10px",
+                      paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
+                    <Link to="register" className="button button-primary"
+                      style={{ margin: "auto", display: "inline",
+                      fontSize: "1.2em", fontFamily: "Montserrat",
+                      fontWeight: "200", paddingTop: "10px",
+                      paddingBottom: "10px" }}>Register</Link>
+                  </div>
+                )
+              }
+              else {
+                return <Link to="dashboard" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
+                  fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register teams</Link>}
+              })()}
             </div>
           </Container>
         </div>
@@ -145,6 +162,7 @@ class Home extends React.Component {
                 <h3>
                   What next? Start practicing!
                 </h3>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"/>
                 <p style={{ fontFamily: "'Computer Modern Serif', serif" }}>
                   <span style={{ fontWeight: "bold" }}>2016 Team Test, Problem 9</span>
                   <br/>
@@ -162,17 +180,26 @@ class Home extends React.Component {
                   Register now!
                 </h3>
                 <div style={{ textAlign: "center" }}>
-                  <Link to="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1em",
-                    fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
-
-                  <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
-                    fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</Link>
+                  {(() => {if (!this.props.user) {
+                    return (
+                      <div>
+                        <Link to="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1em",
+                          fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
+                        <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
+                          fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</Link>
+                      </div>
+                    );
+                  }
+                  else {
+                    return <Link to="dashboard" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
+                      fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register teams</Link>
+                  }})()}
                 </div>
               </Columns>
             </Row>
           </Container>
         </div>
-      </ViewContainer>
+      </div>
     );
   }
 }

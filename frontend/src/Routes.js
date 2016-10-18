@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, Link, browserHistory, withRouter} from 'react-router';
 
 import './css/skeleton';
 
@@ -16,28 +16,46 @@ import Contest from './views/Contest';
 import Dashboard from './views/Dashboard';
 import Travel from './views/Travel';
 import Contact from './views/Contact';
+import { ViewContainer } from './components/Layout';
 
 import axios from 'axios';
-class Test extends React.Component {
+
+
+class UserContext extends React.Component {
   constructor(props) {
     super(props);
+    this.renderChildren = this.renderChildren.bind(this);
     axios.get('/api/auth/token').then(response => {
-      this.setState({data: response.data})
-    })
-    this.state = { data: "Loading..." };
-    window.axios = axios;
+      this.setState({user: response.data});
+    }).catch();
+    this.state = {};
+  }
+
+  renderChildren() {
+    return React.Children.map(this.props.children, child => {
+      return React.cloneElement(child, { user: this.state.user });
+    });
   }
 
   render() {
-    return (<span>{this.state.data}</span>);
+    return (
+      <ViewContainer user={this.state.user} logout={() => {
+        this.setState({ user: undefined });
+        this.props.router.push('/');
+      }}>
+        {this.renderChildren()}
+      </ViewContainer>
+    );
   }
 }
+
+UserContext = withRouter(UserContext);
 
 class Routes extends React.Component {
   render() {
     return (
       <Router history={browserHistory}>
-        <Route path="/">
+        <Route path="/" component={UserContext}>
           <IndexRoute component={Home}/>
           <Route path="register" component={Register}/>
           <Route path="login" component={Login}/>

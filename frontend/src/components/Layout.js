@@ -39,7 +39,7 @@ class ViewContainer extends React.Component {
   render() {
     return (
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-        <Header/>
+        <Header logout={this.props.logout} user={this.props.user}/>
         <div style={{ flex: "1", height: "100%", marginTop: "54px" }}>
           {this.props.children}
         </div>
@@ -59,11 +59,6 @@ class Header extends React.Component {
     this.update = () => this.forceUpdate();
     window.addEventListener('resize', this.update);
     this.state = { dropdownVisible: false };
-    axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data})
-    }).catch(response => {
-      this.setState({user: undefined});
-    });
   }
 
   componentWillUnmount() {
@@ -77,7 +72,7 @@ class Header extends React.Component {
 
   getNavLinks() {
     let links = ['contest', 'travel', 'contact'];
-    if (this.state.user) {
+    if (this.props.user) {
       links.push('dashboard');
     }
     let linkStyle = {
@@ -121,8 +116,7 @@ class Header extends React.Component {
   logout(e) {
     e.preventDefault();
     axios.post('/api/auth/logout').then(response => {
-      this.setState({user: undefined});
-      this.props.router.push('/');
+      this.props.logout();
     });
   }
 
@@ -146,9 +140,9 @@ class Header extends React.Component {
         </nav>
 
         <span style={{ fontWeight: "200", marginLeft: "auto", marginRight: "20px", fontSize: "1em" }}>
-          {this.state.user ?
+          {this.props.user ?
           <span>
-            <span dangerouslySetInnerHTML={{__html: this.state.user.name.replace(" ", "&nbsp;")}}></span>
+            <span dangerouslySetInnerHTML={{__html: this.props.user.name.replace(" ", "&nbsp;")}}></span>
             &nbsp;|&nbsp;
             <Link to="/" style={{ color: "#EEEEEE", textDecoration: "none" }} onClick={this.logout}>logout</Link>
           </span>

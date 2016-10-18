@@ -5,7 +5,6 @@ import { Link, withRouter } from 'react-router';
 
 import '../fonts/Montserrat.css';
 
-import { ViewContainer } from '../components/Layout';
 import { Form, Group, Label, ErrorText, Input, Button } from '../components/Form';
 import Card from '../components/Card';
 import '../css/Form.scss';
@@ -24,13 +23,13 @@ class Login extends React.Component {
       email:    '',
       password: ''
     };
+  }
 
-    axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data});
-      this.props.router.push('dashboard');
-    }).catch(response => {
-      this.setState({user: undefined});
-    });
+  // redirect to dashboard if logged in already
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.user) {
+      nextProps.router.push('dashboard');
+    }
   }
 
   loginUser(e) {
@@ -112,37 +111,35 @@ class Login extends React.Component {
   }
   render() {
     return (
-      <ViewContainer>
-        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Card className="form" style={{ marginTop: "50px" }}>
-            <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
-              Log in to EMCC
-            </h5>
-            <Form name="login" onSubmit={this.loginUser} noValidate>
-              <Group name="email">
-                <Label>
-                  Email<br/>
-                  <ErrorText>{this.state.emailErrorText}</ErrorText>
-                </Label>
-                <Input style={{ width: "100%", ...this.state.emailErrorStyle }} type="email"
-                       value={this.state.email} onChange={this.handleEmailChange}/>
-              </Group>
-              <Group name="password">
-                <Label>
-                  Password <br/>
-                  <ErrorText>{this.state.passwordErrorText}</ErrorText>
-                </Label>
-                <Input style={{ width: "100%", ...this.state.passwordErrorStyle }} type="password"
-                       value={this.state.password} onChange={this.handlePasswordChange} />
-              </Group>
-              <Button type="submit" className="button-primary" style={{ width: "100%" }}>Login</Button>
-              <span>
-                Don't have an account? <Link to="register">Register.</Link>
-              </span>
-            </Form>
-          </Card>
-        </div>
-      </ViewContainer>
+      <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Card className="form" style={{ marginTop: "50px" }}>
+          <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
+            Log in to EMCC
+          </h5>
+          <Form name="login" onSubmit={this.loginUser} noValidate>
+            <Group name="email">
+              <Label>
+                Email<br/>
+                <ErrorText>{this.state.emailErrorText}</ErrorText>
+              </Label>
+              <Input style={{ width: "100%", ...this.state.emailErrorStyle }} type="email"
+                     value={this.state.email} onChange={this.handleEmailChange}/>
+            </Group>
+            <Group name="password">
+              <Label>
+                Password <br/>
+                <ErrorText>{this.state.passwordErrorText}</ErrorText>
+              </Label>
+              <Input style={{ width: "100%", ...this.state.passwordErrorStyle }} type="password"
+                     value={this.state.password} onChange={this.handlePasswordChange} />
+            </Group>
+            <Button type="submit" className="button-primary" style={{ width: "100%" }}>Login</Button>
+            <span>
+              Don't have an account? <Link to="register">Register.</Link>
+            </span>
+          </Form>
+        </Card>
+      </div>
     );
   }
 }

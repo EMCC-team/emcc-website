@@ -4,28 +4,23 @@ import { TeamView } from '../components/TeamForm';
 import { Link, withRouter } from 'react-router';
 
 import { Button } from '../components/Form';
-import { ViewContainer } from '../components/Layout';
 import Card from '../components/Card';
 import '../css/Form.scss';
 
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
+    this.toggleShowLeaveDialog = this.toggleShowLeaveDialog.bind(this);
+    this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.confirmRegistration = this.confirmRegistration.bind(this);
-    this.getPrice = this.getPrice.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
     this.serializeTeam = this.serializeTeam.bind(this);
     this.getTeamViews = this.getTeamViews.bind(this);
     this.updateTeam = this.updateTeam.bind(this);
     this.saveTeam = this.saveTeam.bind(this);
+    this.getPrice = this.getPrice.bind(this);
     this.payload = this.payload.bind(this);
     this.addTeam = this.addTeam.bind(this);
-
-    axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data})
-    }).catch(response => {
-      this.setState({user: undefined});
-      this.props.router.push('/');
-    });
 
     // retrieval
     axios.get('/api/teams/').then(response => {
@@ -34,7 +29,34 @@ class Dashboard extends React.Component {
       console.log(error);
     });
 
-    this.state = { next_id: 0, teams: [], loading_message: "Loading your teams..." };
+    this.state = { next_id: 0, teams: [],
+      loading_message: "Loading your teams..." };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.user) {
+      nextProps.router.push('/');
+    }
+  }
+
+  componentDidMount() {
+    window.onbeforeunload = this.toggleShowLeaveDialog;
+    this.props.router.setRouteLeaveHook(this.props.route, () => {
+      alert('asd');
+      return 'You have unsaved information, are you sure you want to leave this page?';
+    });
+  }
+
+  componentWillUnmount() {
+    window.onbeforeunload = undefined;
+  }
+
+  toggleShowLeaveDialog(e) {
+    if (this.state.teams.some(team => team.expanded)) {
+      console.log('asd');
+      return '';
+    }
+    return;
   }
 
   price(members, combinable) {
@@ -179,96 +201,122 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <ViewContainer>
-        <div style={{ height: "100%", display: "flex", alignItems: "center",
-        justifyContent: "center", flexDirection: "column" }}>
-          <div style={{ height: "100%", display: "flex", flexWrap: "wrap",
-              justifyContent: "center", width: "100%" }}>
-            <div className="form" style={{ width: "calc(100% - 20px)",
-            maxWidth: "440px", overflow: "hidden" }}>
-              <Card style={{ marginTop: "20px", padding: "20px" }}>
-                <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0px" }}>
-                  Confirmed teams
-                </h4>
-              </Card>
-              {this.getTeamViews(this.state.teams, team => team.confirmed,
-              <p style={{ marginBottom: "0px" }}>
-                You have no confirmed teams. After you confirm your
-                registration, your teams will show up here instead.
-              </p>)}
-            </div>
-            <div className="form" style={{ width: "calc(100% - 20px)",
-            maxWidth: "440px", overflow: "hidden" }}>
-              <Card style={{ marginTop: "20px", padding: "20px" }}>
-                <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0px" }}>
-                  Unconfirmed teams
-                </h4>
-              </Card>
-              {this.getTeamViews(this.state.teams, team => !team.confirmed,
-              <span>
-                You have no unconfirmed teams. 
-                <a href="#" onClick={this.addTeam}>Add one?</a>
-              </span>)}
-              <Button onClick={this.addTeam} className="button" style={{
-                paddingRight: "20px", marginRight: "10px", alignItems: "center",
-                display: this.state.loading_message ? "none" : "flex", margin: "0px 10px",
-                width: "calc(100% - 20px)", justifyContent: "center" }}>
-                <span>Add a team</span>
-                <i className="material-icons">add</i>
-              </Button>
-            </div>
+      <div style={{ height: "100%", display: "flex", alignItems: "center",
+      justifyContent: "center", flexDirection: "column" }}>
+        <div style={{ height: "100%", display: "flex", flexWrap: "wrap",
+            justifyContent: "center", width: "100%", flex: "1" }}>
+          <div className="form" style={{ width: "calc(100% - 20px)",
+          maxWidth: "440px", overflow: "hidden", flex: "1" }}>
+            <Card style={{ marginTop: "20px", padding: "20px" }}>
+              <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0px" }}>
+                Confirmed teams
+              </h4>
+            </Card>
+            {this.getTeamViews(this.state.teams, team => team.confirmed,
+            <p style={{ marginBottom: "0px" }}>
+              You have no confirmed teams. After you confirm your
+              registration, your teams will show up here instead.
+            </p>)}
           </div>
-          <Card className="confirmation-box" style={{ padding: "20px",
-              display: "flex", clear: "both", justifyContent: "center",
-              flexWrap: "wrap", width: "calc(100% - 40px)" }}>
-            <table style={{ marginRight: "0px", marginLeft: "auto",
-              marginBottom: "5px" }}>
-              <tbody>
-                <tr>
-                  <td style={{ fontWeight: "bold", margin: "0px 5px",
-                    borderBottom: "none", padding: "3px 10px",
-                    textAlign: "right" }}>Confirmed teams:</td>
-                  <td style={{ borderBottom: "none", padding: "3px 10px" }}>
-                    {"$" + this.getPrice(this.state.teams.filter(team => team.confirmed))}
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ fontWeight: "bold", margin: "0px 5px",
-                    borderBottom: "none", padding: "3px 10px",
-                    textAlign: "right" }}>Unconfirmed teams:</td>
-                  <td style={{ borderBottom: "none", padding: "3px 10px" }}>
-                    {"$" + this.getPrice(this.state.teams.filter(team => !team.confirmed))}
-                  </td>
-                </tr>
-                <tr>
-                  <td style={{ fontWeight: "bold", margin: "0px 5px",
-                    borderBottom: "none", padding: "3px 10px",
-                    textAlign: "right" }}>Total:</td>
-                  <td style={{ borderBottom: "none", padding: "3px 10px" }}>
-                    {"$" + this.getPrice(this.state.teams)}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div style={{ display: this.state.loading_message ? "none" : "block"}}>
-              <Button onClick={this.confirmRegistration} className="button-primary"
-              style={{ paddingRight: "20px", marginRight: "10px",
-                alignItems: "center", display:"flex",
-                width: "100%", margin: "10px 0px", justifyContent: "center" }}>
-                <span>Confirm registration</span>
+          <div className="form" style={{ width: "calc(100% - 20px)",
+          maxWidth: "440px", overflow: "hidden", flex: "1" }}>
+            <Card style={{ marginTop: "20px", padding: "20px" }}>
+              <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0px" }}>
+                Unconfirmed teams
+              </h4>
+            </Card>
+            {this.getTeamViews(this.state.teams, team => !team.confirmed,
+            <span>
+              You have no unconfirmed teams.&nbsp;
+              <a href="#" onClick={this.addTeam}>Add one?</a>
+            </span>)}
+            <Button onClick={this.addTeam} className="button" style={{
+              paddingRight: "20px", marginRight: "10px", alignItems: "center",
+              display: this.state.loading_message ? "none" : "flex", margin: "0px 10px",
+              width: "calc(100% - 20px)", justifyContent: "center" }}>
+              <span style={{ flex: "0" }}>Add a team</span>
+              <i style={{ flex: "0", lineHeight: "inherit" }} className="material-icons">add</i>
+            </Button>
+          </div>
+        </div>
+        <Card className="confirmation-box" style={{ padding: "20px",
+            display: "flex", clear: "both", justifyContent: "center",
+            flexWrap: "wrap", width: "calc(100% - 40px)", flex: "none" }}>
+          <table style={{ marginRight: "0px", marginLeft: "auto",
+            marginBottom: "5px" }}>
+            <tbody>
+              <tr>
+                <td style={{ fontWeight: "bold", margin: "0px 5px",
+                  borderBottom: "none", padding: "3px 10px",
+                  textAlign: "right" }}>Confirmed teams:</td>
+                <td style={{ borderBottom: "none", padding: "3px 10px" }}>
+                  {"$" + this.getPrice(this.state.teams.filter(team => team.confirmed))}
+                </td>
+              </tr>
+              <tr>
+                <td style={{ fontWeight: "bold", margin: "0px 5px",
+                  borderBottom: "none", padding: "3px 10px",
+                  textAlign: "right" }}>Unconfirmed teams:</td>
+                <td style={{ borderBottom: "none", padding: "3px 10px" }}>
+                  {"$" + this.getPrice(this.state.teams.filter(team => !team.confirmed))}
+                </td>
+              </tr>
+              <tr>
+                <td style={{ fontWeight: "bold", margin: "0px 5px",
+                  borderBottom: "none", padding: "3px 10px",
+                  textAlign: "right" }}>Total:</td>
+                <td style={{ borderBottom: "none", padding: "3px 10px" }}>
+                  {"$" + this.getPrice(this.state.teams)}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div style={{ display: this.state.loading_message ? "none" : "block"}}>
+            <Button onClick={this.confirmRegistration} className="button-primary"
+            style={{ paddingRight: "20px", marginRight: "10px",
+              alignItems: "center", display:"flex",
+              width: "100%", margin: "10px 0px", justifyContent: "center" }}>
+              <span>Confirm registration</span>
+            </Button>
+            <p style={{ marginBottom: "8px", fontWeight: "bold" }}>
+              By clicking "confirm registration," you agree to pay the
+              above amount.
+            </p>
+            <p style={{ marginBottom: "0px" }}>
+              Make out a check to the the&nbsp;
+              <span style={{ fontWeight: "bold" }}>
+                Exeter Math Club Competition
+              </span> and send it to:
+            </p>
+            <address style={{ marginBottom: "8px" }}>
+              Zuming Feng <br/>
+              20 Main Street <br/>
+              Exeter, NH, 03833.
+            </address>
+            <p style={{ marginBottom: "0px" }}>
+              You can still edit or delete teams after you've confirmed your
+              registration until the registration period closes.
+            </p>
+          </div>
+        </Card>
+        <div style={{ position: "fixed", width: "100vw", height: "100vh",
+          alignItems: "center", justifyContent: "center", top: "0px",
+          backgroundColor: "rgba(50, 50, 50, 0.30)",
+          display: this.state.showLeaveDialog ? "flex" : "none" }}>
+          <Card style={{ flex: "1", backgroundColor: "#FFF", width: "80vw",
+            maxWidth: "400px", padding: "20px" }}>
+              It seems that you have unsaved work. Do you want to save your
+              changes before you leave?
+              <Button style={{ float: "right", marginTop: "10px" }}>
+                Leave
               </Button>
-              <p style={{ marginBottom: "8px", fontWeight: "bold" }}>
-                By clicking "confirm registration," you agree to pay the
-                above amount by cash or check to the Exeter Math Club.
-              </p>
-              <p style={{ marginBottom: "0px" }}>
-                You can still edit or delete teams after you've confirmed your
-                registration until the period closes.
-              </p>
-            </div>
+              <Button style={{ float: "right", marginTop: "10px",
+                marginRight: "8px" }} className="button-primary">
+                Stay
+              </Button>
           </Card>
         </div>
-      </ViewContainer>
+      </div>
     )
   }
 }

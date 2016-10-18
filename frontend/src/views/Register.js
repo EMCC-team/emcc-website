@@ -24,13 +24,13 @@ class Register extends React.Component {
       email:            '',
       password:         ''
     };
+  }
 
-    axios.get('/api/auth/token').then(response => {
-      this.setState({user: response.data});
-      this.props.router.push('dashboard');
-    }).catch(response => {
-      this.setState({user: undefined});
-    });
+  // redirect to dashboard if logged in already
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.user) {
+      nextProps.router.push('dashboard');
+    }
   }
 
   registerUser(e) {
@@ -137,45 +137,43 @@ class Register extends React.Component {
 
   render() {
     return (
-      <ViewContainer>
-        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flex: "1" }}>
-          <Card className="form" style={{ marginTop: "50px" }}>
-            <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
-              Create your EMCC&nbsp;account
-            </h5>
-            <Form name="register" onSubmit={this.registerUser} style={{ fontSize: "inherit" }} noValidate>
-              <Group name="name">
-                <Label>
-                  Name<br/>
-                  <ErrorText>{this.state.nameErrorText}</ErrorText>
-                </Label>
-                <Input style={{ width: "100%", ...this.state.nameErrorStyle }} type="text"
-                       value={this.state.name} onChange={this.handleNameChange}/>
-              </Group>
-              <Group name="email">
-                <Label>
-                  Email<br/>
-                  <ErrorText>{this.state.emailErrorText}</ErrorText>
-                </Label>
-                <Input style={{ width: "100%", ...this.state.emailErrorStyle }} type="email"
-                       value={this.state.email} onChange={this.handleEmailChange}/>
-              </Group>
-              <Group name="password">
-                <Label>
-                  Password<br/>
-                  <ErrorText>{this.state.passwordErrorText}</ErrorText>
-                </Label>
-                <Input style={{ width: "100%", ...this.state.passwordErrorStyle }} type="password"
-                       value={this.state.password} onChange={this.handlePasswordChange}/>
-              </Group>
-              <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button>
-              <span>
-                Already have an account? <Link to="login">Login.</Link>
-              </span>
-            </Form>
-          </Card>
-        </div>
-      </ViewContainer>
+      <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flex: "1" }}>
+        <Card className="form" style={{ marginTop: "50px" }}>
+          <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
+            Create your EMCC&nbsp;account
+          </h5>
+          <Form name="register" onSubmit={this.registerUser} style={{ fontSize: "inherit" }} noValidate>
+            <Group name="name">
+              <Label>
+                Name<br/>
+                <ErrorText>{this.state.nameErrorText}</ErrorText>
+              </Label>
+              <Input style={{ width: "100%", ...this.state.nameErrorStyle }} type="text"
+                     value={this.state.name} onChange={this.handleNameChange}/>
+            </Group>
+            <Group name="email">
+              <Label>
+                Email<br/>
+                <ErrorText>{this.state.emailErrorText}</ErrorText>
+              </Label>
+              <Input style={{ width: "100%", ...this.state.emailErrorStyle }} type="email"
+                     value={this.state.email} onChange={this.handleEmailChange}/>
+            </Group>
+            <Group name="password">
+              <Label>
+                Password<br/>
+                <ErrorText>{this.state.passwordErrorText}</ErrorText>
+              </Label>
+              <Input style={{ width: "100%", ...this.state.passwordErrorStyle }} type="password"
+                     value={this.state.password} onChange={this.handlePasswordChange}/>
+            </Group>
+            <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button>
+            <span>
+              Already have an account? <Link to="login">Login.</Link>
+            </span>
+          </Form>
+        </Card>
+      </div>
     );
   }
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import '../fonts/Montserrat.css';
 
-import { Container, Row, Columns, Header, Footer, ViewContainer } from '../components/Layout';
+import { Container, Row, Columns, Header, Footer } from '../components/Layout';
 import { Button, Input } from '../components/Form';
 import Card from '../components/Card';
 
@@ -56,38 +56,36 @@ class Contact extends React.Component {
       float: "right"
     };
     return (
-      <ViewContainer>
-        <Container>
-          <Row>
-            <Columns width="ten" offset="one" style={{ fontSize: "1.4em", color: "#333333" }}>
-              <div style={{ paddingBottom: "5px", margin: "40px 0 20px", borderBottom: "1px solid #bbb"}}>
-                <h2>Contact</h2>
-              </div>
+      <Container>
+        <Row>
+          <Columns width="ten" offset="one" style={{ fontSize: "1.4em", color: "#333333" }}>
+            <div style={{ paddingBottom: "5px", margin: "40px 0 20px", borderBottom: "1px solid #bbb"}}>
+              <h2>Contact</h2>
+            </div>
 
-              <div style={flexStyle}>
-                  <Card style={{ padding: "0px", ...cardStyle }}>
-                    <div style={eliza}></div>
-                    <p style={{ flex: "1 0 auto", ...caption }}>
-                      <span style={heavier}>Eliza Khokhar, </span>
-                      <span style={light}>Tournament&nbsp;Director</span>
-                      <br/>
-                      <a style={email}href="mailto:ekhokhar@exeter.edu">Email</a>
-                    </p>
-                  </Card>
-                  <Card style={{ padding: "0px", ...cardStyle }}>
-                    <div style={yannick}></div>
-                    <p style={{ flex: "1 0 auto", ...caption }}>
-                      <span style={heavier}>Yuan "Yannick" Yao, </span>
-                      <span style={light}>Tournament&nbsp;Director</span>
-                      <br/>
-                      <a style={email}href="mailto:yyao@exeter.edu">Email</a>
-                    </p>
-                  </Card>
-              </div>
-            </Columns>
-          </Row>
-        </Container>
-      </ViewContainer>
+            <div style={flexStyle}>
+                <Card style={{ padding: "0px", ...cardStyle }}>
+                  <div style={eliza}></div>
+                  <p style={{ flex: "1 0 auto", ...caption }}>
+                    <span style={heavier}>Eliza Khokhar, </span>
+                    <span style={light}>Tournament&nbsp;Director</span>
+                    <br/>
+                    <a style={email}href="mailto:ekhokhar@exeter.edu">Email</a>
+                  </p>
+                </Card>
+                <Card style={{ padding: "0px", ...cardStyle }}>
+                  <div style={yannick}></div>
+                  <p style={{ flex: "1 0 auto", ...caption }}>
+                    <span style={heavier}>Yuan "Yannick" Yao, </span>
+                    <span style={light}>Tournament&nbsp;Director</span>
+                    <br/>
+                    <a style={email}href="mailto:yyao@exeter.edu">Email</a>
+                  </p>
+                </Card>
+            </div>
+          </Columns>
+        </Row>
+      </Container>
     );
   }
 }
