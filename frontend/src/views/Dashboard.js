@@ -42,8 +42,7 @@ class Dashboard extends React.Component {
   componentDidMount() {
     window.onbeforeunload = this.toggleShowLeaveDialog;
     this.props.router.setRouteLeaveHook(this.props.route, () => {
-      alert('asd');
-      return 'You have unsaved information, are you sure you want to leave this page?';
+      return 'Are you sure you want to leave this page?  Any unsaved progress will be deleted.';
     });
   }
 
@@ -53,7 +52,6 @@ class Dashboard extends React.Component {
 
   toggleShowLeaveDialog(e) {
     if (this.state.teams.some(team => team.expanded)) {
-      console.log('asd');
       return '';
     }
     return;
@@ -283,7 +281,7 @@ class Dashboard extends React.Component {
               above amount.
             </p>
             <p style={{ marginBottom: "0px" }}>
-              Make out a check to the the&nbsp;
+              Please make out a check to the the&nbsp;
               <span style={{ fontWeight: "bold" }}>
                 Exeter Math Club Competition
               </span> and send it to:
