@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { TeamView } from '../components/TeamForm';
-import { Link, withRouter } from 'react-router';
+import Link from 'react-router/lib/Link';
+import withRouter from 'react-router/lib/withRouter';
 
 import { Button } from '../components/Form';
 import Card from '../components/Card';
@@ -10,6 +11,8 @@ import '../css/Form.scss';
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
+    this.props.setTitle('Dashboard');
+
     this.toggleShowLeaveDialog = this.toggleShowLeaveDialog.bind(this);
     this.componentWillUnmount = this.componentWillUnmount.bind(this);
     this.confirmRegistration = this.confirmRegistration.bind(this);
@@ -41,9 +44,7 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     window.onbeforeunload = this.toggleShowLeaveDialog;
-    this.props.router.setRouteLeaveHook(this.props.route, () => {
-      return 'Are you sure you want to leave this page?  Any unsaved progress will be deleted.';
-    });
+    this.props.router.setRouteLeaveHook(this.props.route, this.toggleShowLeaveDialog);
   }
 
   componentWillUnmount() {
@@ -52,9 +53,9 @@ class Dashboard extends React.Component {
 
   toggleShowLeaveDialog(e) {
     if (this.state.teams.some(team => team.expanded)) {
-      return '';
+      return 'Are you sure you want to leave this page?  Any unsaved progress will be deleted.';
     }
-    return;
+    return true;
   }
 
   price(members, combinable) {
@@ -297,23 +298,6 @@ class Dashboard extends React.Component {
             </p>
           </div>
         </Card>
-        <div style={{ position: "fixed", width: "100vw", height: "100vh",
-          alignItems: "center", justifyContent: "center", top: "0px",
-          backgroundColor: "rgba(50, 50, 50, 0.30)",
-          display: this.state.showLeaveDialog ? "flex" : "none" }}>
-          <Card style={{ flex: "1", backgroundColor: "#FFF", width: "80vw",
-            maxWidth: "400px", padding: "20px" }}>
-              It seems that you have unsaved work. Do you want to save your
-              changes before you leave?
-              <Button style={{ float: "right", marginTop: "10px" }}>
-                Leave
-              </Button>
-              <Button style={{ float: "right", marginTop: "10px",
-                marginRight: "8px" }} className="button-primary">
-                Stay
-              </Button>
-          </Card>
-        </div>
       </div>
     )
   }

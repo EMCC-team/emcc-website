@@ -1,6 +1,10 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Router, Route, IndexRoute, Link, browserHistory, withRouter} from 'react-router';
+import Router from 'react-router/lib/Router';
+import Route from 'react-router/lib/Route';
+import IndexRoute from 'react-router/lib/IndexRoute';
+import Link from 'react-router/lib/Link';
+import browserHistory from 'react-router/lib/browserHistory';
+import withRouter from 'react-router/lib/withRouter';
 
 import './css/skeleton';
 
@@ -25,15 +29,26 @@ class UserContext extends React.Component {
   constructor(props) {
     super(props);
     this.renderChildren = this.renderChildren.bind(this);
+    this.login = this.login.bind(this);
+    this.login();
+    this.state = {};
+  }
+
+  login() {
     axios.get('/api/auth/token').then(response => {
       this.setState({user: response.data});
     }).catch();
-    this.state = {};
   }
 
   renderChildren() {
     return React.Children.map(this.props.children, child => {
-      return React.cloneElement(child, { user: this.state.user });
+      return React.cloneElement(child, {
+        user: this.state.user,
+        setTitle: title => {
+          document.title = `EMCC | ${title}`;
+        },
+        login: this.login
+      });
     });
   }
 

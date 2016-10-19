@@ -250,3 +250,6 @@ fabric.properties
 
 # Webpack
 /frontend/dist
+
+# Secret key
+config

@@ -1,16 +1,18 @@
 import webapp2
+import yaml
 
 from app.handlers.Authentication import RegisterUserHandler, LoginUserHandler, LogoutUserHandler, CurrentUserHandler
 from app.handlers.TeamListHandler import TeamListHandler
 from app.handlers.TeamHandler import TeamHandler
 
+secret_key = yaml.safe_load(open("./config"))['secret-key']
 config = {
     'webapp2_extras.auth': {
         'user_model': 'app.models.User.User',
         'user_attributes': ['name']
     },
     'webapp2_extras.sessions': {
-        'secret_key': '()z-~A7qm!+}W7(c&|RFj{Pk82H|Bgtoe^ncKNf/~0r^;&X-x<*Q,J?7s6Bv6HFq'
+        'secret_key': secret_key
     }
 }
 

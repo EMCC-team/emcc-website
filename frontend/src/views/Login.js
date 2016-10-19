@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
-import { Link, withRouter } from 'react-router';
+import Link from 'react-router/lib/Link';
+import withRouter from 'react-router/lib/withRouter';
 
 import '../fonts/Montserrat.css';
 
@@ -12,7 +13,8 @@ import '../css/Form.scss';
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    document.title = "Login | EMCC";
+    this.props.setTitle('Login');
+
     // Binding is necessary because otherwise the functions inhert an
     // incorrect `this` value.
     this.loginUser = this.loginUser.bind(this);
@@ -80,6 +82,7 @@ class Login extends React.Component {
       password: password
     }).then(response => {
       this.props.router.push('/dashboard');
+      this.props.login();
     }).catch(e => {
       let error = e.response.data.message;
       if (error === 'Fields email, password are required.') {

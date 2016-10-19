@@ -77,7 +77,7 @@ class Form extends React.Component {
   }
 
   render() {
-    let { onSubmit, children, name, formName, ...other } = this.props;
+    let { onSubmit, children, ...other } = this.props;
     let formStyle = {
       margin: '0px auto'
     };

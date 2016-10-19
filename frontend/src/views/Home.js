@@ -1,52 +1,15 @@
 import React from 'react';
-import katex from 'katex';
 import axios from 'axios';
-import { Link } from 'react-router';
+import Link from 'react-router/lib/Link';
 
 import '../fonts/Computer-Modern.css';
 
-import { Container, Row, Columns, Header, Footer } from '../components/Layout';
-import { Button, Input } from '../components/Form';
-
+import { Container, Row, Columns } from '../components/Layout';
 
 class Home extends React.Component {
   constructor(props){
     super(props);
-    document.title = 'Home | EMCC';
-
-    this.showAnswer = this.showAnswer.bind(this);
-    this.nextQuestion = this.nextQuestion.bind(this);
-
-    this.state = {
-      question: 0,
-      answerTextDisplay: 'none',
-      answerButtonDisplay: 'inline',
-      nextButtonDisplay: 'none'
-    };
-    this.state.questions = ['Teemu, Marcus, and Sander are signing documents. If they all work together, they would finish in 6 \
-    hours. If only Teemu and Sander work together, the work would be finished in 8 hours. If only Marcus \
-    and Sander work together, the work would be finished in 10 hours. How many hours would Sander \
-    take to finish signing if he worked alone?'];
-    this.state.answers = ['\\frac{120}{7}'];
-    this.state.answers = this.state.answers.map((answer) => katex.renderToString(answer));
-    console.log(this.props.user);
-  }
-
-  showAnswer() {
-    this.setState({
-      answerTextDisplay: 'inline',
-      answerButtonDisplay: 'none',
-      nextButtonDisplay: 'inline'
-    })
-  }
-
-  nextQuestion() {
-    this.setState({
-      question: (this.state.question + 1) % this.state.questions.length,
-      answerTextDisplay: 'none',
-      answerButtonDisplay: 'inline',
-      nextButtonDisplay: 'none'
-    });
+    this.props.setTitle('Home');
   }
 
   render() {
@@ -157,23 +120,6 @@ class Home extends React.Component {
                   provide three rooms per team for a one night stay at the&nbsp;
                   <a href="http://www.marriott.com/hotels/travel/psmex-fairfield-inn-and-suites-portsmouth-exeter/">
                   Exeter Fairfield Inn</a>.
-                </p>
-
-                <h3>
-                  What next? Start practicing!
-                </h3>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"/>
-                <p style={{ fontFamily: "'Computer Modern Serif', serif" }}>
-                  <span style={{ fontWeight: "bold" }}>2016 Team Test, Problem 9</span>
-                  <br/>
-                    {this.state.questions[this.state.question]}
-                  <br/>
-                    <button onClick={this.showAnswer} style={{ display: this.state.answerButtonDisplay, fontSize: ".8em", marginTop: "10px",
-                      fontFamily: "Montserrat", fontWeight: "200" }}>Show answer</button>
-                    <span style={{ display: this.state.answerTextDisplay }}>Answer: </span>
-                    <span style={{ display: this.state.answerTextDisplay }} dangerouslySetInnerHTML={{__html: this.state.answers[this.state.question]}}></span>
-                    <button onClick={this.nextQuestion} style={{ display: this.state.nextButtonDisplay, fontSize: ".8em", marginTop: "10px",
-                      fontFamily: "Montserrat", fontWeight: "200", marginLeft: "15px" }}>Next question</button>
                 </p>
 
                 <h3 style={{ textAlign: "center", marginBottom: "20px" }}>

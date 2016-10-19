@@ -5,7 +5,6 @@ import { Link, withRouter } from 'react-router';
 
 import '../fonts/Montserrat.css';
 
-import { ViewContainer } from '../components/Layout';
 import { Form, Group, Label, Input, Button, ErrorText } from '../components/Form';
 import Card from '../components/Card';
 import '../css/Form.scss';
@@ -13,7 +12,8 @@ import '../css/Form.scss';
 class Register extends React.Component {
   constructor(props) {
     super(props);
-    document.title = "Register | EMCC";
+    this.props.setTitle('Register');
+
     this.registerUser = this.registerUser.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);

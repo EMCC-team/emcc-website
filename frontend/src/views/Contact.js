@@ -1,15 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router';
+import Link from 'react-router/lib/Link';
 
 import '../fonts/Montserrat.css';
 
-import { Container, Row, Columns, Header, Footer } from '../components/Layout';
-import { Button, Input } from '../components/Form';
+import { Container, Row, Columns} from '../components/Layout';
 import Card from '../components/Card';
 
 let elizaImage = require('../assets/eliza.jpg');
 let yannickImage = require('../assets/yannick.jpg');
 class Contact extends React.Component {
+  constructor(props){
+    super(props);
+    this.props.setTitle('Contact');
+  }
+
   render() {
     let cardStyle = {
       width: "48%",

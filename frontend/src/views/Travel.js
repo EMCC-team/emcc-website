@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 import '../fonts/Computer-Modern.css';
 
-import { Container, Row, Columns, Header, Footer } from '../components/Layout';
-import { Button, Input } from '../components/Form';
+import { Container, Row, Columns } from '../components/Layout';
 
 
 class Travel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props.setTitle('Travel');
+  }
+
   render() {
     return (
       <Container>

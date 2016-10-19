@@ -11,7 +11,7 @@ var config = {
     object below. */
     entry: {
         main: './src',
-        vendor: ['react', 'react-dom']
+        vendor: ['react', 'react-dom', 'axios']
     },
     /* Output defines where bundled objects are compiled to.
            path: the directory from the root.
@@ -73,9 +73,16 @@ var config = {
 
     CleanPlugin cleans the compile directory before each build. */
     plugins: [
+        new webpack.DefinePlugin({
+          'process.env':{
+            'NODE_ENV': JSON.stringify('production')
+          }
+        }),
         new CommonsChunkPlugin({name: 'vendor', filename: 'js/vendor.[chunkhash].js', minChunks: Infinity}),
         new ExtractTextPlugin("css/[name].[chunkhash].css", {allChunks: true}),
         new HtmlPlugin({chunks: ['vendor', 'main'], template: 'src/index.ejs'}),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.UglifyJsPlugin()
     ],
 
     postcss: function() {
