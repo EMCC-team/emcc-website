@@ -57,6 +57,10 @@ var config = {
         {
             test: /\.woff2$|\.woff$|\.otf$|\.ttf$/,
             loader: 'file?name=/fonts/[name].[hash].[ext]'
+        },
+        {
+            test: /\/archive\/.*\.pdf/,
+            loader: 'file?name=/archive/[name].[ext]'
         }
       ]
     },
