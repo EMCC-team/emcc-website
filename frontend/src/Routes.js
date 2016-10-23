@@ -20,6 +20,7 @@ import Contest from './views/Contest';
 import Dashboard from './views/Dashboard';
 import Travel from './views/Travel';
 import Contact from './views/Contact';
+import Archive from './views/Archive';
 import { ViewContainer } from './components/Layout';
 
 import axios from 'axios';
@@ -78,6 +79,7 @@ class Routes extends React.Component {
           <Route path="dashboard" component={Dashboard}/>
           <Route path="travel" component={Travel}/>
           <Route path="contact" component={Contact}/>
+          <Route path="archive" component={Archive}/>
           <Route path="*"/>
         </Route>
       </Router>

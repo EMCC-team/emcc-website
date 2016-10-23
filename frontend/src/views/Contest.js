@@ -19,9 +19,9 @@ class Contest extends React.Component {
             <div style={{ paddingBottom: "5px", margin: "40px 0 20px", borderBottom: "1px solid #bbb"}}>
               <h2>Contest Information</h2>
             </div>
-            <h3>
-              Schedule
-            </h3>
+            <p>
+              View the Archive <a href="archive">here</a>.
+            </p>
 
             <h3>
               Format

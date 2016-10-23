@@ -71,7 +71,7 @@ class Header extends React.Component {
   }
 
   getNavLinks() {
-    let links = ['contest', 'travel', 'contact'];
+    let links = ['contest', 'travel', 'contact', 'archive'];
     if (this.props.user) {
       links.push('dashboard');
     }

@@ -21,7 +21,8 @@ class Contact extends React.Component {
       margin: "6px",
       fontFamily: "Montserrat",
       display: "flex",
-      flexDirection: "column"
+      flexDirection: "column",
+      flex: "1"
     };
     let flexStyle = {
       display: "flex",
@@ -72,7 +73,7 @@ class Contact extends React.Component {
                   <div style={eliza}></div>
                   <p style={{ flex: "1 0 auto", ...caption }}>
                     <span style={heavier}>Eliza Khokhar, </span>
-                    <span style={light}>Tournament&nbsp;Director</span>
+                    <span style={light}>Tournament Director</span>
                     <br/>
                     <a style={email}href="mailto:ekhokhar@exeter.edu">Email</a>
                   </p>
@@ -81,7 +82,7 @@ class Contact extends React.Component {
                   <div style={yannick}></div>
                   <p style={{ flex: "1 0 auto", ...caption }}>
                     <span style={heavier}>Yuan "Yannick" Yao, </span>
-                    <span style={light}>Tournament&nbsp;Director</span>
+                    <span style={light}>Tournament Director</span>
                     <br/>
                     <a style={email}href="mailto:yyao@exeter.edu">Email</a>
                   </p>

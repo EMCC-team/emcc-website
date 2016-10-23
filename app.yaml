@@ -10,6 +10,10 @@ handlers:
   static_dir: frontend/dist/assets
   expiration: '100d'
 
+- url: /archive
+  static_dir: frontend/dist/archive
+  expiration: '100d'
+
 - url: /js
   static_dir: frontend/dist/js
   expiration: '100d'
