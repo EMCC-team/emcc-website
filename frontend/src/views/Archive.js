@@ -27,7 +27,8 @@ let archive = {
     all: require('../archive/emcc11all.pdf'),
   },
   2010: {
-    all: require('../archive/emcc10all.pdf'),
+    problems: require('../archive/emcc10all.pdf'),
+    solutions: require('../archive/emcc10sol.pdf')
   },
 }
 
@@ -61,7 +62,8 @@ class Archive extends React.Component {
             <h3>2011</h3>
             <p><a href={`${archive['2011'].all}`}>EMCC 2011 Problems and Solutions</a></p>
             <h3>2010</h3>
-            <p><a href={`${archive['2010'].all}`}>EMCC 2010 Problems and Solutions</a></p>
+            <p><a href={`${archive['2010'].problems}`}>EMCC 2010 Problems</a>&nbsp;
+            <a href={`${archive['2010'].solutions}`}>Solutions</a></p>
           </Columns>
         </Row>
       </Container>
