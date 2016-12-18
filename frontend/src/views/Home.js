@@ -44,10 +44,15 @@ class Home extends React.Component {
     return (
       <div>
         <div id="hero" style={heroStyles}>
-          <Container>
+          <Container style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
             <h1 style={headingStyles}>EMCC</h1>
             <h3 style={subheadingStyles}>The Exeter Math Club&nbsp;Competition</h3>
-            <h5 style={subheadingStyles}>January 21, 2017, Phillips Exeter Academy</h5>
+            <h5 style={{fontWeight: '300'}}>January 21, 2017, Phillips Exeter Academy</h5>
+            <p style={{fontWeight: '200', maxWidth: '500px'}}>
+              Register by January 5 (late registration January 15 for 1.5x the fee).
+              Under no conditions do we accept team registrations or changes
+              after January&nbsp;15.
+            </p>
             <div style={{ textAlign: "center", marginBottom: "10vh" }}>
               {(() => {if (!this.props.user) {
                 return (
@@ -122,9 +127,17 @@ class Home extends React.Component {
                   Exeter Fairfield Inn</a>.
                 </p>
 
-                <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
-                  Register now!
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <h3 style={{ textAlign: "center", marginBottom: "4px" }}>
+                  Register by January 5!
                 </h3>
+                <p style={{fontWeight: '200', maxWidth: '500px',
+                           fontSize: '14px', marginBottom: "25px" }}>
+                  Late registration January 15 for 1.5x the fee.
+                  Under no conditions do we accept team registrations or changes
+                  after January&nbsp;15.
+                </p>
+                </div>
                 <div style={{ textAlign: "center" }}>
                   {(() => {if (!this.props.user) {
                     return (
