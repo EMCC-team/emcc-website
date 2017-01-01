@@ -50,7 +50,7 @@ class Home extends React.Component {
             <h5 style={{fontWeight: '300'}}>January 21, 2017, Phillips Exeter Academy</h5>
             <p style={{fontWeight: '200', maxWidth: '500px'}}>
               Register by January 5 (late registration January 15 for 1.5x the fee).
-              Under no conditions do we accept team registrations or changes
+              Under no conditions will we accept team registrations or changes
               after January&nbsp;15.
             </p>
             <div style={{ textAlign: "center", marginBottom: "10vh" }}>

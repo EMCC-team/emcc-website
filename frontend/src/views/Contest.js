@@ -19,10 +19,89 @@ class Contest extends React.Component {
             <div style={{ paddingBottom: "5px", margin: "40px 0 20px", borderBottom: "1px solid #bbb"}}>
               <h2>Contest Information</h2>
             </div>
-            <p>
-              View the Archive <a href="archive">here</a>.
-            </p>
+            <h3>
+              Tentative Schedule
+            </h3>
+            <table>
+              <tr>
+                <th>Start</th>
+                <th>End</th>
+                <th>Event</th>
+                <th>Location</th>
+              </tr>
+              <tr>
+                <td>9:00</td>
+                <td>10:00</td>
+                <td>Registration</td>
+                <td>Academy Building Foyer</td>
+              </tr>
+              <tr>
+                <td colSpan={2}></td>
+                <td colSpan={2}><p style={{ fontSize: "0.8em" }}>Teams will be introduced to their proctors at registration.
+                If teams arrive late for registration, they should go directly to the opening ceremony, in Assembly Hall.</p></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>Light Breakfast</td>
+                <td>Academy Building Foyer</td>
+              </tr>
+              <tr>
+                <td>10:00</td>
+                <td>10:30</td>
+                <td>Opening Ceremony</td>
+                <td>Assembly Hall (Academy Building)</td>
+              </tr>
+              <tr>
+                <td colSpan={2}></td>
+                <td colSpan={2}><p style={{ fontSize: "0.8em" }}>Proctors will lead teams after the opening ceremony directly to
+                their classrooms for the individual rounds.</p></td>
+              </tr>
+              <tr>
+                <td>10:30</td>
+                <td>12:30</td>
+                <td>Team and Individual Rounds</td>
+                <td>Classrooms (Academy Building)</td>
+              </tr>
+              <tr>
+                <td>12:30</td>
+                <td>1:15</td>
+                <td>Lunch</td>
+                <td>Academy Building</td>
+              </tr>
+              <tr>
+                <td>1:15</td>
+                <td>2:45</td>
+                <td>Guts Round</td>
+                <td>Assembly Hall</td>
+              </tr>
+              <tr>
+                <td>2:45</td>
+                <td>3:00</td>
+                <td>Break</td>
+                <td>Assembly Hall</td>
+              </tr>
+              <tr>
+                <td>3:00</td>
+                <td>3:30</td>
+                <td>Awards</td>
+                <td>Assembly Hall</td>
+              </tr>
 
+            </table>
+
+            <h3>
+              Locations
+            </h3>
+            <p>
+              Academy Building, the main hub for the competition, is the main building on campus
+              overlooking the lawn next to Front Street. Registration will take place in the foyer of the Academy
+              Building, located on the main floor with the marble steps. Breakfast will be available in the foyer as
+              well. The opening and closing ceremonies, along with the Guts Round, will take place in the
+              Assembly Hall, located on the 2 nd floor of the Academy Building. The individual and team rounds will
+              take place in classrooms in the Academy Building. Lunch will also be available for contestants and
+              coaches in the classrooms.
+            </p>
             <h3>
               Format
             </h3>
