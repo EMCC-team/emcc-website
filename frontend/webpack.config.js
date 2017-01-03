@@ -59,7 +59,7 @@ var config = {
             loader: 'file?name=/fonts/[name].[hash].[ext]'
         },
         {
-            test: /\\archive\\.*\.pdf/,
+            test: /[\\\/]archive[\\\/].*\.pdf/,
             loader: 'file?name=/archive/[name].[ext]'
         }
       ]
