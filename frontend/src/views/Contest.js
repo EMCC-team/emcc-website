@@ -30,10 +30,10 @@ class Contest extends React.Component {
                 <th>Location</th>
               </tr>
               <tr>
-                <td>9:00</td>
-                <td>10:00</td>
-                <td>Registration</td>
-                <td>Academy Building Foyer</td>
+                <td style={{borderBottom: "none"}}>9:00</td>
+                <td style={{borderBottom: "none"}}>10:00</td>
+                <td style={{borderBottom: "none"}}>Registration</td>
+                <td style={{borderBottom: "none"}}>Academy Building Foyer</td>
               </tr>
               <tr>
                 <td colSpan={2}></td>
@@ -47,10 +47,10 @@ class Contest extends React.Component {
                 <td>Academy Building Foyer</td>
               </tr>
               <tr>
-                <td>10:00</td>
-                <td>10:30</td>
-                <td>Opening Ceremony</td>
-                <td>Assembly Hall (Academy Building)</td>
+                <td style={{borderBottom: "none"}}>10:00</td>
+                <td style={{borderBottom: "none"}}>10:30</td>
+                <td style={{borderBottom: "none"}}>Opening Ceremony</td>
+                <td style={{borderBottom: "none"}}>Assembly Hall (Academy Building)</td>
               </tr>
               <tr>
                 <td colSpan={2}></td>
