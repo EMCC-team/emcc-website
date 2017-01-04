@@ -25,7 +25,7 @@ class Dashboard extends React.Component {
     this.payload = this.payload.bind(this);
     this.addTeam = this.addTeam.bind(this);
 
-    // retrieval
+    // retrieve teams
     axios.get('/api/teams/').then(response => {
       this.setState({ teams: response.data, loading_message: "" });
     }).catch(error => {
@@ -58,20 +58,22 @@ class Dashboard extends React.Component {
     return true;
   }
 
-  price(members, combinable) {
-    if (!members) {
-      return 0;
-    }
+  price(team) {
+    console.log(team);
+    if (!team || !team.members) return;
+    let { members, combinable } = team;
+    let TEAM_PRICE = 50, MEMBER_PRICE = 15, p = 0;
     let length = members.filter((e) => e).length;
-    if (length == 4) {
-      return 50;
-    }
-    else if (!combinable) {
-      return 50;
+    if (length == 4 || !combinable) {
+      p = TEAM_PRICE;
     }
     else {
-      return length * 15;
+      p = length * MEMBER_PRICE;
     }
+    if (team.late) {
+      p *= 1.5;
+    }
+    return p;
   }
 
   updateTeam(team, index) {
@@ -195,13 +197,20 @@ class Dashboard extends React.Component {
   }
 
   getPrice(teams) {
-    return teams.reduce((a, b) => a + this.price(b.members, b.combinable), 0);
+    return teams.reduce((a, b) => a + this.price(b), 0);
   }
 
   render() {
     return (
       <div style={{ height: "100%", display: "flex", alignItems: "center",
       justifyContent: "center", flexDirection: "column" }}>
+        <Card style={{ backgroundColor: "#f9ce21"}}>
+          <strong>
+          Teams confirmed after January&nbsp;5 at 11:59:59 PM Pacific Standard Time
+          will incur a 1.5x late fee. Under no circumstances do we allow changes
+          to teams after January&nbsp;15.
+          </strong>
+        </Card>
         <div style={{ height: "100%", display: "flex", flexWrap: "wrap",
             justifyContent: "center", width: "100%", flex: "1" }}>
           <div className="form" style={{ width: "calc(100% - 20px)",

@@ -66,7 +66,6 @@ class Header extends React.Component {
   }
 
   toggleDropdown(e) {
-    e.preventDefault();
     this.setState({ dropdownVisible: !this.state.dropdownVisible });
   }
 
@@ -104,8 +103,10 @@ class Header extends React.Component {
                 return <li key={i+20}style={{ margin: "0"}}>
                   <Link key={i+30} style={{ ...linkStyle, width: "100%",
                         boxSizing: "border-box" }}
-                        activeStyle={activeLinkStyle}
-                        to={`${place}`}>{`${place}`}</Link></li>
+                        activeStyle={activeLinkStyle} to={`${place}`}
+                        onClick={this.toggleDropdown}>
+                        {`${place}`}
+                  </Link></li>
              })}
           </ul>
         </div>
