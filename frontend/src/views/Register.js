@@ -95,6 +95,7 @@ class Register extends React.Component {
       return axios.post('/api/auth/login', { email: email, password: password });
     }).then(response => {
       this.props.router.push('/dashboard');
+      this.props.login();
     }).catch(e => {
       let error = e.response.data.message;
       if (error === 'Fields name, email, password are required.') {

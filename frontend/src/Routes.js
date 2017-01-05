@@ -38,7 +38,9 @@ class UserContext extends React.Component {
   login() {
     axios.get('/api/auth/token').then(response => {
       this.setState({user: response.data});
-    }).catch();
+    }).catch((e) => {
+      console.log(e);
+    });
   }
 
   renderChildren() {
