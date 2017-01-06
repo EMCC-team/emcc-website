@@ -37,6 +37,13 @@ class TeamListHandler(BaseHandler):
 			}))
 			return
 
+		if j['confirmed']:
+			self.response.write(json.dumps({
+				'status': '401',
+				'error': 'Unauthorized',
+				'message': 'Team signups are closed.'
+			}))
+			return
 		team = Team(year=2017, user=self.user.key)
 		team.deserialize(j)
 		team.put()

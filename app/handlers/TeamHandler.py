@@ -34,6 +34,13 @@ class TeamHandler(BaseHandler):
                 self.response.write(error_messages['404'])
                 return
             j = json.loads(self.request.body)
+            if j['confirmed'] == True and True != team.confirmed:
+                self.response.write(json.dumps({
+    				'status': '401',
+    				'error': 'Unauthorized',
+    				'message': 'Team signups are closed.'
+    			}))
+                return
             team.deserialize(j)
             self.response.status = '204'
         except ValueError as e:
