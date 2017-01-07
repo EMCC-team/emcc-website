@@ -5,6 +5,10 @@ import { Form, Group, Label, ErrorText, Input, Button } from '../components/Form
 import Card from '../components/Card';
 import '../fonts/Montserrat.css';
 
+let makeTeamForPriceChecker = (members, combinable, late) => {
+  return { members, combinable, late };
+}
+
 class TeamView extends React.Component {
   constructor(props) {
     super(props);
@@ -40,7 +44,11 @@ class TeamView extends React.Component {
   }
 
   componentWillMount() {
-    this.state.price = this.props.price(this.props.members, this.props.combinable);
+    this.state.price = this.props.price(makeTeamForPriceChecker(
+      this.props.members,
+      this.props.combinable,
+      this.props.late
+    ));
     this.props.save(this);
   }
 
@@ -130,7 +138,10 @@ class TeamView extends React.Component {
     }
     this.setState({ name: _name, school: _school, members: _members,
                     combinable: this.state.combinable, expanded: false,
-                    price: this.props.price(_members, this.state._combinable) },
+                    price: this.props.price(makeTeamForPriceChecker(
+                      _members, this.state._combinable, this.props.team.late
+                    ))
+                  },
                     () => {
                       this.props.save(this, true)
                       this.cancel();
@@ -150,7 +161,10 @@ class TeamView extends React.Component {
             display: this.state.expanded ? "none" : "block", marginRight: ".5rem",
           fontWeight: "500", fontFamily: "Montserrat" }}>{this.state.name}</h6>
           <span style={{ display: this.state.expanded ? "none" : "block" }}>
-            {"$" + this.props.price(this.state.members, this.state.combinable)}
+            {"$" + this.props.price(makeTeamForPriceChecker(
+              this.state.members, this.state.combinable, this.props.team.late
+              ))
+            }
           </span>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -263,7 +277,9 @@ class TeamView extends React.Component {
               <div style={{ display: "flex", justifyContent: "flex-end",
               alignItems: "baseline" }}>
                 <span style={{ display: this.state.expanded ? "block" : "none" }}>
-                  {"$" + this.props.price(this.state._members, this.state._combinable)}
+                  {"$" + this.props.price(makeTeamForPriceChecker(
+                    this.state._members, this.state._combinable, this.props.team.late
+                  ))}
                 </span>
                 {(() => {
                   if (this.state.name) {

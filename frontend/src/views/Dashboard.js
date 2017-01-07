@@ -206,9 +206,10 @@ class Dashboard extends React.Component {
       justifyContent: "center", flexDirection: "column" }}>
         <Card style={{ backgroundColor: "#f9ce21"}}>
           <strong>
-          Teams confirmed after January&nbsp;5 at 11:59:59 PM Pacific Standard Time
-          will incur a 1.5x late fee. Under no circumstances do we allow changes
-          to teams after January&nbsp;15.
+            We've had an unexpectedly high number of signups, which have forced
+            us to close registration for this year's EMCC. You can still edit
+            teams until January 15. If you weren't able to sign up, we hope that
+            you can join us next year!
           </strong>
         </Card>
         <div style={{ height: "100%", display: "flex", flexWrap: "wrap",
@@ -225,26 +226,6 @@ class Dashboard extends React.Component {
               You have no confirmed teams. After you confirm your
               registration, your teams will show up here instead.
             </p>)}
-          </div>
-          <div className="form" style={{ width: "calc(100% - 20px)",
-          maxWidth: "440px", overflow: "hidden", flex: "1" }}>
-            <Card style={{ marginTop: "20px", padding: "20px" }}>
-              <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0px" }}>
-                Unconfirmed teams
-              </h4>
-            </Card>
-            {this.getTeamViews(this.state.teams, team => !team.confirmed,
-            <span>
-              You have no unconfirmed teams.&nbsp;
-              <a href="#" onClick={this.addTeam}>Add one?</a>
-            </span>)}
-            <Button onClick={this.addTeam} className="button" style={{
-              paddingRight: "20px", marginRight: "10px", alignItems: "center",
-              display: this.state.loading_message ? "none" : "flex", margin: "0px 10px",
-              width: "calc(100% - 20px)", justifyContent: "center" }}>
-              <span style={{ flex: "0" }}>Add a team</span>
-              <i style={{ flex: "0", lineHeight: "inherit" }} className="material-icons">add</i>
-            </Button>
           </div>
         </div>
         <Card className="confirmation-box" style={{ padding: "20px",
@@ -264,32 +245,14 @@ class Dashboard extends React.Component {
               <tr>
                 <td style={{ fontWeight: "bold", margin: "0px 5px",
                   borderBottom: "none", padding: "3px 10px",
-                  textAlign: "right" }}>Unconfirmed teams:</td>
-                <td style={{ borderBottom: "none", padding: "3px 10px" }}>
-                  {"$" + this.getPrice(this.state.teams.filter(team => !team.confirmed))}
-                </td>
-              </tr>
-              <tr>
-                <td style={{ fontWeight: "bold", margin: "0px 5px",
-                  borderBottom: "none", padding: "3px 10px",
                   textAlign: "right" }}>Total:</td>
                 <td style={{ borderBottom: "none", padding: "3px 10px" }}>
-                  {"$" + this.getPrice(this.state.teams)}
+                  {"$" + this.getPrice(this.state.teams.filter(team => team.confirmed))}
                 </td>
               </tr>
             </tbody>
           </table>
           <div style={{ display: this.state.loading_message ? "none" : "block"}}>
-            <Button onClick={this.confirmRegistration} className="button-primary"
-            style={{ paddingRight: "20px", marginRight: "10px",
-              alignItems: "center", display:"flex",
-              width: "100%", margin: "10px 0px", justifyContent: "center" }}>
-              <span>Confirm registration</span>
-            </Button>
-            <p style={{ marginBottom: "8px", fontWeight: "bold" }}>
-              By clicking "confirm registration," you agree to pay the
-              above amount.
-            </p>
             <p style={{ marginBottom: "0px" }}>
               Please make out a check to the the&nbsp;
               <span style={{ fontWeight: "bold" }}>
