@@ -49,9 +49,9 @@ class Home extends React.Component {
             <h3 style={subheadingStyles}>The Exeter Math Club&nbsp;Competition</h3>
             <h5 style={{fontWeight: '300'}}>January 21, 2017, Phillips Exeter Academy</h5>
             <p style={{fontWeight: '200', maxWidth: '500px'}}>
-              Register by January 5 (late registration January 15 for 1.5x the fee).
-              Under no conditions will we accept team registrations or changes
-              after January&nbsp;15.
+              We've had an unexpectedly high number of signups, which have forced
+              us to close registration for this year's EMCC. If you weren't able to
+              sign up, we hope that you can join us next year!
             </p>
             <div style={{ textAlign: "center", marginBottom: "10vh" }}>
               {(() => {if (!this.props.user) {
@@ -62,17 +62,12 @@ class Home extends React.Component {
                       fontSize: "1.2em", fontFamily: "Montserrat",
                       fontWeight: "200", paddingTop: "10px",
                       paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
-                    <Link to="register" className="button button-primary"
-                      style={{ margin: "auto", display: "inline",
-                      fontSize: "1.2em", fontFamily: "Montserrat",
-                      fontWeight: "200", paddingTop: "10px",
-                      paddingBottom: "10px" }}>Register</Link>
                   </div>
                 )
               }
               else {
                 return <Link to="dashboard" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
-                  fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register teams</Link>}
+                  fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Edit your teams</Link>}
               })()}
             </div>
           </Container>
@@ -129,13 +124,14 @@ class Home extends React.Component {
 
                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <h3 style={{ textAlign: "center", marginBottom: "4px" }}>
-                  Register by January 5!
+                  Regration is now closed.
                 </h3>
                 <p style={{fontWeight: '200', maxWidth: '500px',
                            fontSize: '14px', marginBottom: "25px" }}>
-                  Late registration January 15 for 1.5x the fee.
-                  Under no conditions do we accept team registrations or changes
-                  after January&nbsp;15.
+                  We've had an unexpectedly high number of signups, which have forced
+                  us to close registration for this year's EMCC. You can still edit
+                  confirmed teams until January 15. If you weren't able to sign up, we hope that
+                  you can join us next year!
                 </p>
                 </div>
                 <div style={{ textAlign: "center" }}>
@@ -144,14 +140,12 @@ class Home extends React.Component {
                       <div>
                         <Link to="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1em",
                           fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
-                        <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
-                          fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</Link>
                       </div>
                     );
                   }
                   else {
                     return <Link to="dashboard" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
-                      fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register teams</Link>
+                      fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Edit your teams</Link>
                   }})()}
                 </div>
               </Columns>
@@ -164,3 +158,21 @@ class Home extends React.Component {
 }
 
 export default Home;
+
+/*
+Removed registration buttons
+
+in hero:
+
+<Link to="register" className="button button-primary"
+                      style={{ margin: "auto", display: "inline",
+                      fontSize: "1.2em", fontFamily: "Montserrat",
+                      fontWeight: "200", paddingTop: "10px",
+                      paddingBottom: "10px" }}>Register</Link>
+
+in the bottom of the page:
+
+<Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
+                          fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</Link>
+
+*/
