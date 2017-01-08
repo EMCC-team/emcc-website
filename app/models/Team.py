@@ -57,7 +57,6 @@ class Team(ndb.Model):
         self.confirmed = team['confirmed']
         self.set_members(team['members'])
         self.put()
-        return
 
     def set_members(self, new_members):
         current_members = Individual.query(Individual.team == self.key)

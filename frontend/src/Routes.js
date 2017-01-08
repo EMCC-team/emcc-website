@@ -6,11 +6,10 @@ import Link from 'react-router/lib/Link';
 import browserHistory from 'react-router/lib/browserHistory';
 import withRouter from 'react-router/lib/withRouter';
 
+import './css/styles.css';
 import './css/skeleton';
 
 import './fonts/Montserrat.css';
-import './fonts/Open-Sans.css';
-import './css/styles.css';
 import './fonts/Material-Icons.css';
 
 import Register from './views/Register';

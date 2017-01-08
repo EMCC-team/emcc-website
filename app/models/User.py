@@ -24,3 +24,28 @@ class User(BaseUser):
         """
 
         self.password = security.generate_password_hash(raw_password)
+
+    def serialize(self):
+        """Serialize a user instance.
+
+        Returns: A dictionary with user information.
+        """
+
+        entry = {
+            'name': self.name,
+            'email': self.email
+        }
+        return entry
+
+    def deserialize(self, serialized_user):
+        """Update a user from a serialized representation.
+
+        Args:
+            serialized_user: A dictionary containing fields which will update
+                the user instance.
+        """
+
+        for field in ['name', 'email']:
+            setattr(self, field, serialized_user.get(field))
+        if serialized_user.get('password'):
+            self.set_password(serialized_user.password())
