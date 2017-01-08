@@ -141,6 +141,28 @@ class Register extends React.Component {
       <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flex: "1" }}>
         <Card className="form" style={{ marginTop: "50px" }}>
           <h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
+            Registration closed
+          </h5>
+          
+            <p>
+              We've had an unexpectedly high number of signups, which have forced<br />
+              us to close registration for this year's EMCC. You can still edit<br />
+              confirmed teams until January 15. If you weren't able to sign up, we<br />
+              hope that you can join us next year!
+            </p>
+            <p>
+              Already have an account? <Link to="login">Login.</Link>
+            </p>
+        </Card>
+      </div>
+    );
+  }
+}
+
+export default withRouter(Register);
+
+/* 
+<h5 style={{ fontFamily: "Montserrat", textAlign: "center" }}>
             Create your EMCC&nbsp;account
           </h5>
           <Form name="register" onSubmit={this.registerUser} style={{ fontSize: "inherit" }} noValidate>
@@ -168,15 +190,10 @@ class Register extends React.Component {
               <Input style={{ width: "100%", ...this.state.passwordErrorStyle }} type="password"
                      value={this.state.password} onChange={this.handlePasswordChange}/>
             </Group>
-            <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button>
+            <Button type="submit" className="button-primary" style={{ width: "100%" }}>Register</Button> 
+
             <span>
               Already have an account? <Link to="login">Login.</Link>
             </span>
           </Form>
-        </Card>
-      </div>
-    );
-  }
-}
-
-export default withRouter(Register);
+*/

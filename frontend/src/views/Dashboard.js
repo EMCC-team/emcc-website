@@ -208,7 +208,7 @@ class Dashboard extends React.Component {
           <strong>
             We've had an unexpectedly high number of signups, which have forced
             us to close registration for this year's EMCC. You can still edit
-            teams until January 15. If you weren't able to sign up, we hope that
+            confirmed teams until January 15. If you weren't able to sign up, we hope that
             you can join us next year!
           </strong>
         </Card>
@@ -223,8 +223,8 @@ class Dashboard extends React.Component {
             </Card>
             {this.getTeamViews(this.state.teams, team => team.confirmed,
             <p style={{ marginBottom: "0px" }}>
-              You have no confirmed teams. After you confirm your
-              registration, your teams will show up here instead.
+              You have no confirmed teams. Unfortunately, registration is now closed
+              so you will be unable to add any new teams.
             </p>)}
           </div>
         </div>
