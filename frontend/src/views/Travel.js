@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../fonts/Computer-Modern.css';
-
 import { Container, Row, Columns } from '../components/Layout';
 
 

@@ -6,9 +6,8 @@ import Link from 'react-router/lib/Link';
 import browserHistory from 'react-router/lib/browserHistory';
 import withRouter from 'react-router/lib/withRouter';
 
-import './css/styles.css';
 import './css/skeleton';
-
+import './css/styles.css';
 import './fonts/Montserrat.css';
 import './fonts/Material-Icons.css';
 

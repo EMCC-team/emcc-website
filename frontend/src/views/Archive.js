@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'react-router/lib/Link';
 
-import '../fonts/Computer-Modern.css';
-
 import { Container, Row, Columns } from '../components/Layout';
 
 let archive = {

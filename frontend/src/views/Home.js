@@ -2,8 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Link from 'react-router/lib/Link';
 
-import '../fonts/Computer-Modern.css';
-
 import { Container, Row, Columns } from '../components/Layout';
 
 class Home extends React.Component {
