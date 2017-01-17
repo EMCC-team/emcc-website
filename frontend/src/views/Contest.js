@@ -108,7 +108,7 @@ class Contest extends React.Component {
             </h4>
             <p>
               The individual round consists of two parts, taken one after
-              another. The first part has 25 questions in 20 minutes,
+              another. The first part has 20 questions in 25 minutes,
               emphasizing speed. The second part is 10 questions in 45
               minutes, emphasizing accuracy in problem solving. Each
               student's individual score is added to their team score.

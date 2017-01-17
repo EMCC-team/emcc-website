@@ -21,7 +21,7 @@ class Travel extends React.Component {
             <h4>Campus Map</h4>
             <p>
               The Phillips Exeter Academy campus address is <a href="https://www.google.com/maps/place/20+Main+St,+Exeter,+NH+03833/@42.9819091,-70.9518363,18z/data=!4m5!3m4!1s0x89e2eef8d5c19a37:0x39626a2a0e785695!8m2!3d42.9812306!4d-70.95181">
-              20 Main St</a>.  You can learn more about visiting the campus <a href="http://www.exeter.edu/about-us/our-campus">here</a>.
+              20 Main St, Exeter, NH, 03833</a>.  You can learn more about visiting the campus <a href="http://www.exeter.edu/about-us/our-campus">here</a>.
             </p>
 
             <h4>Parking</h4>
