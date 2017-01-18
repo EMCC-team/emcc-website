@@ -17,8 +17,10 @@ class Contest extends React.Component {
             <div style={{ paddingBottom: "5px", margin: "40px 0 20px", borderBottom: "1px solid #bbb"}}>
               <h2>Contest Information</h2>
             </div>
+            <p>Detailed information is available in the Coaches' Packet, which coaches can access by logging in.
+            These packets will also be handed out at registration.</p>
             <h3>
-              Tentative Schedule
+              Schedule
             </h3>
             <table>
               <tr>
@@ -31,7 +33,7 @@ class Contest extends React.Component {
                 <td style={{borderBottom: "none"}}>9:00</td>
                 <td style={{borderBottom: "none"}}>10:00</td>
                 <td style={{borderBottom: "none"}}>Registration</td>
-                <td style={{borderBottom: "none"}}>Academy Building Foyer</td>
+                <td style={{borderBottom: "none"}}>Powell Hall (Music Center)</td>
               </tr>
               <tr>
                 <td colSpan={2}></td>
@@ -42,7 +44,7 @@ class Contest extends React.Component {
                 <td></td>
                 <td></td>
                 <td>Light Breakfast</td>
-                <td>Academy Building Foyer</td>
+                <td>Powell Hall (Music Center)</td>
               </tr>
               <tr>
                 <td style={{borderBottom: "none"}}>10:00</td>
@@ -57,31 +59,37 @@ class Contest extends React.Component {
               </tr>
               <tr>
                 <td>10:30</td>
-                <td>12:30</td>
+                <td>1:00</td>
                 <td>Team and Individual Rounds</td>
                 <td>Classrooms (Academy Building)</td>
               </tr>
               <tr>
-                <td>12:30</td>
-                <td>1:15</td>
+                <td>1:00</td>
+                <td>1:30</td>
                 <td>Lunch</td>
                 <td>Academy Building</td>
               </tr>
               <tr>
-                <td>1:15</td>
-                <td>2:45</td>
+                <td colSpan={2}></td>
+                <td colSpan={2}><p style={{ fontSize: "0.8em" }}>Pizza will be available for free for students and coaches in
+                the classrooms in which the students took the contest. Parents and other adults must bring their own lunch or
+                buy lunch in town.</p></td>
+              </tr>
+              <tr>
+                <td>1:45</td>
+                <td>3:15</td>
                 <td>Guts Round</td>
                 <td>Assembly Hall</td>
               </tr>
               <tr>
-                <td>2:45</td>
-                <td>3:00</td>
+                <td>3:15</td>
+                <td>3:30</td>
                 <td>Break</td>
                 <td>Assembly Hall</td>
               </tr>
               <tr>
-                <td>3:00</td>
                 <td>3:30</td>
+                <td>4:00</td>
                 <td>Awards</td>
                 <td>Assembly Hall</td>
               </tr>

@@ -217,6 +217,11 @@ class Dashboard extends React.Component {
           <div className="form" style={{ width: "calc(100% - 20px)",
           maxWidth: "440px", overflow: "hidden", flex: "1" }}>
             <Card style={{ marginTop: "20px", padding: "20px" }}>
+              <p style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0px" }}>
+                <a href={`${require('../assets/Coaches-Packet.pdf')}`}>Access the coaches' packet here.</a>
+              </p>
+            </Card>
+            <Card style={{ marginTop: "20px", padding: "20px" }}>
               <h4 style={{ fontFamily: "Montserrat", textAlign: "center", marginBottom: "0px" }}>
                 Confirmed teams
               </h4>
