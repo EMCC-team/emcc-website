@@ -209,7 +209,8 @@ class Dashboard extends React.Component {
             We've had an unexpectedly high number of signups, which have forced
             us to close registration for this year's EMCC. You can still edit
             confirmed teams until January 15. If you weren't able to sign up, we hope that
-            you can join us next year!
+            you can join us next year!  <u>Note: Changes made to teams after January 15 will not go into effect.
+            If there is an emergency and the roster must be changed, please contact us directly.</u>
           </strong>
         </Card>
         <div style={{ height: "100%", display: "flex", flexWrap: "wrap",
