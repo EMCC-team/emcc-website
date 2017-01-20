@@ -51,16 +51,20 @@ var config = {
             loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
         },
         {
-            test: /\.jpg$|\.jpeg$|\.png$|\.pdf$/,
+            test: /[\\\/]archive[\\\/].*\.pdf/,
+            loader: 'file?name=/archive/[name].[ext]'
+        },
+        {
+            test: /[\\\/]assets[\\\/].*\.pdf/,
+            loader: 'file?name=/assets/[name].[ext]'
+        },
+        {
+            test: /\.jpg$|\.jpeg$|\.png$/,
             loader: 'url-loader?limit=8192&name=/assets/[name].[hash].[ext]'
         },
         {
             test: /\.woff2$|\.woff$|\.otf$|\.ttf$/,
             loader: 'file?name=/fonts/[name].[hash].[ext]'
-        },
-        {
-            test: /[\\\/]archive[\\\/].*\.pdf/,
-            loader: 'file?name=/archive/[name].[ext]'
         }
       ]
     },
