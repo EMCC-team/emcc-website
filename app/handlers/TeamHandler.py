@@ -27,6 +27,13 @@ class TeamHandler(BaseHandler):
             self.response.write(error_messages['404'])
 
     def put(self, team_id):
+        if not self.user or not self.user.email == 'thou@exeter.edu':
+            self.response.write(json.dumps({
+                'status': '401',
+                'error': 'Unauthorized',
+                'message': 'Team signups are closed.'
+            }))
+            return
         try:
             team = ndb.Key(urlsafe=team_id).get()
             if not team:
@@ -34,13 +41,6 @@ class TeamHandler(BaseHandler):
                 self.response.write(error_messages['404'])
                 return
             j = json.loads(self.request.body)
-            if j['confirmed'] == True and True != team.confirmed:
-                self.response.write(json.dumps({
-    				'status': '401',
-    				'error': 'Unauthorized',
-    				'message': 'Team signups are closed.'
-    			}))
-                return
             team.deserialize(j)
             self.response.status = '204'
         except ValueError as e:
@@ -56,6 +56,13 @@ class TeamHandler(BaseHandler):
             self.response.write(error_messages['404'])
 
     def delete(self, team_id):
+        if not self.user or not self.user.email == 'thou@exeter.edu':
+            self.response.write(json.dumps({
+                'status': '401',
+                'error': 'Unauthorized',
+                'message': 'Team signups are closed.'
+            }))
+            return
         try:
             team = ndb.Key(urlsafe=team_id)
             if not team:
