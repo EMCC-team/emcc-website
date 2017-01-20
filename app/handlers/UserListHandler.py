@@ -18,9 +18,9 @@ class UserListHandler(BaseHandler):
             user_map = {}
             for team in teams:
                 if user_map.get(team.user.id()):
-                    user_map[team.user.id()] += [team.key.id()]
+                    user_map[team.user.id()] += [team.key.urlsafe()]
                 else:
-                    user_map[team.user.id()] = [team.key.id()]
+                    user_map[team.user.id()] = [team.key.urlsafe()]
             users = {team.user for team in teams}
             users = [user.get() for user in users]
             users = [{
