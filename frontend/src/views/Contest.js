@@ -102,8 +102,8 @@ class Contest extends React.Component {
             <p>
               The Academy Building, the main hub for the competition, is the main building on campus
               overlooking the lawn next to Front Street. Registration will take place in Powell Hall of the Forrestal-Bowld
-              Music Center, located to the left of the entrance. Breakfast will be available in Powell Hall as
-              well. The opening and closing ceremonies, along with the Guts Round, will take place in the
+              Music Center, located to the left of the entrance. Breakfast will also be available in Powell Hall.
+              The opening and closing ceremonies, along with the Guts Round, will take place in the
               Assembly Hall, located on the second floor of the Academy Building. The individual and team rounds will
               take place in classrooms in the Academy Building. Lunch will also be available for contestants and
               coaches in the classrooms.
