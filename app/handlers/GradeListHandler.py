@@ -24,7 +24,7 @@ class GradeListHandler(BaseHandler):
             }))
             return
 
-        grade = Grade(year=2017)
+        grade = Grade(Grade.year==2017)
         try:
             grade.deserialize(j)
         except ValueError as e:
@@ -44,6 +44,6 @@ class GradeListHandler(BaseHandler):
             }))
             return
 
-        grades = Grade.query(year=2017)
+        grades = Grade.query(Grade.year==2017)
         self.response.status = '200'
         self.response.write(json.dumps([grade.serialize() for grade in grades]))
