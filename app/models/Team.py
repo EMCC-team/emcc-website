@@ -32,7 +32,7 @@ class Team(ndb.Model):
         """
         MAX_MEMBERS_LENGTH = 4
         members = Individual.query(Individual.team == self.key)
-        serialized_members = sorted([member.name for member in members], reverse=True)
+        serialized_members = sorted([member.name for member in members])
         serialized_members += [""] * (MAX_MEMBERS_LENGTH-len(serialized_members))
         entry = {
             'id': self.key.urlsafe(),

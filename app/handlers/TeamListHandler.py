@@ -13,15 +13,10 @@ class TeamListHandler(BaseHandler):
 				'error': 'Unauthorized',
 			}))
 			return
-		teams = Team.query(Team.user == self.user.key)
-		if not teams:
-			self.response.status = '404'
-			self.response.write(json.dumps({
-				'status': '404',
-				'error': 'Not Found',
-				'message': 'No teams registered to this user exist.'
-			}))
-			return
+		if self.user.email == 'thou@exeter.edu':
+			teams = Team.query(Team.year == 2017, Team.confirmed == True)
+		else:
+			teams = Team.query(Team.user == self.user.key)
 		serialized_teams = [team.serialize() for team in teams]
 		self.response.write(json.dumps(serialized_teams))
 

@@ -1,9 +1,11 @@
 import webapp2
 import yaml
 
-from app.handlers.Authentication import RegisterUserHandler, LoginUserHandler, LogoutUserHandler, CurrentUserHandler
+from app.handlers.Authentication import RegisterUserHandler, LoginUserHandler, \
+    LogoutUserHandler, CurrentUserHandler
 from app.handlers.TeamListHandler import TeamListHandler
 from app.handlers.TeamHandler import TeamHandler
+from app.handlers.UserListHandler import UserListHandler
 
 secret_key = yaml.safe_load(open("./config"))['secret-key']
 config = {
@@ -23,4 +25,5 @@ app = webapp2.WSGIApplication([
     (r'/api/auth/token', CurrentUserHandler),
     webapp2.Route(r'/api/teams/<team_id>', handler=TeamHandler, name='team'),
     (r'/api/teams/', TeamListHandler),
+    (r'/api/users/', UserListHandler)
 ], debug=True, config=config)
