@@ -21,6 +21,13 @@ class TeamListHandler(BaseHandler):
 		self.response.write(json.dumps(serialized_teams))
 
 	def post(self):
+		if not self.user or not self.user.email == 'thou@exeter.edu':
+			self.response.write(json.dumps({
+				'status': '401',
+				'error': 'Unauthorized',
+				'message': 'Team signups are closed.'
+			}))
+			return
 		try:
 			j = json.loads(self.request.body)
 		except ValueError as e:
@@ -29,14 +36,6 @@ class TeamListHandler(BaseHandler):
 				'status': '400',
 				'error': 'Bad Request',
 				'message': 'Invalid json in body.'
-			}))
-			return
-
-		if j['confirmed']:
-			self.response.write(json.dumps({
-				'status': '401',
-				'error': 'Unauthorized',
-				'message': 'Team signups are closed.'
 			}))
 			return
 		team = Team(year=2017, user=self.user.key)

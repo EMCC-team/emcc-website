@@ -14,18 +14,18 @@ class GradeListHandler(BaseHandler):
             return
 
         try:
-			j = json.loads(self.request.body)
-		except ValueError as e:
-			self.response.status = '400'
-			self.response.write(json.dumps({
-				'status': '400',
-				'error': 'Bad Request',
-				'message': 'Invalid json in body.'
-			}))
-			return
+            j = json.loads(self.request.body)
+        except ValueError as e:
+            self.response.status = '400'
+            self.response.write(json.dumps({
+                'status': '400',
+                'error': 'Bad Request',
+                'message': 'Invalid json in body.'
+            }))
+            return
 
-		grade = Grade(year=2017)
-		try:
+        grade = Grade(year=2017)
+        try:
             grade.deserialize(j)
         except ValueError as e:
             self.response.status = '400'
