@@ -24,7 +24,7 @@ class GradeListHandler(BaseHandler):
             }))
             return
 
-        grade = Grade(Grade.year==2017)
+        grade = Grade(year=2017)
         try:
             grade.deserialize(j)
         except ValueError as e:

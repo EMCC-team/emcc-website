@@ -72,12 +72,11 @@ class Team(ndb.Model):
         current_members = Individual.query(Individual.team == self.key)
         for member in current_members:
             member.key.delete()
-        if not self.key:
-            self.put()
         for index, member in enumerate(new_members):
             if member:
                 Individual(name=member,
                     user=self.user,
                     team=self.key,
                     year=2017,
-                    assigned_id=index+1).put()
+                    assigned_id=str(index+1)).put()
+        self.put()

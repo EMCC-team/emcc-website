@@ -8,6 +8,7 @@ class Grade(ndb.Model):
     year = ndb.IntegerProperty(required=True)
     grader = ndb.StringProperty(required=True)
     grades = ndb.JsonProperty(required=True)
+    time = ndb.DateTimeProperty(auto_now=True)
 
     def serialize(self):
         entry = {
@@ -17,7 +18,8 @@ class Grade(ndb.Model):
             'member': self.individual.urlsafe(),
             'year': self.year,
             'grader': self.grader,
-            'grades': self.grades
+            'grades': self.grades,
+            'time': self.time.isoformat()
         }
         return entry
 
