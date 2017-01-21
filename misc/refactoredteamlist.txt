@@ -1,0 +1,2522 @@
+[
+    {
+        "assigned_id": "106B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC1_7EIDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDT_oAJDA",
+                "name": "Betty Xu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDT_oAKDA",
+                "name": "Paula Jiang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICNr50KDA",
+                "name": "Sunny Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDT6p4LDA",
+                "name": "Jonathan Chen"
+            }
+        ],
+        "name": "Rectory Wolves",
+        "school": "The Rectory School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDk25MJDA"
+    },
+    {
+        "assigned_id": "109B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDurMQIDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDioo4JDA",
+                "name": "Alicia Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCaopMKDA",
+                "name": "Evan Huang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCxn4MLDA",
+                "name": "Alex Wu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMC1jZ4LDA",
+                "name": "Isabel Tu"
+            }
+        ],
+        "name": "Maniac",
+        "school": "Andover",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICV9ZsJDA"
+    },
+    {
+        "assigned_id": "123B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCSvs0IDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCyhYQJDA",
+                "name": "Gregory Pylypovych"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCNtYYJDA",
+                "name": "Shrestha Hari"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCXg4QLDA",
+                "name": "Vincent Xu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDt5pwLDA",
+                "name": "Lasal Mapitigama"
+            }
+        ],
+        "name": "Bergen County Academies - Thor",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": "125B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCSz9IIDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDakM4IDA",
+                "name": "Joseph Huang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCJ84QJDA",
+                "name": "Jessica Lee"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDakI4LDA",
+                "name": "Yuji Choi"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDojpsLDA",
+                "name": "Michael Wong"
+            }
+        ],
+        "name": "Bergen County Academies - Ragnarok",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": "030A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMD85NgIDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDy0YoJDA",
+                "name": "Xinyu Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDX8IwKDA",
+                "name": "Mingjiu Zhao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCeg5QKDA",
+                "name": "Yingqi Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDkuJsKDA",
+                "name": "Yangyi Gao"
+            }
+        ],
+        "name": "SFLS 4",
+        "school": "Shanghai Foreign Language School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDOnJwJDA"
+    },
+    {
+        "assigned_id": "121B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCaydsIDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDQyJ8JDA",
+                "name": "Marvin Mao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDakM4JDA",
+                "name": "Benjamin Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCe0okLDA",
+                "name": "Michelle Tan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCepJALDA",
+                "name": "Kishan Bava"
+            }
+        ],
+        "name": "Bergen County Academies - Loki",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": "107B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCXpIAJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICNr50JDA",
+                "name": "Angelina Qian"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDT6p4JDA",
+                "name": "Insel Lee"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCS9IUKDA",
+                "name": "Jonathan Hui"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCS6pQKDA",
+                "name": "David Liu"
+            }
+        ],
+        "name": "Rectory Black Wolves",
+        "school": "The Rectory School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDk25MJDA"
+    },
+    {
+        "assigned_id": "021A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC8jYEJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQ-YYJDA",
+                "name": "Changhao Lin"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICtxYkKDA",
+                "name": "Yixi Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCJmpEKDA",
+                "name": "Xinle Yu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCXmZkKDA",
+                "name": "Yan Weng"
+            }
+        ],
+        "name": "Four Seasons",
+        "school": "Four Seasons Education",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDOnJwJDA"
+    },
+    {
+        "assigned_id": "007A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDkrYIJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCz2IQKDA",
+                "name": "Fangze Tian"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICe3Y4KDA",
+                "name": "Kira Tang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDu4ZcKDA",
+                "name": "Jocelyn Hsieh"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMD1l50KDA",
+                "name": "Alex Tang"
+            }
+        ],
+        "name": "Clarke C",
+        "school": "Jonas Clarke Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCEzJAKDA"
+    },
+    {
+        "assigned_id": "005A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICcyIMJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDui8IIDA",
+                "name": "Alex Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDNuMIIDA",
+                "name": "Ben Epstein"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuhsYIDA",
+                "name": "Linda Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDT9I8JDA",
+                "name": "Kathy Xue"
+            }
+        ],
+        "name": "Clarke A",
+        "school": "Jonas Clarke Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCEzJAKDA"
+    },
+    {
+        "assigned_id": "126B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMD1w4wJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDkuJsJDA",
+                "name": "Vivian Tan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDo544KDA",
+                "name": "Jongwon Jung"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDX8IwLDA",
+                "name": "Yunseo Choi"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCeg5QLDA",
+                "name": "Siwen Simon Sun"
+            }
+        ],
+        "name": "Bergen County Academies - Odin",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": "027B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDwoI4JDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIC1oZwJDA",
+                "name": "Alice Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDwoI4LDA",
+                "name": "John Lin"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDsj48LDA",
+                "name": "Albert Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDw1J8LDA",
+                "name": "Julianna Zhao"
+            }
+        ],
+        "name": "dy",
+        "school": "Boston Latin School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCkvoAKDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC1_5EJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCatooJDA",
+                "name": "Oscar Capraro"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDTkJYKDA",
+                "name": "Jacob Greenfield"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICrsJwKDA",
+                "name": "Isaac Lau"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICN0JELDA",
+                "name": "Achyuta Rajaram"
+            }
+        ],
+        "name": "Sage Blue",
+        "school": "The Sage School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMC1_5EKDA"
+    },
+    {
+        "assigned_id": "128A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDc-ZMJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICOrokKDA",
+                "name": "Charlotte Wang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDcg5kKDA",
+                "name": "Joshua Cheng"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICIppwKDA",
+                "name": "Kenneth Wan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCIiZ4KDA",
+                "name": "Joshua Shen"
+            }
+        ],
+        "name": "CCLS 3",
+        "school": "Century Chinese Language School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICQx4AKDA"
+    },
+    {
+        "assigned_id": "122A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgID19pYJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDSu54KDA",
+                "name": "Shiqi Huang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICt4M4KDA",
+                "name": "Yinzhen Du"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCXzogLDA",
+                "name": "Shuang Wu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCz8Z0LDA",
+                "name": "Xiaosen Sun"
+            }
+        ],
+        "name": "Tsinghua 3",
+        "school": "HS attached to Tsinghua Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "102B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICwu5cJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDUkYUKDA",
+                "name": "Sruthi Kurada"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDwhYkKDA",
+                "name": "Samuel David"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDws4sKDA",
+                "name": "Matt Young"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDwk5gKDA",
+                "name": "Shane Ferrante"
+            }
+        ],
+        "name": "AMSA Blue",
+        "school": "Advanced Math and Science Academy Charter School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDsxYcKDA"
+    },
+    {
+        "assigned_id": "108A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDLjpgJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCNiMIIDA",
+                "name": "Juntong Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICt4M4IDA",
+                "name": "Danqing Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDS8dYKDA",
+                "name": "Junchi Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuq58LDA",
+                "name": "Xingzao Jiang"
+            }
+        ],
+        "name": "Beijing No. 4 3",
+        "school": "Beijing No. 4 MS",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICP6JgJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDgwZwJDA",
+                "name": "Kevin Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDglYMKDA",
+                "name": "Stanley Jiang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICqopQKDA",
+                "name": "Eric Yang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICquIULDA",
+                "name": "Sean Liu"
+            }
+        ],
+        "name": "Golden Tigers",
+        "school": "Gauss School of Mathematics",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIC2oIgJDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCugJkJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCu8pUKDA",
+                "name": "Sophia Zhou"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDurMQKDA",
+                "name": "Jason Qian"
+            },
+            "",
+            ""
+        ],
+        "name": "Bromfield2",
+        "school": "Bromfield",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCugJkKDA"
+    },
+    {
+        "assigned_id": "123A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCOk5oJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDVt8sIDA",
+                "name": "Zhiqian Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDItJkJDA",
+                "name": "Yi Liang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDCjsgJDA",
+                "name": "Yuzhou Yuan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDCktEKDA",
+                "name": "Jianan Xie"
+            }
+        ],
+        "name": "Renmin 1",
+        "school": "HS Affiliated to Renmin Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDP8poJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDslIkKDA",
+                "name": "Sumer Moudgill"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICzjZEKDA",
+                "name": "Brandon Yu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDE1pIKDA",
+                "name": "Naved Azim"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICQtpYKDA",
+                "name": "Anika Puri"
+            }
+        ],
+        "name": "Westchester Area Math Circle B",
+        "school": "Westchester Area Math Circle",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCEmokKDA"
+    },
+    {
+        "assigned_id": "006B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMD8w5wJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCemcUIDA",
+                "name": "Tianyi Yang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCeg9QIDA",
+                "name": "Armaan Tipirneni"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDkooYKDA",
+                "name": "Anthony Zhao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDJwp0KDA",
+                "name": "Alexander Peng"
+            }
+        ],
+        "name": "Diamond School B",
+        "school": "Diamond Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICO5IEKDA"
+    },
+    {
+        "assigned_id": "107A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCM9p0JDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDgrcwIDA",
+                "name": "Bingshuai Fu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCzu9MIDA",
+                "name": "Heyang An"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDg5sQKDA",
+                "name": "Xiaoyun Guo"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDSgtoLDA",
+                "name": "Buoyu Xiao"
+            }
+        ],
+        "name": "Beijing No. 4 2",
+        "school": "Beijing No. 4 MS",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDui8IJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDa6oEJDA",
+                "name": "Michael (Zheng) Wu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCwg4sJDA",
+                "name": "Hyunkyu (Ben) Lee"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDNhJ8JDA",
+                "name": "Arosh De Silva"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCi4YEKDA",
+                "name": "Michael Yin"
+            }
+        ],
+        "name": "Bergen County Academies - Heimdall",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": "128B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC1_9EJDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCk74oKDA",
+                "name": "Joshua Seiple"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDJuIwKDA",
+                "name": "Rory Chambers"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCL6JAKDA",
+                "name": "Kaia Outzen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDyjZsKDA",
+                "name": "Yasha Barshteyn"
+            }
+        ],
+        "name": "Bancroft Bulldogs",
+        "school": "Bancroft School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMC1_9EKDA"
+    },
+    {
+        "assigned_id": "208B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICumYAKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDOsYAJDA",
+                "name": "Hannah Han"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMC13IcKDA",
+                "name": "Kevin Zhao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCigZMKDA",
+                "name": "June Kim"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMC1xpYKDA",
+                "name": "Andrew Zhao"
+            }
+        ],
+        "name": "Wayland Math Team",
+        "school": "Wayland Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDOpp4KDA"
+    },
+    {
+        "assigned_id": "009A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCInYAKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDOiI0JDA",
+                "name": "Christina Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMD0-oAKDA",
+                "name": "Steven Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMD2lokKDA",
+                "name": "Kaylee Ji"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMC8kZ8KDA",
+                "name": "Emily Chen"
+            }
+        ],
+        "name": "Doherty Middle School",
+        "school": "Doherty Middle School, Andover, MA",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDct5sKDA"
+    },
+    {
+        "assigned_id": "127B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDg64AKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIC2oIgKDA",
+                "name": "Ethan Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgID394kKDA",
+                "name": "Alex He"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDgrJQKDA",
+                "name": "William Hu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMD44psKDA",
+                "name": "Zhebin Zhao"
+            }
+        ],
+        "name": "Long Island Super",
+        "school": "Jericho, Syosset Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDJsYgKDA"
+    },
+    {
+        "assigned_id": "127A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDcnoIKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDcnoIJDA",
+                "name": "Eric Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDc44oJDA",
+                "name": "Sophia Tate"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICI0YMKDA",
+                "name": "Audrey Lin"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICLoZcKDA",
+                "name": "Emma Sun"
+            }
+        ],
+        "name": "CCLS 2",
+        "school": "Century Chinese Language School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICQx4AKDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCM6YIKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgID14ocKDA",
+                "name": "Ishita Goluguri"
+            },
+            "",
+            "",
+            ""
+        ],
+        "name": "Westborough",
+        "school": "Sarah W. Gibbons Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCE85QJDA"
+    },
+    {
+        "assigned_id": "022B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC0pIMKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCIlo8JDA",
+                "name": "Alexander Lho"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCqxJoJDA",
+                "name": "Stephanie Yang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICL-oYKDA",
+                "name": "Jerry Shu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCIlo8KDA",
+                "name": "Chen-chen Song"
+            }
+        ],
+        "name": "Pike School B",
+        "school": "The Pike School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICQyY8LDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICrzIMKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDIo4AJDA",
+                "name": "Janani Ganesh"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgID1p4AJDA",
+                "name": "Aditya Venkatesh"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDuwYwJDA",
+                "name": "Keep the 3 kids above together!"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCTh4cLDA",
+                "name": "Surya Sakhamuri"
+            }
+        ],
+        "name": "Sage Green",
+        "school": "The Sage School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMC1_5EKDA"
+    },
+    {
+        "assigned_id": "105A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDV-YMKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICujp4KDA",
+                "name": "Liyuan Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDC_cQKDA",
+                "name": "Zhuoqi Wu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDLkskKDA",
+                "name": "Sixue Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDVt4sLDA",
+                "name": "Bati Li"
+            }
+        ],
+        "name": "Beijing 3",
+        "school": "Affiliated HS to Peking Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "022A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDO-oMKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQ-YYKDA",
+                "name": "Peiqing Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDzoIoKDA",
+                "name": "Meng Sun"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDz1JsKDA",
+                "name": "Zhefei Cao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQ7psKDA",
+                "name": "Yihua Sun"
+            }
+        ],
+        "name": "Shibei Middle School",
+        "school": "Shibei Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDOnJwJDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDcl4QKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCC7IsKDA",
+                "name": "Zhening Li"
+            },
+            "",
+            "",
+            ""
+        ],
+        "name": "Individual",
+        "school": "Tsinghua University High School and Laurelwood Public School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDqrIgKDA"
+    },
+    {
+        "assigned_id": "126A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDkmIQKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDk5owJDA",
+                "name": "Eric Yang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDpnJcJDA",
+                "name": "William Yue"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDanooKDA",
+                "name": "Andrew W. Lee"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDa-ZsKDA",
+                "name": "Jason Tang"
+            }
+        ],
+        "name": "CCLS 1",
+        "school": "Century Chinese Language School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICQx4AKDA"
+    },
+    {
+        "assigned_id": "",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgKDQ64UKDA",
+        "members": [
+            {
+                "assigned_id": "",
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDyxpMKDA",
+                "name": "Michael Cheng"
+            },
+            "",
+            "",
+            ""
+        ],
+        "name": "Michael Cheng (individual)",
+        "school": "",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCezpgKDA"
+    },
+    {
+        "assigned_id": "104B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICw7YYKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCUt4EJDA",
+                "name": "Vikram Kaushik"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDwmpwJDA",
+                "name": "Ryan Young"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCcgoAKDA",
+                "name": "Krishna Purimetla"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDsxYcLDA",
+                "name": "Sidhant Roymoulik"
+            }
+        ],
+        "name": "AMSA Red",
+        "school": "Advanced Math and Science Academy Charter School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDsxYcKDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDTt4cKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDTt8cIDA",
+                "name": "Bryan Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICquIUJDA",
+                "name": "Christopher Qiu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCQg4wKDA",
+                "name": "Allan Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDTt8cKDA",
+                "name": "Daniel Zhang"
+            }
+        ],
+        "name": "NJAlligators",
+        "school": "Gauss School of Mathematics",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIC2oIgJDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDO34cKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDLkokKDA",
+                "name": "Max Xu"
+            },
+            "",
+            "",
+            ""
+        ],
+        "name": "Westford Flying Fish",
+        "school": "Stony Brook Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCUioYKDA"
+    },
+    {
+        "assigned_id": "030B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCk04gKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDQpZUJDA",
+                "name": "Ryan Shu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDMgY4KDA",
+                "name": "Jacob Ye"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDQpZUKDA",
+                "name": "David Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCkj5kKDA",
+                "name": "Thomas Wang"
+            }
+        ],
+        "name": "Day Two",
+        "school": "FA Day Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDqz4ALDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDVg4kKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDQ3IEJDA",
+                "name": "Sophie Murthy"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDojtsKDA",
+                "name": "Emily Huang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDz498KDA",
+                "name": "Kate Ellison"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDyqJ0LDA",
+                "name": "Helen Xiao"
+            }
+        ],
+        "name": "Bigelow Girls",
+        "school": "Bigelow MS",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDqz4AKDA"
+    },
+    {
+        "assigned_id": "005B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC8_4kKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDX8MwIDA",
+                "name": "Jeremy Flemming"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDkooYJDA",
+                "name": "Richard Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDC14YJDA",
+                "name": "Kristina Wong"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDkooYLDA",
+                "name": "Bryce Zhang"
+            }
+        ],
+        "name": "Diamond School A",
+        "school": "Lexington Diamond Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICO5IEKDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDN1ooKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCSpZwJDA",
+                "name": "Janani Ganesh"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDNuIILDA",
+                "name": "Aditya Venkatesh"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICe-IoLDA",
+                "name": "Surya Sakhamuri"
+            },
+            ""
+        ],
+        "name": "Sage Green",
+        "school": "The Sage School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCKsp8KDA"
+    },
+    {
+        "assigned_id": "029A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDOtYsKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICt05gJDA",
+                "name": "Yiwen Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuv4EKDA",
+                "name": "Jialin Zuo"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCynpkKDA",
+                "name": "Jingxian Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDz1JsLDA",
+                "name": "Yihong Gu"
+            }
+        ],
+        "name": "SFLS 3",
+        "school": "Shanghai Foreign Language School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDOnJwJDA"
+    },
+    {
+        "assigned_id": "207A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDx4osKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDTz5kJDA",
+                "name": "Daniel Wang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDNuMIJDA",
+                "name": "Justin Qin"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMD1w8wKDA",
+                "name": "Lucy Cai"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCSz9IKDA",
+                "name": "Claire Mao"
+            }
+        ],
+        "name": "Nobles",
+        "school": "Noble and Greenough School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDQs4wKDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDVpI4KDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgID394kJDA",
+                "name": "Christopher Dong"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICzqJYJDA",
+                "name": "Peter Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDTt8cJDA",
+                "name": "Andrew Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIC2oMgJDA",
+                "name": "Eric Lin"
+            }
+        ],
+        "name": "The Superman",
+        "school": "Gauss School of Mathematics",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIC2oIgJDA"
+    },
+    {
+        "assigned_id": "006A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCK5I4KDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCX0tEJDA",
+                "name": "Euhan Kim"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICNr90JDA",
+                "name": "Sammy Charney"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCS04MLDA",
+                "name": "Jeff Lin"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuhsYLDA",
+                "name": "Arthur Hu"
+            }
+        ],
+        "name": "Clarke B",
+        "school": "Jonas Clarke Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCEzJAKDA"
+    },
+    {
+        "assigned_id": "102B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC1kY8KDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMC1kY8JDA",
+                "name": "Sruthi Kurada"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDxhJIJDA",
+                "name": "Samuel David"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDLp40KDA",
+                "name": "Matt Young"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDioo4KDA",
+                "name": "Shane Ferrante"
+            }
+        ],
+        "name": "AMSA Blue",
+        "school": "Advanced Math and Science Academy",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDczpEKDA"
+    },
+    {
+        "assigned_id": "104A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDCkpEKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDO38cIDA",
+                "name": "Chenui Jim"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDI8tYIDA",
+                "name": "Jinhui Cao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDLjtgIDA",
+                "name": "Yukun Guan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDCp5UJDA",
+                "name": "Hanlin Gao"
+            }
+        ],
+        "name": "Beijing 2",
+        "school": "Affiliated HS to Peking Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICu_ZEKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCi85sKDA",
+                "name": "Anna"
+            },
+            "",
+            "",
+            ""
+        ],
+        "name": "SunShine",
+        "school": "Fay school",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICumYALDA"
+    },
+    {
+        "assigned_id": "008A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICwgpMKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDNnYYKDA",
+                "name": "Kunal Kapoor"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDSmIsKDA",
+                "name": "Aahan Mehra"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDN-5cKDA",
+                "name": "Anna Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICeh58KDA",
+                "name": "Charlie Chen"
+            }
+        ],
+        "name": "Clarke D",
+        "school": "Jonas Clarke Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCEzJAKDA"
+    },
+    {
+        "assigned_id": "207B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDzspUKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDM0JsJDA",
+                "name": "Anuj Sakarda"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIC294IKDA",
+                "name": "Jerry Tan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICa8YQKDA",
+                "name": "Poonam Sahoo"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICarZUKDA",
+                "name": "Justin Shan"
+            }
+        ],
+        "name": "RJ Grey",
+        "school": "Raymond J Grey Junior High School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCkqp4KDA"
+    },
+    {
+        "assigned_id": "021B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDcwJUKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDc1IwKDA",
+                "name": "Kris Aziabor"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCq6Y8KDA",
+                "name": "Arnav Bhakta"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCqjpYKDA",
+                "name": "Jay Aziabor"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDcip0KDA",
+                "name": "Adam Jac"
+            }
+        ],
+        "name": "Pike School A",
+        "school": "The Pike School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICQyY8LDA"
+    },
+    {
+        "assigned_id": "029B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCk4JYKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDMmpcJDA",
+                "name": "Charles Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgID2vIoKDA",
+                "name": "Jason Jiang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDM5Z8KDA",
+                "name": "Eric Yu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCk04gLDA",
+                "name": "Steven Gao"
+            }
+        ],
+        "name": "Day One",
+        "school": "FA Day Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDqz4ALDA"
+    },
+    {
+        "assigned_id": "105B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDiuJcKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCemYUJDA",
+                "name": "Kazuya Erdos"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDz94EKDA",
+                "name": "Kavika Krishnan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDomYYKDA",
+                "name": "Nikhil Rao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCN344KDA",
+                "name": "Griffin Coyle"
+            }
+        ],
+        "name": "AMSA Gold",
+        "school": "Advanced Math and Science Academy",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDczpEKDA"
+    },
+    {
+        "assigned_id": "105B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCU7pcKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDw_oMKDA",
+                "name": "Kazuya Erdos"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDK-o0KDA",
+                "name": "Kavika Krishnan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDp4d8KDA",
+                "name": "Nikhil Rao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDKiIULDA",
+                "name": "Griffin Coyle"
+            }
+        ],
+        "name": "AMSA Gold",
+        "school": "Advanced Math and Science Academy Charter School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDsxYcKDA"
+    },
+    {
+        "assigned_id": "106A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDLjpgKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQwIIJDA",
+                "name": "Jiahui Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCzlswKDA",
+                "name": "Jiaming Xu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCzgtUKDA",
+                "name": "Ruoyi Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICttJ8LDA",
+                "name": "Dingchen Zhang"
+            }
+        ],
+        "name": "Beijing No. 4 1",
+        "school": "Beijing No. 4 MS",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "206B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIC21JkKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMC1kc8IDA",
+                "name": "Ishan Kumar"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDOzdEIDA",
+                "name": "Aryan Kalia"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICu54gJDA",
+                "name": "Pranav Ramesh"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDiuJcLDA",
+                "name": "Keshav Ramesh"
+            }
+        ],
+        "name": "Pi In The Sky",
+        "school": "Timothy Edwards Middle School, South Windsor, CT",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICq1o0JDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDP8poKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIC2yoQJDA",
+                "name": "Sam Florin"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDPw48JDA",
+                "name": "Grace Tian"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICzm4gKDA",
+                "name": "Amy Hu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDq054KDA",
+                "name": "Erik Brodsky"
+            }
+        ],
+        "name": "Westchester Area Math Circle A",
+        "school": "Westchester Area Math Circle",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCEmokKDA"
+    },
+    {
+        "assigned_id": "206A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCC-poKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDI4IgJDA",
+                "name": "Alexander Sun"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCMhJUJDA",
+                "name": "Eddie Wang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCCy48KDA",
+                "name": "William Sun"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDOq5oLDA",
+                "name": "Matthew Ding"
+            }
+        ],
+        "name": "WAW United",
+        "school": "Rj grey JHS, McCall middle school, Blanchard middle school",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCMhJUKDA"
+    },
+    {
+        "assigned_id": "008B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMDK4ZwKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCJ88QIDA",
+                "name": "Surya Meiyappan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDt5twIDA",
+                "name": "William Yang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDzysYJDA",
+                "name": "Matt Berhe"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDQxtAKDA",
+                "name": "Jacob Epstein"
+            }
+        ],
+        "name": "It's 5 year old simple",
+        "school": "Diamond Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDUqJAKDA"
+    },
+    {
+        "assigned_id": "102A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCM9p0KDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICt4I4JDA",
+                "name": "Ze Fan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDxx48LDA",
+                "name": "Tianyi Lu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCN7JMLDA",
+                "name": "Xike Song"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCJ0J4LDA",
+                "name": "Yuhan Wang"
+            }
+        ],
+        "name": "Beijing 1",
+        "school": "Affiliated HS to Peking Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "104B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC1jZ4KDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCa-IIJDA",
+                "name": "Vikram Kaushik"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDiuJcJDA",
+                "name": "Ryan Young"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDu2pUKDA",
+                "name": "Krishna Purimetla"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDIuZ4KDA",
+                "name": "Sidhant Roymoulik"
+            }
+        ],
+        "name": "AMSA Red",
+        "school": "Advanced Math and Science Academy",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDczpEKDA"
+    },
+    {
+        "assigned_id": "108B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC1_7EKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuhoYJDA",
+                "name": "Leo Wu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCSvo0KDA",
+                "name": "Catherine Xie"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDTpZEKDA",
+                "name": "Tina Wang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuhoYLDA",
+                "name": "Kevin Zhang"
+            }
+        ],
+        "name": "Rectory Silver Wolves",
+        "school": "The Rectory School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDk25MJDA"
+    },
+    {
+        "assigned_id": "125A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCOhcsKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICtqsEIDA",
+                "name": "Yichen Xiao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCzlswIDA",
+                "name": "Peiqi Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICttJ8JDA",
+                "name": "Zijian Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCNiIILDA",
+                "name": "Evan Ai"
+            }
+        ],
+        "name": "Renmin 2",
+        "school": "HS Affiliated to Renmin Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "122B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCSpdwKDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCL0YUJDA",
+                "name": "Jooeun Lee"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCLm40KDA",
+                "name": "Julia Yul Kim"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCLzZQKDA",
+                "name": "Sophie Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCN344LDA",
+                "name": "Linda Sun"
+            }
+        ],
+        "name": "Bergen County Academies - Sif",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": "009B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICL34ELDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgID1p4AKDA",
+                "name": "Eric Teng Tu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCTh4cKDA",
+                "name": "Richard Chen"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICNzIgKDA",
+                "name": "Christopher Ye"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICN0JEKDA",
+                "name": "Ivy Zhang"
+            }
+        ],
+        "name": "LYCAL",
+        "school": "Lexington Youth Center for Asian Learning",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICO5IEKDA"
+    },
+    {
+        "assigned_id": "027A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDO-oMLDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCy1JEJDA",
+                "name": "Yuchen Yang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCyyogKDA",
+                "name": "Junkai Wang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQt44KDA",
+                "name": "Yurou Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCNoZsKDA",
+                "name": "Yuhe Huang"
+            }
+        ],
+        "name": "SFLS 2",
+        "school": "Shanghai Foreign Language School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDOnJwJDA"
+    },
+    {
+        "assigned_id": "119B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICohoQLDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCe0skIDA",
+                "name": "Debra Boutom"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCk85MKDA",
+                "name": "Katherine Vandermel"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDQjZgLDA",
+                "name": "Kevin Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDakM4LDA",
+                "name": "Johnathan Wong"
+            }
+        ],
+        "name": "Bergen County Academies - Tyr",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": "109A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCO94cLDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCemYUKDA",
+                "name": "Wanhe Zhu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDy0YoKDA",
+                "name": "Huishen Peng"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCwpI0KDA",
+                "name": "Yixun Xu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDQ_5QKDA",
+                "name": "Jiaheng Han"
+            }
+        ],
+        "name": "Nanjing",
+        "school": "Nanjing",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "119A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDLkokLDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCJ0J4JDA",
+                "name": "Xinyi Xiong"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuq58JDA",
+                "name": "Yumeng Wang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCah9cJDA",
+                "name": "Yiran Cao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCzu5MLDA",
+                "name": "Beining Zhou"
+            }
+        ],
+        "name": "Tsinghua 1",
+        "school": "HS attached to Tsinghua Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "025A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMC8_4kLDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQ7psJDA",
+                "name": "Jiayi Wang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCN-ooKDA",
+                "name": "Yixiao Huang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCy1JEKDA",
+                "name": "Hanqing Li"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQo5cKDA",
+                "name": "Zhongyu Huang"
+            }
+        ],
+        "name": "SFLS 1",
+        "school": "Shanghai Foreign Language School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgIDOnJwJDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDuwYwLDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICoq50JDA",
+                "name": "Arthur Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCyoIAKDA",
+                "name": "Kevin Huang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICov4IKDA",
+                "name": "Mark Sun"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCQiooKDA",
+                "name": "Arthur Lee"
+            }
+        ],
+        "name": "WinMath",
+        "school": "McCall Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCatooLDA"
+    },
+    {
+        "assigned_id": "007B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCI-5ELDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCxusUIDA",
+                "name": "VIctoria Yuan"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMD8w9wIDA",
+                "name": "Julian Han"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMD85LgKDA",
+                "name": "Brian Yu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMC8jcEKDA",
+                "name": "Matthew Wang"
+            }
+        ],
+        "name": "Diamond School C",
+        "school": "Diamond Middle School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICO5IEKDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMD12ZULDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDL5IMKDA",
+                "name": "To be determined 2"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKDkyY4KDA",
+                "name": "Alexandra Jerdee"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgKCi9ZAKDA",
+                "name": "To be determined 1"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDa6oELDA",
+                "name": "To be determined 3"
+            }
+        ],
+        "name": "Bergen County Academies - Frija",
+        "school": "Bergen County Academies",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgICN84wJDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDu2pULDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDi1p8JDA",
+                "name": "Vivian Liu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDiyYEKDA",
+                "name": "Jack Yu"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCulIQKDA",
+                "name": "Olivia Ren"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDOzZELDA",
+                "name": "Tiana Jiang"
+            }
+        ],
+        "name": "Bromfield",
+        "school": "Bromfield",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCugJkKDA"
+    },
+    {
+        "assigned_id": "208A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCSkJgLDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDNwtMIDA",
+                "name": "Robert Sheng"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDxqYcJDA",
+                "name": "Eddie Wei"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCSz5IJDA",
+                "name": "Kevin Guo"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICohoQKDA",
+                "name": "Jianzhou Liu"
+            }
+        ],
+        "name": "Rock Math",
+        "school": "LexingtonMath",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMDuyIoKDA"
+    },
+    {
+        "assigned_id": null,
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgICNr50LDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDNuIIJDA",
+                "name": "Isaac Lau"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDTs4gKDA",
+                "name": "Achyuta Rajaram"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCSz5IKDA",
+                "name": "Oscar Capraro"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgIDNwpMLDA",
+                "name": "Jacob Greenfield"
+            }
+        ],
+        "name": "Sage Blue",
+        "school": "The Sage School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCKsp8KDA"
+    },
+    {
+        "assigned_id": "121A",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgMCM9p0LDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICo9cwIDA",
+                "name": "Jiangshan Gao"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCzu5MJDA",
+                "name": "Feiyang Yang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDSrY8KDA",
+                "name": "Xinyue Zhang"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMDuq58KDA",
+                "name": "Zixi Wang"
+            }
+        ],
+        "name": "Tsinghua 2",
+        "school": "HS attached to Tsinghua Univ.",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgID1qY8KDA"
+    },
+    {
+        "assigned_id": "025B",
+        "combinable": true,
+        "confirmed": true,
+        "deletable": false,
+        "id": "ag1zfmV4ZXRlci1tYXRochELEgRUZWFtGICAgIDcpJ4LDA",
+        "members": [
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICLiIoJDA",
+                "name": "Ronak"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgICL7JsKDA",
+                "name": "Eric Cheung"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCKw4kLDA",
+                "name": "Raymond"
+            },
+            {
+                "assigned_id": null,
+                "id": "ag1zfmV4ZXRlci1tYXRochcLEgpJbmRpdmlkdWFsGICAgMCK15gLDA",
+                "name": "Ruth Shiferaw"
+            }
+        ],
+        "name": "dx",
+        "school": "Boston Latin School",
+        "user": "ag1zfmV4ZXRlci1tYXRochELEgRVc2VyGICAgMCkvoAKDA"
+    }
+]
