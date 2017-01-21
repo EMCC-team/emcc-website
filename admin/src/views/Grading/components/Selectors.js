@@ -28,7 +28,7 @@ const SimpleFlatButtonList = ButtonListFromLabels(FlatButton)
  * code */
 class RoundSelector extends React.Component {
   render() {
-    let pass_props = {}, choices = ['Sprint', 'Accuracy', 'Team', 'Guts'],
+    let pass_props = {}, choices = ['Speed', 'Accuracy', 'Team', 'Guts'],
     selected_style = { backgroundColor: faintBlack }
     pass_props[choices.indexOf(this.props.selected)] = selected_style
     return <Center>

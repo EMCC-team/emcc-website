@@ -5,7 +5,7 @@ import { setGrader, setRound, setSubround,
          setTeam, setTeamMember } from '../actions/RoundMetadata.js'
 
 const showTeamMemberTextField = (selected_round) => {
-  return ['Sprint', 'Accuracy'].indexOf(selected_round) > -1
+  return ['Speed', 'Accuracy'].indexOf(selected_round) > -1
 }
 
 const mapStateToProps = (state) => {
