@@ -20,6 +20,7 @@ class Team(ndb.Model):
     school = ndb.StringProperty(required=True)
     combinable = ndb.BooleanProperty(required=True)
     confirmed = ndb.BooleanProperty(required=True)
+    assigned_id = ndb.StringProperty()
 
     deletable = ndb.BooleanProperty(default=False)
 
@@ -34,8 +35,9 @@ class Team(ndb.Model):
         members = Individual.query(Individual.team == self.key)
         serialized_members = sorted([{
             'name': member.name,
-            'id': member.key.urlsafe()
-        } for member in members], key=lambda x: x['name'])
+            'id': member.key.urlsafe(),
+            'assigned_id': member.assigned_id
+        } for member in members], key=lambda x: x['assigned_id'])
         serialized_members += [""] * (MAX_MEMBERS_LENGTH-len(serialized_members))
         entry = {
             'id': self.key.urlsafe(),
@@ -44,7 +46,8 @@ class Team(ndb.Model):
             'members': serialized_members,
             'combinable': self.combinable,
             'deletable': self.deletable,
-            'confirmed': self.confirmed
+            'confirmed': self.confirmed,
+            'assigned_id': self.assigned_id
         }
         return entry
 
@@ -58,7 +61,10 @@ class Team(ndb.Model):
         self.school = team['school']
         self.combinable = team['combinable']
         self.confirmed = team['confirmed']
-        self.set_members(team['members'])
+        if team.get('assigned_id'):
+            self.assigned_id = team['assigned_id']
+        if team.get('members'):
+            self.set_members(team['members'])
         self.put()
 
     def set_members(self, new_members):
@@ -67,9 +73,10 @@ class Team(ndb.Model):
             member.key.delete()
         if not self.key:
             self.put()
-        for member in new_members:
+        for index, member in enumerate(new_members):
             if member:
                 Individual(name=member,
                     user=self.user,
                     team=self.key,
-                    year=2017).put()
+                    year=2017
+                    assigned_id=index+1).put()

@@ -14,3 +14,4 @@ class Individual(ndb.Model):
     name = ndb.StringProperty(required=True)
     team = ndb.KeyProperty(kind='Team', default=None)
     year = ndb.IntegerProperty(required=True)
+    assigned_id = ndb.StringProperty()
