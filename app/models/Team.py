@@ -47,7 +47,8 @@ class Team(ndb.Model):
             'combinable': self.combinable,
             'deletable': self.deletable,
             'confirmed': self.confirmed,
-            'assigned_id': self.assigned_id
+            'assigned_id': self.assigned_id,
+            'user': self.user.urlsafe()
         }
         return entry
 
@@ -78,5 +79,5 @@ class Team(ndb.Model):
                 Individual(name=member,
                     user=self.user,
                     team=self.key,
-                    year=2017
+                    year=2017,
                     assigned_id=index+1).put()
