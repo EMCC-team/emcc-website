@@ -17,7 +17,7 @@ class Contest extends React.Component {
             <div style={{ paddingBottom: "5px", margin: "40px 0 20px", borderBottom: "1px solid #bbb"}}>
               <h2>Contest Information</h2>
             </div>
-            <p>Detailed information is available in the Coaches' Packet, which coaches can access by logging in.
+            <p>Detailed information is also available in the 2017 Coaches' Packet, which coaches can access by logging in.
             These packets will also be handed out at registration.</p>
             <h3>
               Schedule
@@ -111,6 +111,7 @@ class Contest extends React.Component {
             <h3>
               Format
             </h3>
+
             <h4>
               Individual Rounds
             </h4>
@@ -149,6 +150,50 @@ class Contest extends React.Component {
               each team's points and progress will displayed on a projector
               screen at the front of the hall. The point value for each
               problem increases between each set of three.
+            </p>
+
+            <h4>
+              Scoring and Tie-breaking
+            </h4>
+            <p>
+              Rounds are scored as follows.  Each of the 20 questions in the
+              speed round is worth 3 points, for a total of 60 points.  Each
+              of the 10 questions in the accuracy round is worth 9 points, for
+              a total of 90 points.  In total each individual can score up to 150 points.
+              Each of the 15 questions in the team round is worth 20 points, for
+              a total of 300 points.  Each of the 24 questions in the guts round are
+              weighted by set (in order, the scores are 5, 7, 9, 11, 13, 15, 18, 22),
+              for a total of 300 points.  Each team's sweepstakes score is calculated
+              as the sum of the four individual scores (up to 600 points) and the sum
+              of the two team scores (also up to 600 points), for a grand total of
+              up to 1,200 points.
+            </p>
+            <p>
+              In the case of a tie in any round, the tie will be broken as
+              follows.
+            </p>
+            <p>
+              Within a single round: The student or team who solved the last
+              problem will be ranked higher.  If the tie persists, the second
+              last problem will be used, then the third last problem, and so on.
+              A tie will not be broken in the case where two students or teams
+              solved the exact same set of problems.
+            </p>
+            <p>
+              Individual total: The student who ranked higher in the accuracy
+              round will be ranked higher overall.  If a tie persists, the student
+              who ranked higher in the speed round will be ranked higher.
+            </p>
+            <p>
+              Team sweepstakes: The team who has a higher total score of team and
+              guts round will be ranked higher.  If a tie persists, the team who
+              ranked higher in guts round will be ranked higher.  If a tie still
+              persists, the team who ranked higher in team round will be ranked higher.
+            </p>
+            <p>
+              No individual or team will be tie-broken out of the top 10. For example,
+              in the case of a three-way tie for the 9th place individual, after tie-breaking
+              there will be one person receiving 9th place and two receiving 10th place.
             </p>
 
             <h3>

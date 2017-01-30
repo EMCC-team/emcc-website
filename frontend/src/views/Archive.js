@@ -4,6 +4,10 @@ import Link from 'react-router/lib/Link';
 import { Container, Row, Columns } from '../components/Layout';
 
 let archive = {
+  2017: {
+    all: require('../archive/emcc17all.pdf'),
+    results: require('../archive/emcc17results.pdf')
+  },
   2016: {
     all: require('../archive/emcc16all.pdf'),
     results: require('../archive/emcc16results.pdf')
@@ -45,6 +49,9 @@ class Archive extends React.Component {
             <div style={{ paddingBottom: "5px", margin: "40px 0 20px", borderBottom: "1px solid #bbb"}}>
               <h2>EMCC Archive</h2>
             </div>
+            <h3>2017</h3>
+            <p><a href={`${archive['2017'].all}`}>EMCC 2017 Problems and Solutions</a></p>
+            <p><a href={`${archive['2017'].results}`}>EMCC 2017 Results</a></p>
             <h3>2016</h3>
             <p><a href={`${archive['2016'].all}`}>EMCC 2016 Problems and Solutions</a></p>
             <p><a href={`${archive['2016'].results}`}>EMCC 2016 Results</a></p>

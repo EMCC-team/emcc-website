@@ -47,9 +47,8 @@ class Home extends React.Component {
             <h3 style={subheadingStyles}>The Exeter Math Club&nbsp;Competition</h3>
             <h5 style={{fontWeight: '300'}}>January 21, 2017, Phillips Exeter Academy</h5>
             <p style={{fontWeight: '200', maxWidth: '500px'}}>
-              We've had an unexpectedly high number of signups, which have forced
-              us to close registration for this year's EMCC. If you weren't able to
-              sign up, we hope that you can join us next year!
+              The 2017 Exeter Math Club Competition is now over.  Thank you for your participation!
+              Coaches will be emailed results soon.
             </p>
             <div style={{ textAlign: "center", marginBottom: "10vh" }}>
               {(() => {if (!this.props.user) {
@@ -65,7 +64,7 @@ class Home extends React.Component {
               }
               else {
                 return <Link to="dashboard" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1.2em",
-                  fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Edit your teams</Link>}
+                  fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>View your teams</Link>}
               })()}
             </div>
           </Container>
@@ -119,33 +118,6 @@ class Home extends React.Component {
                   <a href="http://www.marriott.com/hotels/travel/psmex-fairfield-inn-and-suites-portsmouth-exeter/">
                   Exeter Fairfield Inn</a>.
                 </p>
-
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <h3 style={{ textAlign: "center", marginBottom: "4px" }}>
-                  Regration is now closed.
-                </h3>
-                <p style={{fontWeight: '200', maxWidth: '500px',
-                           fontSize: '14px', marginBottom: "25px" }}>
-                  We've had an unexpectedly high number of signups, which have forced
-                  us to close registration for this year's EMCC. You can still edit
-                  confirmed teams until January 15. If you weren't able to sign up, we hope that
-                  you can join us next year!
-                </p>
-                </div>
-                <div style={{ textAlign: "center" }}>
-                  {(() => {if (!this.props.user) {
-                    return (
-                      <div>
-                        <Link to="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1em",
-                          fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
-                      </div>
-                    );
-                  }
-                  else {
-                    return <Link to="dashboard" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
-                      fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Edit your teams</Link>
-                  }})()}
-                </div>
               </Columns>
             </Row>
           </Container>
@@ -173,4 +145,34 @@ in the bottom of the page:
 <Link to="register" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
                           fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Register</Link>
 
+*/
+
+/*
+
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <h3 style={{ textAlign: "center", marginBottom: "4px" }}>
+                  Regration is now closed.
+                </h3>
+                <p style={{fontWeight: '200', maxWidth: '500px',
+                           fontSize: '14px', marginBottom: "25px" }}>
+                  We've had an unexpectedly high number of signups, which have forced
+                  us to close registration for this year's EMCC. You can still edit
+                  confirmed teams until January 15. If you weren't able to sign up, we hope that
+                  you can join us next year!
+                </p>
+                </div>
+                <div style={{ textAlign: "center" }}>
+                  {(() => {if (!this.props.user) {
+                    return (
+                      <div>
+                        <Link to="login" className="button" style={{ margin: "auto", display: "inline", fontSize: "1em",
+                          fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px", marginRight: "1em" }}>Login</Link>
+                      </div>
+                    );
+                  }
+                  else {
+                    return <Link to="dashboard" className="button button-primary" style={{ margin: "auto", display: "inline", fontSize: "1em",
+                      fontFamily: "Montserrat", fontWeight: "200", paddingTop: "10px", paddingBottom: "10px" }}>Edit your teams</Link>
+                  }})()}
+                </div>
 */
